@@ -213,3 +213,9 @@ STRINGS.GORGE = {
 
 	COOLDOWN = "冷却时间: %s",
 }
+
+AddPrefabPostInit("world",function()
+	AddClassPostConstruct("screens/gorge_gamemode",function(inst)
+		inst.close_btn:SetHoverText("关闭")
+	end)
+end)

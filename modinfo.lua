@@ -121,7 +121,7 @@ configuration_options =
     },
     SkipSpace(" "),
     {
-        name = "Test_Mode",
+        name = "TestMode",
         label = "本地测试模式(作者用的，别开！)",
         hover = "给作者本地测试用的开关,请不要打开！\n开启后不会有任何新功能或汉化内容，所以请不要尝试",
         options =
