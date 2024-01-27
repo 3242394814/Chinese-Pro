@@ -94,7 +94,7 @@ local info=
 	configuration_options = {
 	{
 		name = "hideButton",
-		label = "显示/隐藏计时器",
+		label = "显示/隐藏计时器快捷键",
 		hover = "按下时切换燃烧计时器的可见性。",
 		options = Keys,
 		default = 0,
@@ -115,7 +115,7 @@ local info=
 	},
 	{
 		name = "showBurningTimer",
-		label = "显示燃烧定时器",
+		label = "显示燃烧计时器",
 		hover = "燃烧的物体将显示剩余时间，直到它们燃烧成灰烬。",
 		options = Boolean,
 		default = true,

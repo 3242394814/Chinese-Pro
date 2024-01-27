@@ -5,6 +5,6 @@
         "GLOBAL",
         "MODROOT",
         "AddPrefabPostInit",
-        "AddClassPostConstruct"
+        "AddClassPostConstruct",
     ]
 }
