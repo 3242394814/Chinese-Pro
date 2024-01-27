@@ -28,3 +28,7 @@ AddClassPostConstruct("widgets/autojoin/rejoinbutton", function(RejoinButton)
         self.text_shadow:SetPosition(-1, -40)
     end
 end)
+
+AddClassPostConstruct("widgets/autojoin/autojoinbutton", function(inst)
+    inst:SetHoverText("自动加入")
+end)

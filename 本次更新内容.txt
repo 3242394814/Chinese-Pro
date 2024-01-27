@@ -1,6 +1,6 @@
-·新增[url=https://steamcommunity.com/sharedfiles/filedetails/?id=1416911938]Gorge extender[/url]MOD信息汉化
+·新增[url=https://steamcommunity.com/sharedfiles/filedetails/?id=1416911938]Gorge extender(暴食扩展)[/url]MOD信息汉化
 ·新增[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2621090176]Wormholes/Sinkholes Icons For Server (虫洞/硕大的泥坑服务器图标)MOD信息&游戏内翻译修正（取消和接受）[/url] 原模组的机翻实在太烂...我尝试联系作者更新 但作者没理我 如果作者理我的话我再把这个给删了
-·优化其它MOD的汉化信息..
+·优化其它MOD的汉化信息......
 
 这里的更新内容是方便我复制粘贴的，最终以创意工坊里的更新日志为准
 所有更新记录请前往：https://steamcommunity.com/sharedfiles/filedetails/changelog/2941527805 查看
