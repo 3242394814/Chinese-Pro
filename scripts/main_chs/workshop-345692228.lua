@@ -11,4 +11,4 @@ AddPrefabPostInit("world",function()
 			inst:SetOpen(true)
 		end
 	end)
-end)	
+end)
