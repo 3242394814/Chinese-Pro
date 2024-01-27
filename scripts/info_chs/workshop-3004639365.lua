@@ -37,8 +37,9 @@ local info=
 			options =
 			{
 				{description = "自动", data = false},
-				{description = "英语", data = "en"},
-				{description = "韩语", data = "ko"},
+				{description = "英语(English)", data = "en"},
+				{description = "韩语(한국어)", data = "ko"},
+				{description = "越南语(Tiếng Việt)", data = "vi"},
 			},
 			default = false,
 		},
@@ -338,7 +339,7 @@ local info=
 			default = .25
 		},
 		SEPARATOR,
-		Title("Drink Butterhunter Effect","喝Butterhunter效果"),
+		Title("Drink Butterhunter Effect","饮用Butterhunter效果"),
 		{
 			name = "butterhunter_time",
 			label = "持续时间",

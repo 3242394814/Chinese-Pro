@@ -126,7 +126,7 @@ configuration_options =
         hover = "给作者本地测试用的开关,请不要打开！\n开启后不会有任何新功能或汉化内容，所以请不要尝试",
         options =
         {
-            {description = "开启",hover = "",data = "Chs"},
+            {description = "开启",hover = "",data = "Chinese-Pro"},
             {description = "关闭",hover = "",data = "workshop-2941527805"},
         },
         default = "workshop-2941527805",
