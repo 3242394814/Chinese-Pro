@@ -1,0 +1,1 @@
+LoadPOFile("scripts/languages/chinese_s_reforged.po", "zh")

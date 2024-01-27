@@ -1,0 +1,548 @@
+#: STRINGS.UI.NOTIFICATION.LOADING
+msgid "Loading"
+msgstr "祈祷中"
+
+#模组页面的获取模组说明
+#: STRINGS.UI.MODSSCREEN.TOOLTIP_SHOWCASEMODS
+msgid "See popular and featured mods"
+msgstr "这里的部分MOD因长时间未更新可能导致崩溃\n订阅前请看看评论区或去B站搜一下MOD推荐"
+
+#: STRINGS.UI.MAINSCREEN.MODS
+msgid "Mods"
+msgstr "模组"
+
+#: STRINGS.UI.MODSSCREEN.MODTITLE
+msgid "Mods"
+msgstr "模组"
+
+#: STRINGS.UI.SERVERLISTINGSCREEN.MODSTITLE
+msgid "Mods"
+msgstr "模组"
+
+#: STRINGS.UI.MODSSCREEN.CLIENTMODS
+msgid "Client Mods"
+msgstr "客户端Mod"
+
+#: STRINGS.UI.MODSSCREEN.SERVERMODS
+msgid "Server Mods"
+msgstr "服务器Mod"
+
+#: STRINGS.UI.MODSSCREEN.TOOLTIP_CLIENTMODS
+msgid "Cosmetic mods that run on your machine"
+msgstr "在客户端所运行的Mod"
+
+#: STRINGS.UI.MODSSCREEN.TOOLTIP_SERVERMODS
+msgid "Gameplay-affecting mods that run on the game server"
+msgstr "在服务器上运行的Mod"
+
+#: STRINGS.UI.SERVERLISTINGSCREEN.FILTERS
+msgid "Filters"
+msgstr "过滤"
+
+#: STRINGS.UI.SERVERLISTINGSCREEN.FILTER_RESET
+msgid "Reset Filters"
+msgstr "重置过滤"
+
+#: STRINGS.UI.SERVERLISTINGSCREEN.CONNECTION
+msgid "Connection:"
+msgstr "网络类型"
+
+#搜索页面：服务器类型之一
+#: STRINGS.UI.SERVERLISTINGSCREEN.DEDICATED
+msgid "Dedicated"
+msgstr "专用服务器"
+
+#搜索页面：网络类型之一
+#: STRINGS.UI.SERVERLISTINGSCREEN.LAN
+msgid "LAN"
+msgstr "局域网"
+
+#搜索页面过滤选项
+#: STRINGS.UI.SERVERLISTINGSCREEN.MODSENABLED
+msgid "Mods Enabled:"
+msgstr "是否启用Mod"
+
+#其它（是哪个页面的我也不知道）
+#: STRINGS.UI.ACCOUNT.LAN
+msgid "LAN"
+msgstr "局域网"
+
+#: STRINGS.UI.SERVERLISTINGSCREEN.SHOWING_FMT
+msgid "({viewed} of {total} shown)"
+msgstr "(已显示：{viewed}/{total})"
+
+#: STRINGS.UI.SERVERLISTINGSCREEN.SORTING_TYPES.PING
+msgid "Best Connection"
+msgstr "网络延迟(从低到高)"
+
+#: STRINGS.UI.SERVERLISTINGSCREEN.SORTING_TYPES.PLAYERCOUNT
+msgid "Most Active Players"
+msgstr "玩家数量(从多到少)"
+
+#: STRINGS.UI.SERVERLISTINGSCREEN.SORTING_TYPES.RELEVANCE
+msgid "Relevance"
+msgstr "综合"
+
+#游戏内按U发送的消息前缀
+#: STRINGS.UI.CHATINPUTSCREEN.WHISPER_DESIGNATOR
+msgid "[W]"
+msgstr "[私聊]"
+
+#以下是游戏内计分板的内容
+#: STRINGS.UI.PLAYERSTATUSSCREEN.LOBBY_PERF_LEVELS.1
+msgid "Connection: Good"
+msgstr "网络：良好"
+
+#: STRINGS.UI.PLAYERSTATUSSCREEN.LOBBY_PERF_LEVELS.2
+msgid "Connection: Okay"
+msgstr "网络：一般"
+
+#: STRINGS.UI.PLAYERSTATUSSCREEN.LOBBY_PERF_LEVELS.3
+msgid "Connection: Bad"
+msgstr "网络：较差"
+
+#: STRINGS.UI.PLAYERSTATUSSCREEN.PERF_CLIENT_LEVELS.1
+msgid "Client Performance: Good"
+msgstr "客户端网络性能：优秀"
+
+#: STRINGS.UI.PLAYERSTATUSSCREEN.PERF_CLIENT_LEVELS.2
+msgid "Client Performance: Okay"
+msgstr "客户端网络性能：良好"
+
+#: STRINGS.UI.PLAYERSTATUSSCREEN.PERF_CLIENT_LEVELS.3
+msgid "Client Performance: Bad"
+msgstr "客户端网络性能：较差"
+
+#: STRINGS.UI.PLAYERSTATUSSCREEN.PERF_CLIENT_LEVEL_UNKNOWN
+msgid "Client Performance: Unknown"
+msgstr "客户端网络：未知"
+
+#: STRINGS.UI.PLAYERSTATUSSCREEN.PERF_HOST_LEVELS.1
+msgid "Host Performance: Good"
+msgstr "主机性能：优秀"
+
+#: STRINGS.UI.PLAYERSTATUSSCREEN.PERF_HOST_LEVELS.2
+msgid "Host Performance: Okay"
+msgstr "主机性能：良好"
+
+#: STRINGS.UI.PLAYERSTATUSSCREEN.PERF_HOST_LEVELS.3
+msgid "Host Performance: Bad"
+msgstr "主机性能：较差"
+
+
+#: STRINGS.UI.MODSSCREEN.MOD_WARNING
+msgid "This is not a Steam Workshop mod. Players will need to download it manually if you host a server."
+msgstr "这不是Steam创意工坊的模组。\n如果你是主服务器，玩家必须手动下载这个MOD才能进入你的世界。"
+
+#: STRINGS.UI.SKINSSCREEN.FILTERS
+msgid "Filters"
+msgstr "过滤"
+
+#: STRINGS.UI.PURCHASEPACKSCREEN.FILTERS
+msgid "Filters"
+msgstr "筛选"
+
+#: STRINGS.UI.SANDBOXMENU.ADDLEVEL_WARNING
+msgid "This requires running multiple servers at the same time.\nIs your computer up to the task?"
+msgstr "这需要同时运行多个服务器。\n所以会导致房主也以客户端的形式连接到服务器从而产生游戏延迟\n确认添加？"
+
+#暴食内容
+#: STRINGS.UI.RECIPE_BOOK.CRAVINGS.BREAD
+msgid "Bread"
+msgstr "面包"
+
+#: STRINGS.UI.RECIPE_BOOK.CRAVINGS.CHEESE
+msgid "Cheese"
+msgstr "奶酪"
+
+#: STRINGS.UI.RECIPE_BOOK.CRAVINGS.FISH
+msgid "Fish"
+msgstr "鱼"
+
+#: STRINGS.UI.RECIPE_BOOK.CRAVINGS.MEAT
+msgid "Meat"
+msgstr "肉"
+
+#: STRINGS.UI.RECIPE_BOOK.CRAVINGS.PASTA
+msgid "Pasta"
+msgstr "意大利面"
+
+#: STRINGS.UI.RECIPE_BOOK.CRAVINGS.SNACK
+msgid "Snack"
+msgstr "零食"
+
+#: STRINGS.UI.RECIPE_BOOK.CRAVINGS.SOUP
+msgid "Soup"
+msgstr "汤"
+
+#: STRINGS.UI.RECIPE_BOOK.CRAVINGS.SWEET
+msgid "Dessert"
+msgstr "甜点"
+
+#: STRINGS.UI.RECIPE_BOOK.CRAVINGS.VEGGIE
+msgid "Veggie"
+msgstr "素食"
+
+
+#MOD崩溃的“警告”标题
+#: STRINGS.UI.MAINSCREEN.MODFAILTITLE
+msgid "WARNING!"
+msgstr "警告！"
+
+#: STRINGS.UI.MAINSCREEN.SCRIPTERRORMODWARNING
+msgid "This error may have occurred due to a mod you have enabled!\nYou have the following mods enabled:\n"
+msgstr "此错误可能是由于你启用的某个模组所致！\n你可以尝试通过订阅【错误追踪】模组排查问题\n你启用了下列模组：\n"
+
+#: STRINGS.UI.SERVERCREATIONSCREEN.OFFLINEMODEBODYCREATE
+msgid "Are you sure you want to create an offline world? This is a limited mode where only players on your Local Area Network can join. Players will not be able to receive or use Collection Items in this world."
+msgstr "你确定想创建一个离线世界？\n这是有限模式，在这个模式下只有你局域网上的玩家可以加入。玩家无法接收或使用这个世界的收藏物品。"
+
+#: STRINGS.UI.SERVERCREATIONSCREEN.OFFLINEMODEBODYCREATE_CANSKIN
+msgid "Are you sure you want to create an offline world? This is a limited mode where only players on your Local Area Network can join."
+msgstr "你确定想创建一个离线世界？\n这是有限模式，在这个模式下只有你局域网上的玩家可以加入。"
+
+#: STRINGS.UI.SERVERCREATIONSCREEN.OFFLINEMODEBODYRESUME
+msgid "You are resuming an offline world. Only users on your Local Area Network will be able to join this world. Players will not be able to receive or use Collection Items in this world."
+msgstr "你正在恢复一个离线世界。\n只有局域网的用户能够加入这个世界。玩家无法接收或使用这个世界的收藏物品。"
+
+#: STRINGS.UI.SERVERCREATIONSCREEN.OFFLINEMODEBODYRESUME_CANSKIN
+msgid "You are resuming an offline world. Only users on your Local Area Network will be able to join this world."
+msgstr "你正在恢复一个离线世界。\n只有你局域网上的玩家可以加入游戏。"
+
+
+#选人界面
+#: STRINGS.UI.LOBBYSCREEN.DISCONNECT
+msgid "Disconnect"
+msgstr "断开联线"
+
+#选人界面退出标题
+#: STRINGS.UI.LOBBYSCREEN.CLIENTQUITTITLE
+msgid "Leave Server"
+msgstr "离开服务器"
+
+#选人界面退出说明
+#: STRINGS.UI.LOBBYSCREEN.CLIENTQUITBODY
+msgid "Are you sure you want to leave this server?"
+msgstr "这么快就离开？"
+
+#服务端选人界面的退出说明
+#: STRINGS.UI.LOBBYSCREEN.HOSTQUITBODY
+msgid "Are you sure you want to shut down this server? If you do, all players will be disconnected."
+msgstr "你确定你想关掉这个服务器？要是你这么做，所有的玩家都会断开连接。"
+
+#选人界面退出按钮
+#: STRINGS.UI.LOBBYSCREEN.YES
+msgid "Do it!"
+msgstr "我说了退出！"
+
+#选人界面取消退出按钮
+#: STRINGS.UI.LOBBYSCREEN.NO
+msgid "Maybe not..."
+msgstr "还是算了…"
+
+
+#房主退出时的说明
+#: STRINGS.UI.PAUSEMENU.HOSTQUITBODY
+msgid "Are you sure you want to shut down the server? If you do, all current players will be disconnected."
+msgstr "你确定想要关闭服务器吗？是的话，现在所有的玩家都会断开连接。"
+
+#房主退出时的标题
+#: STRINGS.UI.PAUSEMENU.HOSTQUITTITLE
+msgid "Shut Down Server"
+msgstr "关闭服务器"
+
+
+#暂停页面退出按钮
+#: STRINGS.UI.PAUSEMENU.DISCONNECT
+msgid "Disconnect"
+msgstr "断开联线"
+
+#客户端退出的标题
+#: STRINGS.UI.PAUSEMENU.CLIENTQUITTITLE
+msgid "Leave Server"
+msgstr "离开服务器"
+
+#客户端退出服务器时的说明
+#: STRINGS.UI.PAUSEMENU.CLIENTQUITBODY
+msgid "Are you sure you want to leave the server?"
+msgstr "你确定要离开服务器吗？\n别担心。我们会在这等着你。"
+
+#暂停页面退出按钮/所有玩家死亡后“重置世界”确认按钮
+#: STRINGS.UI.PAUSEMENU.YES
+msgid "Do it!"
+msgstr "动手！"
+
+#暂停页面取消退出按钮
+#: STRINGS.UI.PAUSEMENU.NO
+msgid "Maybe not..."
+msgstr "还是算了…"
+
+
+#主界面“进入游戏”
+#: STRINGS.UI.MAINSCREEN.PLAY
+msgid "Play!"
+msgstr "进入游戏！"
+
+#登录中
+#: STRINGS.UI.NOTIFICATION.LOGIN
+msgid "Logging in"
+msgstr "正在进入永恒领域"
+
+#主界面离开按钮
+#: STRINGS.UI.MAINSCREEN.QUIT
+msgid "Quit"
+msgstr "退出"
+
+#主界面退出标题
+#: STRINGS.UI.MAINSCREEN.ASKQUIT
+msgid "Quit Game?"
+msgstr "离开永恒领域？"
+
+#主界面退出“是”选项
+#: STRINGS.UI.MAINSCREEN.YES
+msgid "Yes"
+msgstr "是"
+
+#主界面退出“否”选项
+#: STRINGS.UI.MAINSCREEN.NO
+msgid "No"
+msgstr "否"
+
+#预留位置说明（原版没有换行会导致无法显示）
+#: STRINGS.UI.NETWORKDISCONNECT.BODY.ID_DST_SLOT_RESERVATION
+msgid "Attempt to join server failed because remaining player slots are reserved. Please try again once a slot frees up."
+msgstr "尝试加入服务器失败，因为剩余玩家位置已被预留。\n当位置空出来之后，请再次尝试。"
+
+#: STRINGS.UI.SERVERLISTINGSCREEN.MOD_WARNING_BODY
+msgid "This server has mods enabled. Klei won't be able to help if you encounter issues while playing on a modded server."
+msgstr "此服务器已启用模组。在启用模组的服务器上打游戏时，\n如果您遇到问题，Klei无法提供帮助。"
+
+#: STRINGS.UI.NETWORKDISCONNECT.TITLE.ID_DST_DEDICATED_SERVER_STARTUP_FAILED
+msgid "Dedicated Server Failed To Start"
+msgstr "服务器无法启动"
+
+#: STRINGS.UI.NETWORKDISCONNECT.BODY.ID_DST_DEDICATED_SERVER_STARTUP_FAILED
+msgid "There was some sort of trouble starting the server. Please try again."
+msgstr "启动服务器失败。请再次尝试。\n日志路径：我的文档\Klei\DoNotStarveTogether\nmaster_server_log.txt与caves_server_log.txt"
+
+#: STRINGS.UI.NETWORKDISCONNECT.BODY.ID_DST_GAME_SESSION_AUTH_FAILED
+msgid "Authentication failed. Please try again."
+msgstr "授权失败。请再次尝试。\n如果你的网络没问题，那么就是科雷网络抽风了"
+
+#: STRINGS.UI.NETWORKDISCONNECT.BODY.ID_CONNECTION_BANNED
+msgid "You have been banned from this server."
+msgstr "你已经被这个服务器Ban了！"
+
+#: STRINGS.UI.NETWORKDISCONNECT.BODY.ID_CONNECTION_LOST
+msgid "You have lost connection to the server."
+msgstr "你已经失去与服务器的连接。\n如果你与服务器的网络都没问题且所有玩家掉线，那么100%是服务器崩溃了，\n请检查服务器日志查看崩溃原因。"
+
+#: STRINGS.UI.NETWORKDISCONNECT.BODY.ID_DST_DESTINATION_SERVER_NOT_AVAILABLE
+msgid "The server you were playing on is unavailable. Please try again later."
+msgstr "你正在使用的服务器不可用。请稍后再次尝试。\n这意味着主世界服务器与本世界断开连接了，请检查主世界服务器日志。"
+
+#岛屿冒险汉化
+#世界规则
+#: STRINGS.UI.CUSTOMIZATIONSCREEN.CLOCKTYPE
+msgid "Clock Type"
+msgstr "时钟类型"
+
+#: STRINGS.UI.SANDBOXMENU.CLOCKTYPE_SHIPWRECKED
+msgid "Tropical"
+msgstr "热带"
+
+#: STRINGS.UI.SANDBOXMENU.CLOCKTYPE_DEFAULT
+msgid "Default"
+msgstr "默认"
+
+#季节：由于IA模组内的string.pot没有使用翻译文件，所以是英文，IA自带了四季名称的翻译(怎么回事呢?)
+
+#Shipwrecked世界
+#: STRINGS.UI.CUSTOMIZATIONSCREEN.DRAGOONEGG
+msgid "Dragoon Eggs"
+msgstr "龙蛋"
+
+#: STRINGS.UI.CUSTOMIZATIONSCREEN.FLOODS
+msgid "Floods"
+msgstr "水坑"
+
+#: STRINGS.UI.CUSTOMIZATIONSCREEN.POISON
+msgid "Poison"
+msgstr "中毒"
+
+#: STRINGS.UI.CUSTOMIZATIONSCREEN.OCEANWAVES
+msgid "Waves"
+msgstr "海浪"
+
+#: STRINGS.UI.CUSTOMIZATIONSCREEN.WHALEHUNT
+msgid "Whaling"
+msgstr "捕鲸"
+
+#Shipwrecked巨兽
+#: STRINGS.UI.CUSTOMIZATIONSCREEN.KRAKEN
+msgid "Quacken"
+msgstr "海妖"
+
+#: STRINGS.UI.CUSTOMIZATIONSCREEN.TWISTER
+msgid "Sealnado"
+msgstr "豹卷风"
+
+#: STRINGS.UI.CUSTOMIZATIONSCREEN.TIGERSHARK
+msgid "Tiger Sharks"
+msgstr "虎鲨"
+
+#以下为“世界生成”的内容
+#: STRINGS.UI.SANDBOXMENU.SHIPWRECKED
+msgid "Shipwrecked Portal"
+msgstr "海难"
+
+#: STRINGS.UI.SANDBOXMENU.VOLCANO
+msgid "Volcano Portal"
+msgstr "火山"
+
+#: STRINGS.UI.CUSTOMIZATIONSCREEN.PRIMARYWORLDTYPE
+msgid "World Type"
+msgstr "世界类型"
+
+#: STRINGS.UI.SANDBOXMENU.WORLDTYPE_DEFAULT
+msgctxt "STRINGS.UI.SANDBOXMENU.WORLDTYPE_DEFAULT"
+msgid "Forest"
+msgstr "森林"
+
+#: STRINGS.UI.SANDBOXMENU.WORLDTYPE_ISLANDSONLY
+msgid "Islands Only"
+msgstr "仅海难"
+
+#: STRINGS.UI.SANDBOXMENU.WORLDTYPE_VOLCANOONLY
+msgid "Volcano Only"
+msgstr "仅火山"
+
+#: STRINGS.UI.CUSTOMIZATIONSCREEN.BAMBOO
+msgid "Bamboo"
+msgstr "竹子"
+
+#: STRINGS.UI.CUSTOMIZATIONSCREEN.BIOLUMINESCENCE
+msgid "Bioluminescence"
+msgstr "海上萤火虫"
+
+#: STRINGS.UI.CUSTOMIZATIONSCREEN.CORAL_BRAIN_ROCK
+msgid "Brainy Sprouts"
+msgstr "智慧树"
+
+#: STRINGS.UI.CUSTOMIZATIONSCREEN.CORAL
+msgid "Corals"
+msgstr "珊瑚"
+
+#: STRINGS.UI.CUSTOMIZATIONSCREEN.CRATE
+msgid "Crates"
+msgstr "条板箱"
+
+#: STRINGS.UI.CUSTOMIZATIONSCREEN.LIMPETS
+msgid "Limpets"
+msgstr "帽贝岩"
+
+#以下为Shipwrecked资源
+
+#Shipwrecked世界
+#: STRINGS.UI.CUSTOMIZATIONSCREEN.BERMUDATRIANGLE
+msgid "Electric Isosceles"
+msgstr "电光三角"
+
+#: STRINGS.UI.CUSTOMIZATIONSCREEN.VOLCANO
+msgid "Volcano"
+msgstr "火山"
+
+#: STRINGS.UI.CUSTOMIZATIONSCREEN.VOLCANOISLAND
+msgid "Volcano Island"
+msgstr "火山岛"
+
+#"Magma Rocks" 无法汉化
+
+#: STRINGS.UI.CUSTOMIZATIONSCREEN.MUSSEL_FARM
+msgid "Mussels"
+msgstr "贻贝"
+
+#: STRINGS.UI.CUSTOMIZATIONSCREEN.POISONHOLE
+msgid "Poisonous Holes"
+msgstr "毒穴"
+
+#: STRINGS.UI.CUSTOMIZATIONSCREEN.SANDHILL
+msgid "Sandy Piles"
+msgstr "沙堆"
+
+#: STRINGS.UI.CUSTOMIZATIONSCREEN.SEASHELL
+msgid "Seashells"
+msgstr "贝壳"
+
+#: STRINGS.UI.CUSTOMIZATIONSCREEN.SEAWEED
+msgid "Seaweeds"
+msgstr "海带"
+
+#Tar Pools无法汉化
+
+#: STRINGS.UI.CUSTOMIZATIONSCREEN.TIDALPOOL
+msgid "Tidal Pools"
+msgstr "潮汐池"
+
+#: STRINGS.UI.CUSTOMIZATIONSCREEN.BUSH_VINE
+msgid "Viney Bushes"
+msgstr "藤蔓根"
+
+#以下为Shipwrecked 生物及刷新点
+#"Crabbit Holes" 无法汉化
+
+#: STRINGS.UI.CUSTOMIZATIONSCREEN.SOLOFISH
+msgid "Dogfish"
+msgstr "狗鱼"
+
+#: STRINGS.UI.CUSTOMIZATIONSCREEN.DOYDOY
+msgctxt "STRINGS.UI.CUSTOMIZATIONSCREEN.DOYDOY"
+msgid "Doydoys"
+msgstr "渡渡鸟"
+
+#"Fisher Merm Huts"无法汉化
+
+#: STRINGS.UI.CUSTOMIZATIONSCREEN.JELLYFISH
+msgid "Jellyfish"
+msgstr "水母"
+
+#"Prime Ape Huts" 无法汉化
+
+#: STRINGS.UI.CUSTOMIZATIONSCREEN.SEAGULL
+msgid "Seagulls"
+msgstr "海鸥"
+
+#: STRINGS.UI.CUSTOMIZATIONSCREEN.FISHINHOLE
+msgid "Shoals"
+msgstr "鱼群"
+
+#: STRINGS.UI.CUSTOMIZATIONSCREEN.OX
+msgid "Water Beefalos"
+msgstr "水牛"
+
+#"wildbore houses" 无法汉化
+
+#: STRINGS.UI.CUSTOMIZATIONSCREEN.SWEET_POTATO
+msgid "Sweet Potatoes"
+msgstr "甘薯"
+
+#: STRINGS.UI.CUSTOMIZATIONSCREEN.BALLPHIN
+msgid "Ballphins"
+msgstr "海豚宫殿"
+
+#: STRINGS.UI.CUSTOMIZATIONSCREEN.LOBSTER
+msgid "Wobsters"
+msgstr "龙虾"
+
+#Shipwrecked敌对生物及刷新点
+#: STRINGS.UI.CUSTOMIZATIONSCREEN.FLUP
+msgid "Flup"
+msgstr "大眼鱼"
+
+#: STRINGS.UI.CUSTOMIZATIONSCREEN.STUNGRAY
+msgid "Stink Rays"
+msgstr "黄貂鱼"
+
+#: STRINGS.UI.CUSTOMIZATIONSCREEN.SWORDFISH
+msgid "Swordfish"
+msgstr "剑鱼"
