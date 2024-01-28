@@ -20,7 +20,7 @@ STRINGS.CHARACTER_BIOS.weerclops = {
 { title = "生日", desc = "2月26日" },
 { title = "最喜欢的食物", desc = "甜瓜冻" }, }
 --Skins
-if GetModConfigData("enable_unintelligible") == true then
+if GLOBAL.GetModConfigData("enable_unintelligible","workshop-2010472942") == true then
 GLOBAL.STRINGS.CHARACTER_QUOTES.weerclops = "“咕......”"
 GLOBAL.STRINGS.SKIN_QUOTES.weerclops_ice = "“嗯......”"
 GLOBAL.STRINGS.SKIN_QUOTES.weerclops_rose = "“嗯！”"
@@ -284,7 +284,7 @@ STRINGS.SKIN_NAMES.wearger_teddy = "泰迪贝尔格"
 -- STRINGS.SKIN_NAMES.body_wearger_teddy = "毛绒内衣"
 STRINGS.SKIN_NAMES.wearger_minotaur = "古老的齿轮贝尔格服装"
 STRINGS.SKIN_NAMES.wearger_lunar = "月球系"
-if GetModConfigData("enable_unintelligible") == true then
+if GLOBAL.GetModConfigData("enable_unintelligible","workshop-2010472942") == true then
     GLOBAL.STRINGS.SKIN_QUOTES.wearger_ice = "\"嗯。嗯！\""
     GLOBAL.STRINGS.CHARACTER_QUOTES.wearger =  "\"呜呜……\""
     GLOBAL.STRINGS.SKIN_QUOTES.wearger_survivor = "\"呜呜呜呜呜！！！\""
@@ -683,7 +683,7 @@ general_scripts.WEARGER1 = {
 --------------------------------------------------------------------------
 GLOBAL.STRINGS.CHARACTER_TITLES.woose = "鹅跃之主"
 GLOBAL.STRINGS.CHARACTER_NAMES.woose = "麋鹿或雁鸟"
-if GetModConfigData("enable_nesting") == true then
+if GLOBAL.GetModConfigData("enable_nesting","workshop-2010472942") == true then
 GLOBAL.STRINGS.CHARACTER_DESCRIPTIONS.woose = "能够形成凶悍的旋风\n喜欢在海洋上散步\n容易弄湿羽毛\n有建巢的倾向"
 else
 GLOBAL.STRINGS.CHARACTER_DESCRIPTIONS.woose = "能够形成凶悍的旋风\n容易弄湿羽毛\n善于发出恶意嘎嘎声"
@@ -710,7 +710,7 @@ STRINGS.SKIN_NAMES.woose_victorian = "维多利亚时代"
 --STRINGS.SKIN_DESCRIPTIONS.body_woose_victorian = "为了照看你育儿场中所有鸟嘴并保持良好形象而进行双重工作。"
 STRINGS.SKIN_NAMES.woose_malbatross = "鹿鹅魔蝙蝠装"
 STRINGS.SKIN_DESCRIPTIONS.woose_malbatross = "这个服装需要在海上钓鱼度过许多艰难的日子。"
-if GetModConfigData("enable_unintelligible") == true then
+if GLOBAL.GetModConfigData("enable_unintelligible","workshop-2010472942") == true then
 	GLOBAL.STRINGS.CHARACTER_QUOTES.woose =  "\"嘟哧嘟!? 喙喙喙来!!!\""
 	GLOBAL.STRINGS.SKIN_QUOTES.woose_ice = "\"呼-呼-呼——嘟!!\""
 	GLOBAL.STRINGS.SKIN_QUOTES.woose_young = "\"嘎呢！噗噗！嘟！\""
@@ -1005,7 +1005,7 @@ STRINGS.CHARACTER_BIOS.wragonfly = {
 	{ title = "生日", desc = "11月30日" },
 	{ title = "最喜欢的食物", desc = "热辣龙椒沙拉" }, }
 -------------------------- SKINS --------------------------
-if GetModConfigData("enable_unintelligible") == true then
+if GLOBAL.GetModConfigData("enable_unintelligible","workshop-2010472942") == true then
 -- GLOBAL.STRINGS.CHARACTER_QUOTES.wragonfly =  "\"Grrr...! Bzrrrt, zrt zrt!\""
 -- GLOBAL.STRINGS.SKIN_QUOTES.wragonfly_ice = "\"Zrrh-rh-zrht!\""
 -- GLOBAL.STRINGS.SKIN_QUOTES.wragonfly_shadow = "\"ZRRRT..! Bzzzzrrt!\""
