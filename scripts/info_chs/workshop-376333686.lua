@@ -21,7 +21,7 @@ local info = {
 							{description = "隐藏", data = false},
 						},
 			default = false,
-		},	
+		},
 		{
 			name = "SHOWTEMPBADGES",
 			label = "显示小图标",
@@ -31,7 +31,7 @@ local info = {
 							{description = "隐藏", data = false, hover = "永远不会显示图标"},
 						},
 			default = true,
-		},	
+		},
 		{
 			name = "UNIT",
 			label = "温度单位",
@@ -109,23 +109,23 @@ local info = {
 		{
 			name = "SHOWNAUGHTINESS",
 			label = "淘气值",
-			hover = "设定是否显示玩家的淘气值。此功能无法在多人版使用。",
+			hover = "设定是否显示玩家的淘气值。此功能无法在联机版使用。\n除非你开启了Insight模组",
 			options =	{
 							{description = "显示", data = true},
 							{description = "隐藏", data = false},
 						},
 			default = true,
-		},	
+		},
 		{
 			name = "SHOWBEAVERNESS",
 			label = "海狸值",
-			hover = "当伍迪（Woodie）还是人类状态的时候显示海狸值。在多人版，这已经是内置的功能",
+			hover = "当伍迪还是人类状态的时候显示海狸值。在联机版，这已经是内置的功能",
 			options =	{
 							{description = "永远显示", data = true},
 							{description = "变身时显示", data = false},
 						},
 			default = true,
-		},	
+		},
 		{
 			name = "HIDECAVECLOCK",
 			label = "洞穴时钟",
@@ -135,7 +135,7 @@ local info = {
 							{description = "隐藏", data = true},
 						},
 			default = false,
-		},	
+		},
 		{
 			name = "SHOWSTATNUMBERS",
 			label = "状态值",
@@ -146,7 +146,7 @@ local info = {
 							{description = "被动显示", data = false},
 						},
 			default = true,
-		},	
+		},
 		{
 			name = "SHOWMAXONNUMBERS",
 			label = "显示状态最大值",
@@ -156,7 +156,7 @@ local info = {
 							{description = "隐藏", data = false},
 						},
 			default = true,
-		},	
+		},
 		{
 			name = "SHOWCLOCKTEXT",
 			label = "显示时钟上的文字",
