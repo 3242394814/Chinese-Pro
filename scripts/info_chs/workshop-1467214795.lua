@@ -1,3 +1,4 @@
+--岛屿冒险
 local info={
     configuration_options =
     {
