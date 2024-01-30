@@ -15,15 +15,15 @@ author = "冰冰羊"
 api_version = 10
 priority = -100001
 
-dst_compatible = true
-forge_compatible = true
-gorge_compatible = true
-dont_starve_compatible = false
+dst_compatible = true--兼容联机版
+forge_compatible = true--兼容熔炉
+gorge_compatible = true--兼容暴食
+dont_starve_compatible = false--不兼容单机版
 
-all_clients_require_mod = true
+all_clients_require_mod = true--所有人都需要下载 -为了保证汉化效果 此MOD既是客户端MOD 也是服务器MOD QwQ
 client_only_mod = true
 server_only_mod = false
-server_filter_tags = {"Chinese++ Pro "..version}
+server_filter_tags = {"Chinese++ Pro "..version}--服务器Tag 在服务器列表中搜索此Tag可以查看安装了此模组的服务器
 
 icon_atlas = "images/modicon.xml"
 icon = "modicon.tex"
