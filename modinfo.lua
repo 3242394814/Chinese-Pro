@@ -1,13 +1,13 @@
 name = "Chinese++ Pro"
-version = "3.2"
-description = "当前版本：" ..version .. "\n更新日期：2024年1月28日\n" ..
+version = "3.2.1"
+description = "当前版本：" ..version .. "\n更新日期：2024年1月31日\n" ..
 [[
     
 汉化你的客户端/服务器 MOD名称、MOD介绍、MOD设置 甚至MOD内容！
 支持汉化的MOD与更新日志请在创意工坊查看
 
 本MOD内含冰冰羊的自用汉化包，修改了一些令人不爽的汉化内容，可与【中文语言包】同时开启~
-新增高清字体！如果还有其他高清字体MOD，请不要与此MOD的高清字体同时开启！
+新增高清字体！如果还有其他修改字体的MOD，请不要与此MOD的高清字体同时开启
 容易导致崩溃
 
 󰀔汉化其它模组信息功能：当前未生效×]]
@@ -54,7 +54,7 @@ configuration_options =
 		hover = "是否启用高清字体(思源黑体)",
         options =
         {
-            {description = "开启", hover = "如果开启了其它高清字体MOD，请关闭这个！" , data = true},
+            {description = "开启", hover = "如果开启了其它高清字体MOD，请关闭这个！否则容易导致崩溃" , data = true},
             {description = "关闭", hover = "已关闭" , data = false},
         },
         default = true
@@ -124,7 +124,7 @@ configuration_options =
     {
         name = "check_mod",
         label = "自动检测是否有其它字体模组",
-        hover = "开启后 如果检测到其它的字体模组 则停止加载本模组的高清字体\n非必要不关闭 除非你能保证你的字体模组与本模组不冲突",
+        hover = "开启后:如果检测到其它的字体模组则停止加载本模组的高清字体。但如果你想从其它字体\n切换到本模组的高清字体则需要关闭它们然后重新启动一次游戏（不然游戏自己也会崩溃）",
         options =
         {
             {description = "开启",hover = "",data = true},
