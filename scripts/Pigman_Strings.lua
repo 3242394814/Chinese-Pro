@@ -11,5 +11,5 @@ STRINGS.PIG_TALK_FIGHT = { "打爆你的蛋！", "你完蛋了！", "嗷嗷嗷�
 STRINGS.PIG_TALK_PANIC = { "卧槽！！！！！", "太黑了！和"..playername.."一样黑！", "啊啊啊啊啊！！" }
 STRINGS.PIG_GUARD_TALK_FIGHT = { "为了国王！", "看什么看！", "拯救国王！干翻"..playername }
 STRINGS.PIG_TALK_GO_HOME = { "回家玩饥荒了！", "回家！回家！" }
-
+PIG_TALK_FIND_MEAT = { "我饿了！", "好吃！", "来都来了", "吃东西的时间到了！" }
 --目前只能知道这么多...你还知道什么？评论区见
