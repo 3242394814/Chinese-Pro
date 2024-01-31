@@ -31,13 +31,45 @@ GLOBAL.ModManager.GetEnabledServerModNames=function(self)
 	return server_mods
 end
 
--- 高清字体
-if GetModConfigData("clearfont") then
-	
-	if GLOBAL.KnownModIndex:IsModEnabled("workshop-2403997762") then
-		print("Chinese++ Pro:检测到冲突的模组：高清字体 本次取消加载本模组的高清字体！")
-		return
+--检测是否有其它字体模组
+local function ismodloaded(name)
+	if GLOBAL.KnownModIndex:IsModEnabled(name) then return true end
+	for _, v in ipairs(GLOBAL.KnownModIndex:GetModsToLoad()) do
+		if v == name then return true end
 	end
+end
+
+if GetModConfigData("check_mod") then
+	if
+		ismodloaded("workshop-2697699832") or
+		ismodloaded("workshop-678340265") or
+		ismodloaded("workshop-2408210241") or
+		ismodloaded("workshop-2548665665") or
+		ismodloaded("workshop-2908253266") or
+		ismodloaded("workshop-2536466536") or
+		ismodloaded("workshop-2771766820") or
+		ismodloaded("workshop-2908218000") or
+		ismodloaded("workshop-2908204672") or
+		ismodloaded("workshop-1948672481") or
+		ismodloaded("workshop-2777522581") or
+		ismodloaded("workshop-1950096199") or
+		ismodloaded("workshop-2403997762") or
+		ismodloaded("workshop-1947681600") or
+		ismodloaded("workshop-1950033847") or
+		ismodloaded("workshop-1947732315") or
+		ismodloaded("workshop-2552315006") or
+		ismodloaded("workshop-1947687544") or
+		ismodloaded("workshop-1947686229") or
+		ismodloaded("workshop-2476520859") or
+		ismodloaded("workshop-1948684537")
+	then
+		font_Conflict_MOD = true
+		print("Chinese++ Pro:检测到其它字体模组！本次不加载本模组的高清字体功能")
+	end
+end
+
+-- 高清字体
+if GetModConfigData("clearfont") and not font_Conflict_MOD then
 
     TheSim = GLOBAL.TheSim
     
@@ -107,5 +139,4 @@ if GetModConfigData("clearfont") then
 		OldRegisterPrefabs(...)
 		registerfont()
 	end
-
 end

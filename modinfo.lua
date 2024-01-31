@@ -107,7 +107,7 @@ configuration_options =
     mainConfig("workshop-756229217","Teleportato(世界折跃)汉化","汉化Teleportato模组",true),
 
     SkipSpace(" "),
-    SkipSpace("MOD信息汉化"),
+    SkipSpace("MOD信息页面汉化"),
     {
         name = "mod_info_Chs",
         label = "MOD信息汉化",
@@ -120,6 +120,18 @@ configuration_options =
         default = true,
     },
     SkipSpace(" "),
+    SkipSpace("其它"),
+    {
+        name = "check_mod",
+        label = "自动检测是否有其它字体模组",
+        hover = "开启后 如果检测到其它的字体模组 则停止加载本模组的高清字体\n非必要不关闭 除非你能保证你的字体模组与本模组不冲突",
+        options =
+        {
+            {description = "开启",hover = "",data = true},
+            {description = "关闭",hover = "",data = false},
+        },
+        default = true,
+    },
     {
         name = "TestMode",
         label = "本地测试模式(作者用的，别开！)",
