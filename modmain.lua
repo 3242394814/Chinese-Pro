@@ -1,9 +1,9 @@
-if GetModConfigData("冰冰羊的个人汉化") then
+if GetModConfigData("冰冰羊的个人汉化",true) then
     LoadPOFile("scripts/BBGOAT_chs.po", "zh")
     --GLOBAL.TranslateStringTable( GLOBAL.STRINGS ) --游戏内文本汉化
 end
 
-if GetModConfigData("Pigman_Strings") then
+if GetModConfigData("Pigman_Strings",true) then
 	modimport("scripts/Pigman_Strings")
 end
 --公共函数部分
@@ -39,7 +39,7 @@ local function ismodloaded(name)
 	end
 end
 
-if GetModConfigData("check_mod") then
+if GetModConfigData("check_mod",true) then
 	if
 		ismodloaded("workshop-2697699832") or
 		ismodloaded("workshop-678340265") or
@@ -69,7 +69,7 @@ if GetModConfigData("check_mod") then
 end
 
 -- 高清字体
-if GetModConfigData("clearfont") and not font_Conflict_MOD then
+if GetModConfigData("clearfont",true) and not font_Conflict_MOD then
 
     TheSim = GLOBAL.TheSim
     

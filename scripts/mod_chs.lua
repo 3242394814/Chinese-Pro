@@ -28,7 +28,7 @@ local main_list = {}
 -- 加载MOD配置汉化
 local modlist=KnownModIndex:GetModNames()
 	for _,v in ipairs(modlist) do
-		if fileexists(MODROOT.."scripts/info_chs/"..v..".lua") and GetModConfigData("mod_info_Chs") then--检测本模组内的配置汉化文件
+		if fileexists(MODROOT.."scripts/info_chs/"..v..".lua") and GetModConfigData("mod_info_Chs",true) then--检测本模组内的配置汉化文件
 			info_list[v] = require("info_chs/"..v)
 		end
         if fileexists(MODROOT.."scripts/main_chs/"..v..".lua") then--检测本模组内的游戏内汉化文件
@@ -38,7 +38,10 @@ local modlist=KnownModIndex:GetModNames()
 
 --汉化游戏内MOD语言
 for _, v in ipairs(main_list) do
-    if GetModConfigData(v) and ismodloaded(v) then
+    if GetModConfigData("client_"..v,true) and ismodloaded(v) then--跟随客户端设置
+        modimport("scripts/main_chs/" .. v)
+    end
+    if GetModConfigData("server_"..v) and ismodloaded(v) then--跟随服务器设置
         modimport("scripts/main_chs/" .. v)
     end
 end

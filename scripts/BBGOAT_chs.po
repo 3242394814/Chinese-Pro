@@ -339,7 +339,7 @@ msgstr "你已经失去与服务器的连接。\n如果你与服务器的网络�
 
 #: STRINGS.UI.NETWORKDISCONNECT.BODY.ID_DST_DESTINATION_SERVER_NOT_AVAILABLE
 msgid "The server you were playing on is unavailable. Please try again later."
-msgstr "你正在使用的服务器不可用。请稍后再次尝试。\n这意味着主世界服务器与本世界断开连接了，请检查主世界服务器日志。"
+msgstr "你正在使用的服务器不可用。请稍后再次尝试。\n这意味着主世界服务器与本世界断开连接了，\n如果服主没有关服 请检查主世界服务器日志。"
 
 #岛屿冒险汉化
 #世界规则
