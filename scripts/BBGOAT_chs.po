@@ -358,25 +358,29 @@ msgstr "默认"
 #季节：由于IA模组内的string.pot没有使用翻译文件，所以是英文，IA自带了四季名称的翻译(怎么回事呢?)
 
 #Shipwrecked世界
-#: STRINGS.UI.CUSTOMIZATIONSCREEN.DRAGOONEGG
-msgid "Dragoon Eggs"
-msgstr "龙蛋"
-
-#: STRINGS.UI.CUSTOMIZATIONSCREEN.FLOODS
-msgid "Floods"
-msgstr "水坑"
+#: STRINGS.UI.CUSTOMIZATIONSCREEN.CROCODOG
+msgid "Crocodogs"
+msgstr "鳄鱼"
 
 #: STRINGS.UI.CUSTOMIZATIONSCREEN.POISON
 msgid "Poison"
 msgstr "中毒"
 
+#: STRINGS.UI.CUSTOMIZATIONSCREEN.WHALEHUNT
+msgid "Whaling"
+msgstr "捕鲸"
+
+#: STRINGS.UI.CUSTOMIZATIONSCREEN.FLOODS
+msgid "Floods"
+msgstr "水坑"
+
 #: STRINGS.UI.CUSTOMIZATIONSCREEN.OCEANWAVES
 msgid "Waves"
 msgstr "海浪"
 
-#: STRINGS.UI.CUSTOMIZATIONSCREEN.WHALEHUNT
-msgid "Whaling"
-msgstr "捕鲸"
+#: STRINGS.UI.CUSTOMIZATIONSCREEN.DRAGOONEGG
+msgid "Dragoon Eggs"
+msgstr "龙蛋"
 
 #Shipwrecked巨兽
 #: STRINGS.UI.CUSTOMIZATIONSCREEN.KRAKEN

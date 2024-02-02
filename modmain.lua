@@ -1,9 +1,9 @@
 if GetModConfigData("冰冰羊的个人汉化",true) then
     LoadPOFile("scripts/BBGOAT_chs.po", "zh")
-    --GLOBAL.TranslateStringTable( GLOBAL.STRINGS ) --游戏内文本汉化
+    --GLOBAL.TranslateStringTable( GLOBAL.STRINGS ) --同时应用到游戏内文本汉化
 end
 
-if GetModConfigData("Pigman_Strings",true) then
+if GetModConfigData("Pigman_Strings",true) then--煤式猪人语言包
 	modimport("scripts/Pigman_Strings")
 end
 --公共函数部分
