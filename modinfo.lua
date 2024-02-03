@@ -1,9 +1,10 @@
 name = "Chinese++ Pro"
-version = "3.2.1"
-description = "当前版本：" ..version .. "\n更新日期：2024年2月2日\n" ..
+version = "3.2.2"
+description = "当前版本：" ..version .. "\n更新日期：2024年2月3日\n" ..
 [[
-    
+
 汉化你的客户端/服务器 MOD名称、MOD介绍、MOD设置 甚至MOD内容！
+这既是客户端模组 也是服务器模组，当客户端启用此模组后 开服时服务器也会自动启用此模组
 支持汉化的MOD与更新日志请在创意工坊查看
 
 本MOD内含冰冰羊的自用汉化包，修改了一些令人不爽的汉化内容，可与【中文语言包】同时开启~
@@ -58,15 +59,27 @@ configuration_options =
 {
     SkipSpace("游戏内汉化"),
     {
-        name = "clearfont",
+        name = "try_off_clearfont",
+        label = "关闭高清字体",
+		hover = "当开启此选项后 如果客户端的“高清字体”设置为\"自动\"(默认选项) 那么将不再加载高清字体\n防止未订阅此模组的人不喜欢高清字体功能",
+        options =
+        {
+            {description = "开启", hover = "启用此功能" , data = true},
+            {description = "关闭", hover = "不启用此功能" , data = false},
+        },
+        default = false,
+    },
+    {
+        name = "clear_font",
         label = "高清字体",
 		hover = "是否启用高清字体(思源黑体)",
         options =
         {
-            {description = "开启", hover = "如果开启了其它字体MOD，请关闭这个！否则容易导致崩溃" , data = true},
-            {description = "关闭", hover = "已关闭" , data = false},
+            {description = "自动", hover = "如果服务器未启用此模组的“关闭高清字体”功能则加载高清字体，否则关闭高清字体" , data = "auto"},
+            {description = "始终开启", hover = "如果开启了其它字体MOD，请关闭这个！否则容易导致崩溃" , data = true},
+            {description = "始终关闭", hover = "不加载高清字体功能" , data = false},
         },
-        default = true,
+        default = "auto",
         client = true,
     },
     {

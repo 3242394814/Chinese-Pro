@@ -69,8 +69,7 @@ if GetModConfigData("check_mod",true) then
 end
 
 -- 高清字体
-if GetModConfigData("clearfont",true) and not font_Conflict_MOD then
-
+local function load_clear_font()
     TheSim = GLOBAL.TheSim
     
 	local Assets = {}
@@ -139,4 +138,10 @@ if GetModConfigData("clearfont",true) and not font_Conflict_MOD then
 		OldRegisterPrefabs(...)
 		registerfont()
 	end
+end
+
+if GetModConfigData("clear_font",true) == true and not font_Conflict_MOD then
+	load_clear_font()
+elseif GetModConfigData("clear_font",true) == "auto" and not font_Conflict_MOD and not GetModConfigData("try_off_clearfont") then--“高清字体”=自动 and 没有冲突模组 and 没有开启“关闭高清字体”
+	load_clear_font()
 end
