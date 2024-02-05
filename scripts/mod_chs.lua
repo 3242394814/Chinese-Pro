@@ -1,6 +1,4 @@
-GLOBAL.setmetatable(env, { __index = function(_, k)
-    return GLOBAL.rawget(GLOBAL, k)
-end })
+GLOBAL.setmetatable(env, {__index = function(t, k) return GLOBAL.rawget(GLOBAL, k) end})
 
 function fileexists(name)
 	local f=io.open(name,"r")
@@ -13,8 +11,8 @@ function fileexists(name)
 end
 
 function ismodloaded(name)
-	if GLOBAL.KnownModIndex:IsModEnabled(name) then return true end
-	for _, v in ipairs(GLOBAL.KnownModIndex:GetModsToLoad()) do
+	if KnownModIndex:IsModEnabled(name) then return true end
+	for _, v in ipairs(KnownModIndex:GetModsToLoad()) do
 		if v == name then return true end
 	end
 end
@@ -47,7 +45,7 @@ for _, v in ipairs(main_list) do
 end
 
 --汉化模组名称、介绍、配置 by.冰冰羊
-if not GLOBAL.InGamePlay() or ismodloaded("workshop-2893492379") then--如果 不在游戏中 或 开启了“游戏内主菜单”模组 那么进行汉化
+if not InGamePlay() or ismodloaded("workshop-2893492379") then--如果 不在游戏中 或 开启了“游戏内主菜单”模组 那么进行汉化
     local old_modname = KnownModIndex.GetModInfo
     KnownModIndex.GetModInfo = function(self, modname)
         local modinfo = old_modname(self, modname)
