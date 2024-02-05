@@ -1,6 +1,6 @@
 name = "Chinese++ Pro"
 version = "3.2.2"
-description = "当前版本：" ..version .. "\n更新日期：2024年2月3日\n" ..
+description = "当前版本：" ..version .. "\n更新日期：2024年2月5日\n" ..
 [[
 
 汉化你的客户端/服务器 MOD名称、MOD介绍、MOD设置 甚至MOD内容！
@@ -29,11 +29,35 @@ server_filter_tags = {"Chinese++ Pro "..version}--服务器Tag 在服务器列�
 icon_atlas = "images/modicon.xml"
 icon = "modicon.tex"
 
-local function SkipSpace(name, client_config)
+folder_name = folder_name or "workshop-"
+if not folder_name:find("workshop-") then
+	name = name .. " - 本地版"
+    function MOD_MODE()
+        return
+        {
+        name = "Test-Mode",
+        label = "模组运行环境",
+        options = { { description = "本地", data = "Chinese-Pro" }, },
+        default = "Chinese-Pro"
+        }
+    end
+else
+    function MOD_MODE()
+        return
+        {
+        name = "Test-Mode",
+        label = "模组运行环境",
+        options = { { description = "创意工坊", hover="此模组是从创意工坊下载的", data = "workshop-2941527805" }, },
+        default = "workshop-2941527805"
+        }
+    end
+end
+
+local function SkipSpace(name, client_config)--空一行。如果填写了name则显示为标题。如果client_config为true则只显示在客户端设置页面上 用开服工具(例如鸽子鸽开服工具)就看不到了
 	return { name = name, hover = "", options = { { description = "", data = false }, }, default = false, client = client_config}
 end
 
-local function mainConfig(name, label, hover, default, client_config)
+local function mainConfig(name, label, hover, default, client_config)--选项名称(name),显示在游戏里的名称[如果没有则显示name](label),介绍(hover),默认选项(default),是不是给客户端设置的选项(client_config)
     if client_config then
     v_name = "client_"..name
     v_hover = "当对应的MOD开启时，自动加载汉化文件。此开关仅跟随客户端设置而非服务器"
@@ -61,11 +85,11 @@ configuration_options =
     {
         name = "try_off_clearfont",
         label = "关闭高清字体",
-		hover = "当开启此选项后 如果客户端的“高清字体”设置为\"自动\"(默认选项) 那么将不再加载高清字体\n防止未订阅此模组的人不喜欢高清字体功能",
+		hover = "当启用此选项后 如果客户端的“高清字体”设置为\"自动\"(默认选项) 那么将不再加载高清字体\n防止未订阅此模组的人不喜欢高清字体功能",
         options =
         {
-            {description = "开启", hover = "启用此功能" , data = true},
-            {description = "关闭", hover = "不启用此功能" , data = false},
+            {description = "启用", hover = "启用此功能" , data = true},
+            {description = "禁用", hover = "不启用此功能" , data = false},
         },
         default = false,
     },
@@ -75,9 +99,9 @@ configuration_options =
 		hover = "是否启用高清字体(思源黑体)",
         options =
         {
-            {description = "自动", hover = "如果服务器未启用此模组的“关闭高清字体”功能则加载高清字体，否则关闭高清字体" , data = "auto"},
-            {description = "始终开启", hover = "如果开启了其它字体MOD，请关闭这个！否则容易导致崩溃" , data = true},
-            {description = "始终关闭", hover = "不加载高清字体功能" , data = false},
+            {description = "自动", hover = "如果服务器启用了此模组的“关闭高清字体”功能则不加载高清字体" , data = "auto"},
+            {description = "开启", hover = "如果启用了“自动检测是否有其它字体模组”功能且检测到其它字体模组，则不加载高清字体" , data = true},
+            {description = "关闭", hover = "不加载高清字体功能" , data = false},
         },
         default = "auto",
         client = true,
@@ -96,8 +120,8 @@ configuration_options =
     },
     {
         name = "Pigman_Strings",
-        label = "󰀐语言包",
-        hover = "想体验煤式猪人语言包吗？开启这个选项试试吧。但是猪人喊的名字是你自己！",
+        label = "梅式󰀐语言包",
+        hover = "将游戏中猪人的台词变得和bilibili·踏雪寻梅3124的猪人一样骚",
         options =
         {
         {description = "开启",hover = "",data = true},
@@ -159,15 +183,5 @@ configuration_options =
         default = true,
         client = true,
     },
-    {
-        name = "TestMode",
-        label = "本地测试模式(作者用的，别开！)",
-        hover = "给作者本地测试用的开关,请不要打开！\n开启后不会有任何新功能或汉化内容，所以请不要尝试",
-        options =
-        {
-            {description = "开启",hover = "",data = "Chinese-Pro"},
-            {description = "关闭",hover = "",data = "workshop-2941527805"},
-        },
-        default = "workshop-2941527805",
-    }
+    MOD_MODE(),
 }

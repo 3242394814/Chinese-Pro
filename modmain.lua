@@ -19,9 +19,10 @@ end
 
 modimport("scripts/mod_chs")--MOD汉化
 
---ModIndex:GetModFancyName(modname)--获取模组花式名称
---当本模组开启时，自动插入到服务器模组中
-local this_mod = GetModConfigData("TestMode")
+--ModIndex:GetModFancyName(modname)--笔记:获取模组花式名称
+
+--部分翻译需要让服务器也加载此MOD才能生效。当本模组开启时，会自动插入到服务器模组中
+local this_mod = GetModConfigData("Test-Mode")
 local OldGetEnabledServerModNames = GLOBAL.ModManager.GetEnabledServerModNames
 GLOBAL.ModManager.GetEnabledServerModNames=function(self)
 	local server_mods = OldGetEnabledServerModNames(self)
