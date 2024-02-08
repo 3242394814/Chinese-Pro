@@ -14,7 +14,7 @@ description = string.gsub(description,"Another tool for survival is a book that 
 local opt_Empty = {{description = "", data = 0}}
 local function Title(title,label,hover)
 	return {
-		name=title,
+		name=title,--可以被汉化，好评！
 		label=label,
 		hover=hover,
 		options=opt_Empty,
@@ -40,6 +40,7 @@ local info=
 				{description = "英语(English)", data = "en"},
 				{description = "韩语(한국어)", data = "ko"},
 				{description = "越南语(Tiếng Việt)", data = "vi"},
+				{description = "西班牙语(Español)", data="es"},
 			},
 			default = false,
 		},
