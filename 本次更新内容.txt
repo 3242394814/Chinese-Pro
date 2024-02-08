@@ -1,4 +1,6 @@
 ·更新 梅式猪人语言包
+·新增 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3050284136]Chasni 模组配置 [成就与等级配置](Level and Achievement By Chasni [ACHIEVEMENT AND PERK CONFIG])[/url]模组信息汉化
+·新增 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3051541293]Chasni 模组配置 [物品配置](Level and Achievement By Chasni [ITEM CONFIG])[/url]模组信息汉化[spoiler]—— 只汉化了名称和介绍，里面的大部分配置项我都看不懂0.0 而且配置项里的标题我没法汉化！ 因为它的标题name="",label=label[/spoiler]
 
 这里的更新内容是方便我复制粘贴的，最终以创意工坊里的更新日志为准
 所有更新记录请前往：https://steamcommunity.com/sharedfiles/filedetails/changelog/2941527805 查看
