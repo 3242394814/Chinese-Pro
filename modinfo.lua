@@ -1,6 +1,6 @@
 name = "Chinese++ Pro"
 version = "3.3.1"
-description = "当前版本：" ..version .. "\n更新日期：2024年2月10日\n" ..
+description = "当前版本：" ..version .. "\n更新日期：2024年2月11日\n" ..
 [[
 
 汉化你的客户端/服务器 MOD名称、MOD介绍、MOD设置 甚至MOD内容！
@@ -64,7 +64,7 @@ end
 local function mainConfig(name, label, hover, default, client_config)--选项名称(name),显示在游戏里的名称[如果没有则显示name](label),介绍(hover),默认选项(default),是不是给客户端设置的选项(client_config)
     if client_config then
     v_name = "client_"..name
-    v_hover = "当对应的MOD开启时，自动加载汉化文件。此开关仅跟随客户端设置而非服务器"
+    v_hover = "当对应的MOD开启时，自动加载汉化文件。此开关跟随客户端设置而非服务器设置"
     else
     v_name = "server_"..name
     v_hover = "当对应的MOD开启时，自动加载汉化文件"
@@ -83,57 +83,36 @@ local function mainConfig(name, label, hover, default, client_config)--选项名
 	    }
 end
 
+local function setConfig(name, label, options, default, desc, client_config)--选项名称(name),显示在游戏里的名称(label),选项(options),默认选项(default),介绍(desc),是不是给客户端设置的选项(client_config)
+    local _options = {}
+    for i=1,#options  do
+        _options[i] = {
+            description = options[i][1],
+            data = options[i][2],
+            hover = options[i][3]
+        }
+    end
+    options = _options
+    if client_config then
+        desc = desc.."\n这是一个客户端设置 与服务器无关！所以也不会影响到其它玩家"
+    end
+
+    return {
+        name = name,
+        label = label,
+        hover = desc,
+        options = options,
+        default = default
+    }
+end
+
 configuration_options =
 {
     SkipSpace("游戏内汉化"),
-    {
-        name = "try_off_clearfont",
-        label = "关闭高清字体",
-		hover = "当启用此选项后 如果客户端的“高清字体”设置为\"自动\"(默认选项) 那么将不再加载高清字体\n防止未订阅此模组的人不喜欢高清字体功能",
-        options =
-        {
-            {description = "启用", hover = "启用此功能" , data = true},
-            {description = "禁用", hover = "不启用此功能" , data = false},
-        },
-        default = false,
-    },
-    {
-        name = "clear_font",
-        label = "高清字体",
-		hover = "是否启用高清字体(思源黑体)\n此设置仅在客户端上生效 不会影响到其它玩家",
-        options =
-        {
-            {description = "自动", hover = "如果服务器启用了此模组的“关闭高清字体”功能则不加载高清字体" , data = "auto"},
-            {description = "开启", hover = "如果启用了“自动检测是否有其它字体模组”功能且检测到其它字体模组，则不加载高清字体" , data = true},
-            {description = "关闭", hover = "不加载高清字体功能" , data = false},
-        },
-        default = "auto",
-        client = true,
-    },
-    {
-        name = "冰冰羊的个人汉化",
-        label = "冰冰羊的中文翻译",
-        hover = "修改了一些令人不爽的汉化内容、添加了一些提示、汉化岛屿冒险MOD的世界设置（推荐开启）",
-        options =
-        {
-        {description = "开启",hover = "打开 打开 一定要打开",data = true},
-        {description = "关闭",hover = "为什么要关掉？ QAQ",data = false},
-        },
-        default = true,
-        client = true,
-    },
-    {
-        name = "Pigman_Strings",
-        label = "梅式󰀐语言包",
-        hover = "将游戏中猪人的台词变得和bilibili·踏雪寻梅3124的猪人一样骚",
-        options =
-        {
-        {description = "开启",hover = "",data = true},
-        {description = "关闭",hover = "",data = false},
-        },
-        default = false,
-        client = true,
-    },
+    setConfig("try_off_clearfont","关闭高清字体",{{"启用",true,"启用此功能"},{"禁用",false,"不启用此功能"}},false,"当启用此选项后 如果客户端的“高清字体”设置为\"自动\"(默认选项) 那么将不再加载高清字体\n防止未订阅此模组的人不喜欢高清字体功能"),
+    setConfig("clear_font","高清字体",{{"自动","auto","如果服务器启用了此模组的“关闭高清字体”功能则不加载高清字体"},{"开启",true,"如果启用了“自动检测是否有其它字体模组”功能且检测到其它字体模组，则不加载高清字体"},{"关闭",false,"不加载高清字体功能"}},"auto","是否启用高清字体(思源黑体)",true),
+    setConfig("冰冰羊的个人汉化","冰冰羊的中文翻译",{{"开启",true,"打开 打开 一定要打开"},{"关闭",false,"为什么要关掉？ QAQ"}},true,"修改了一些令人不爽的汉化内容、添加了一些提示、汉化岛屿冒险MOD的世界设置（推荐开启）",true),
+    setConfig("Pigman_Strings","梅式󰀐语言包",{{"开启",true},{"关闭",false}},false,"将游戏中猪人的台词变得和bilibili·踏雪寻梅3124的猪人一样骚",true),
     SkipSpace("常用模组",true),
     mainConfig("workshop-376333686","Combined Status(综合状态显示汉化)","汉化游戏内Combined Status显示的内容\n 例如：Max → 最大值",true,true),
     mainConfig("workshop-351325790","Geometric Placement(几何布局)汉化","汉化游戏内Combined Status的设置页面\n部分内容汉化太麻烦了...如果你会汉化的话请联系作者！",true,true),
@@ -161,31 +140,21 @@ configuration_options =
 
     SkipSpace(" ",true),
     SkipSpace("MOD信息页面汉化",true),
-    {
-        name = "mod_info_Chs",
-        label = "MOD信息汉化",
-        hover = "汉化的内容有：MOD名称、MOD介绍、MOD配置\n支持汉化的MOD请在创意工坊查看",
-        options =
-        {
-            {description = "全部开启",hover = "如果有翻译不当的地方，请反馈！",data = true},
-            {description = "全部关闭",hover = "有什么问题！？去反馈！！！",data = false},
-        },
-        default = true,
-        client = true,
-    },
+    setConfig("mod_info_Chs","MOD信息汉化",{{"全部开启",true,"如果有翻译不当的地方，请反馈！"},{"全部关闭",false,"有什么问题！？去反馈！！！"}},true,"汉化的内容有：MOD名称、MOD介绍、MOD配置。支持汉化的MOD请在创意工坊查看",true),
     SkipSpace(" "),
     SkipSpace("其它"),
-    {
-        name = "check_mod",
-        label = "自动检测是否有其它字体模组",
-        hover = "开启后:如果检测到其它的字体模组则停止加载本模组的高清字体。但如果你想从其它字体\n切换到本模组的高清字体则需要关闭它们然后重新启动一次游戏（不然游戏自己也会崩溃）",
-        options =
-        {
-            {description = "开启",hover = "",data = true},
-            {description = "关闭",hover = "",data = false},
-        },
-        default = true,
-        client = true,
-    },
+    -- {
+    --     name = "check_mod",
+    --     label = "自动检测是否有其它字体模组",
+    --     hover = "开启后:如果检测到其它的字体模组则停止加载本模组的高清字体。但如果你想从其它字体\n切换到本模组的高清字体则需要关闭它们然后重新启动一次游戏（不然游戏自己也会崩溃）",
+    --     options =
+    --     {
+    --         {description = "开启",hover = "",data = true},
+    --         {description = "关闭",hover = "",data = false},
+    --     },
+    --     default = true,
+    --     client = true,
+    -- },
+    setConfig("check_mod","自动检测是否有其它字体模组",{{"开启",true,"如果检测到其它的字体模组则停止加载本模组的高清字体"},{"关闭",false,"不检测 直接视为无其它字体模组"}},true,"是否检测有无其它字体模组",true),
     MOD_MODE(),
 }
