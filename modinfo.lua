@@ -33,20 +33,26 @@ if not folder_name:find("workshop-") then
     function MOD_MODE()
         return
         {
-        name = "Test-Mode",
-        label = "模组运行环境",
-        options = { { description = "本地", data = "Chinese-Pro" }, },
-        default = "Chinese-Pro"
+            name = "Test-Mode",
+            label = "模组运行环境",
+            hover = "显示此模组是从哪里获取的",
+            options =
+            {
+                { description = "本地", hover = "此模组是从github上获取的本地版本", data = "Chinese-Pro" },
+                { description = "仅客户端运行",hover = "此模组将不会插入到服务器模组列表中，仅在客户端运行", data = false }
+            },
+            default = false
         }
     end
 else
     function MOD_MODE()
         return
         {
-        name = "Test-Mode",
-        label = "模组运行环境",
-        options = { { description = "创意工坊", hover="此模组是从创意工坊下载的", data = "workshop-2941527805" }, },
-        default = "workshop-2941527805"
+            name = "Test-Mode",
+            label = "模组运行环境",
+            hover = "显示此模组是从哪里获取的",
+            options = { { description = "创意工坊", hover="此模组是从创意工坊订阅的", data = "workshop-2941527805" }, },
+            default = "workshop-2941527805"
         }
     end
 end

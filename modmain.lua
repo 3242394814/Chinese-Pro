@@ -23,15 +23,16 @@ modimport("scripts/mod_chs")--MOD汉化
 
 --部分翻译需要让服务器也加载此MOD才能生效。当本模组开启时，会自动插入到服务器模组中
 local this_mod = GetModConfigData("Test-Mode")
-local OldGetEnabledServerModNames = GLOBAL.ModManager.GetEnabledServerModNames
-GLOBAL.ModManager.GetEnabledServerModNames=function(self)
-	local server_mods = OldGetEnabledServerModNames(self)
-		if GLOBAL.IsNotConsole() then
-		table.insert(server_mods, this_mod)--将本模组插入到服务器模组列表中。开启洞穴时、直接复制存档文件夹到专服时也会加载此模组
-		end
-	return server_mods
+if this_mod then
+	local OldGetEnabledServerModNames = GLOBAL.ModManager.GetEnabledServerModNames
+	GLOBAL.ModManager.GetEnabledServerModNames=function(self)
+		local server_mods = OldGetEnabledServerModNames(self)
+			if GLOBAL.IsNotConsole() then
+			table.insert(server_mods, this_mod)--将本模组插入到服务器模组列表中。开启洞穴时、直接复制存档文件夹到专服时也会加载此模组
+			end
+		return server_mods
+	end
 end
-
 --检测是否有其它字体模组
 local function ismodloaded(name)
 	if GLOBAL.KnownModIndex:IsModEnabled(name) then return true end
