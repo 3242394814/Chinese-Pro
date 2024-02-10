@@ -2,8 +2,8 @@ local function Breaker(name, label, hover, options, default)
 	return { name = name, label = label, hover = hover or "", options = options, default = default }
 end
 
-local function Title(title)
-	return Breaker(title, title, "", { { description = "", data = 0 } }, 0)
+local function Title(title,label)
+	return Breaker(title, label, "", { { description = "", data = 0 } }, 0)
 end
 
 --
@@ -98,7 +98,8 @@ local options_hundred = {
 local description = KnownModIndex:GetModInfo("workshop-2010472942").description
 description = string.gsub(description,"The 4 iconic Don't Starve: Reign of Giants bosses reimagined.","《饥荒：巨人国》的4个标志性BOSS重新构想。")
 description = string.gsub(description,"They're looking a little smaller than usual...%?","它们看起来比平时小了点...？")
-description = string.gsub(description,"Skill Tree Spotlight: Bearger","技能树聚点：熊獾")
+description = string.gsub(description,"Skill Tree Spotlight","技能树聚点")
+description = string.gsub(description,"Dragonfly","龙蝇")
 --
 local info={
 	name = "Reign of Runts(侏儒的统治)",
@@ -106,7 +107,7 @@ local info={
 	configuration_options =
 	{
 		--BEARGER
-		Title("小熊獾"),
+		Title("Bearger","小熊獾"),
 		{
 			name    = "enable_wearger",
 			label   = "启用熊獾",
@@ -336,7 +337,7 @@ local info={
 			default = .2,
 		},
 		--DEERCLOPS
-		Title("小鹿"),
+		Title("Deerclops","小鹿"),
 		{
 			name    = "enable_weerclops",
 			label   = "启用巨鹿",
@@ -480,7 +481,7 @@ local info={
 			default = 84,
 		},
 		--DRAGONFLY
-		Title("小龙蝇/蜻蜓"),
+		Title("Dragonfly","小龙蝇/蜻蜓"),
 		{
 			name    = "enable_wragonfly",
 			label   = "启用龙蝇",
@@ -509,6 +510,17 @@ local info={
 			label   = "龙蝇的理智值",
 			options = options_sanity,
 			default = 100,
+		},
+		{
+			name    = "enable_wragonfly_skills",
+			label   = "启用技能树",
+			hover	= "启用或禁用龙蝇的技能树。",
+			options =
+			{
+				{description = "Enable", data = true},
+				{description = "Disable", data = false},
+			},
+			default = true,
 		},
 		{
 			name    = "wfly_fireimmune",
@@ -715,6 +727,13 @@ local info={
 			default = 50,
 		},
 		{
+			name    = "wfly_lavaehp",
+			label   = "熔岩虫生命值",
+			hover	= "熔岩虫的最大生命值。",
+			options = options_health,
+			default = 500,
+		},
+		{
 			name    = "wfly_lavaemax",
 			label   = "最大熔岩虫",
 			hover   = "龙蝇同时可以拥有多少个熔岩虫。",
@@ -748,7 +767,7 @@ local info={
 			default = 9,
 		},
 		--MOOSE/GOOSE
-		Title("小麋鹿鹅"),
+		Title("Moose/Goose","小麋鹿鹅"),
 		{
 			name    = "enable_woose",
 			label   = "启用麋鹿鹅",
@@ -1043,7 +1062,7 @@ local info={
 			default = false,
 		},
 		--All
-		Title("其它"),
+		Title("All","其它"),
 		{
 			name    = "enable_unintelligible",
 			label   = "启用含糊不清的言语",
