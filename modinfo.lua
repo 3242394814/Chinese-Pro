@@ -100,7 +100,7 @@ configuration_options =
     {
         name = "clear_font",
         label = "高清字体",
-		hover = "是否启用高清字体(思源黑体)",
+		hover = "是否启用高清字体(思源黑体)\n此设置仅在客户端上生效 不会影响到其它玩家",
         options =
         {
             {description = "自动", hover = "如果服务器启用了此模组的“关闭高清字体”功能则不加载高清字体" , data = "auto"},
@@ -112,7 +112,7 @@ configuration_options =
     },
     {
         name = "冰冰羊的个人汉化",
-        label = "冰冰羊的中文翻译优化",
+        label = "冰冰羊的中文翻译",
         hover = "修改了一些令人不爽的汉化内容、添加了一些提示、汉化岛屿冒险MOD的世界设置（推荐开启）",
         options =
         {
