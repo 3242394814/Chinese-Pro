@@ -143,18 +143,6 @@ configuration_options =
     setConfig("mod_info_Chs","MOD信息汉化",{{"全部开启",true,"如果有翻译不当的地方，请反馈！"},{"全部关闭",false,"有什么问题！？去反馈！！！"}},true,"汉化的内容有：MOD名称、MOD介绍、MOD配置。支持汉化的MOD请在创意工坊查看",true),
     SkipSpace(" "),
     SkipSpace("其它"),
-    -- {
-    --     name = "check_mod",
-    --     label = "自动检测是否有其它字体模组",
-    --     hover = "开启后:如果检测到其它的字体模组则停止加载本模组的高清字体。但如果你想从其它字体\n切换到本模组的高清字体则需要关闭它们然后重新启动一次游戏（不然游戏自己也会崩溃）",
-    --     options =
-    --     {
-    --         {description = "开启",hover = "",data = true},
-    --         {description = "关闭",hover = "",data = false},
-    --     },
-    --     default = true,
-    --     client = true,
-    -- },
     setConfig("check_mod","自动检测是否有其它字体模组",{{"开启",true,"如果检测到其它的字体模组则停止加载本模组的高清字体"},{"关闭",false,"不检测 直接视为无其它字体模组"}},true,"是否检测有无其它字体模组",true),
     MOD_MODE(),
 }
