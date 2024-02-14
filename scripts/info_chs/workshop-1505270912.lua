@@ -822,7 +822,7 @@ local info={
 
 		{
 			name    = "enableallprefabs",
-			label   = "启用所有预制体(prefabs)",
+			label   = "启用所有预制体",
 			hover   = "用于多层世界服务器和测试，如果不是启用的，生成的物品可能会在非混合世界中崩溃",
 			options =
 			{

@@ -94,7 +94,7 @@ local function setConfig(name, label, options, default, desc, client_config)--�
     end
     options = _options
     if client_config then
-        desc = desc.."\n这是一个客户端设置 与服务器无关！所以也不会影响到其它玩家"
+        desc = desc.."\n这是一个客户端设置 与服务器无关！所以不会影响到其它玩家"
     end
 
     return {
