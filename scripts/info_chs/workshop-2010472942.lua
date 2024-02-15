@@ -481,7 +481,7 @@ local info={
 			default = 84,
 		},
 		--DRAGONFLY
-		Title("Dragonfly","小龙蝇/蜻蜓"),
+		Title("Dragonfly","小龙蝇"),
 		{
 			name    = "enable_wragonfly",
 			label   = "启用龙蝇",
@@ -517,8 +517,8 @@ local info={
 			hover	= "启用或禁用龙蝇的技能树。",
 			options =
 			{
-				{description = "Enable", data = true},
-				{description = "Disable", data = false},
+				{description = "启用", data = true},
+				{description = "禁用", data = false},
 			},
 			default = true,
 		},
