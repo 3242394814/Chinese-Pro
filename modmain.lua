@@ -44,7 +44,7 @@ end
 if GetModConfigData("check_mod",true) then
 	if
 		ismodloaded("workshop-2697699832") or
-		ismodloaded("workshop-678340265") or
+		ismodloaded("workshop-678340265")  or
 		ismodloaded("workshop-2408210241") or
 		ismodloaded("workshop-2548665665") or
 		ismodloaded("workshop-2908253266") or

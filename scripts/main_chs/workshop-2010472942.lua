@@ -153,7 +153,7 @@ STRINGS.SKILLTREE.WEARGER = {
 		WEARGER_HIBEAR_3_DESC = "当饱腹冬眠时，更快地搬运重物。",
 
 		WEARGER_HIBEAR_4_TITLE = "储备充足 IV",
-		WEARGER_HIBEAR_4_DESC = "降低熊皮的饱腹效果阈值到20%。",
+		WEARGER_HIBEAR_4_DESC = "降低冬眠的饱腹效果阈值到20%。",
 
 		WEARGER_HIBEAR_LOCK_DESC = "学习5种休眠技能解锁。",
 
@@ -170,7 +170,7 @@ STRINGS.SKILLTREE.WEARGER = {
 		WEARGER_YAWN_3_DESC = "在冬眠期间，睡觉时减少饥饿感。",
 
 		WEARGER_YAWN_4_TITLE = "昏昏欲睡 III",
-		WEARGER_YAWN_4_DESC = "在冬眠期间，尝试地面跳跃时不要再打哈欠。\n减少睡眠后的昏昏沉沉。",
+		WEARGER_YAWN_4_DESC = "在冬眠期间，尝试地面跳跃时不再打哈欠。\n减少睡眠后的昏昏沉沉。",
 
 		----------------------
 		WEARGER_ALLEGIANCE_LOCK_1_DESC = "学习12种技能解锁。",
