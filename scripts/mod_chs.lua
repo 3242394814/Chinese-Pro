@@ -45,33 +45,36 @@ for _, v in ipairs(main_list) do
 end
 
 --汉化模组名称、介绍、配置 by.冰冰羊
-if not InGamePlay() or ismodloaded("workshop-2893492379") then--如果 不在游戏中 或 开启了“游戏内主菜单”模组 那么进行汉化
+if not InGamePlay() or ismodloaded("workshop-2893492379") then--如果 不在游戏中 或 开启了“游戏内主菜单”模组 那么进行汉化(节约性能？)
     local old_modname = KnownModIndex.GetModInfo
     KnownModIndex.GetModInfo = function(self, modname)
         local modinfo = old_modname(self, modname)
         local newinfo = info_list[modname]
         if newinfo then
             if modinfo and type(modinfo) == "table" then
-                modinfo.name = newinfo.name or modinfo.name      --笔记：modinfo.folder_name 表示MOD路径名称（workshop-xxx）
-                modinfo.description = newinfo.description or modinfo.description
-                if modinfo.configuration_options and type(modinfo.configuration_options) == "table" then
-                    for _, v in pairs(modinfo.configuration_options) do
-                        if newinfo.configuration_options and type(newinfo.configuration_options) == "table" then
-                            for _, v1 in pairs(newinfo.configuration_options) do
-                                if v.name ~= "" and v.name == v1.name then--所以说 如果你想写SkipSpace或是Header或者别的没有配置项的标题 请不要把name设置成空白字符串 然后标题写在label里，不然我没法汉化:( 正确的做法是name = 标题 label不要写 就像这个模组的modinfo里的SkipSpace一样
-                                    if v.name ~= "" and v.name == v1.name then--So if you want to write SkipSpace or Header or other titles without configuration items, please don't set the name to an empty string and write the title in the label, otherwise I can't localize it:( The correct approach is to set name = title and not write the label, just like SkipSpace in the modinfo of this module
-                                        v.label = v1.label or v.label
-                                        v.hover = v1.hover or v.hover
-                                        if v.options then
-                                            for n, m in pairs(v.options) do
-                                                if m and v1.options and v1.options[n] then
-                                                    m.description = v1.options[n].description or m.description
-                                                    m.hover = v1.options[n].hover or m.hover
+                if not modinfo.old_name then--判断是否运行过汉化代码
+                    modinfo.old_name = modinfo.name -- 保存旧名称用于兼容其他模组内的GetModActualName
+                    modinfo.name = newinfo.name or modinfo.name      --笔记：modinfo.folder_name 表示MOD路径名称（workshop-xxx）
+                    modinfo.description = newinfo.description or modinfo.description
+                    if modinfo.configuration_options and type(modinfo.configuration_options) == "table" then
+                        for _, v in pairs(modinfo.configuration_options) do
+                            if newinfo.configuration_options and type(newinfo.configuration_options) == "table" then
+                                for _, v1 in pairs(newinfo.configuration_options) do
+                                    if v.name ~= "" and v.name == v1.name then--所以说 如果你想写SkipSpace或是Header或者别的没有配置项的标题 请不要把name设置成空白字符串 然后标题写在label里，不然我没法汉化:( 正确的做法是name = 标题 label不要写 就像这个模组的modinfo里的SkipSpace一样
+                                        if v.name ~= "" and v.name == v1.name then--So if you want to write SkipSpace or Header or other titles without configuration items, please don't set the name to an empty string and write the title in the label, otherwise I can't localize it:( The correct approach is to set name = title and not write the label, just like SkipSpace in the modinfo of this module
+                                            v.label = v1.label or v.label
+                                            v.hover = v1.hover or v.hover
+                                            if v.options then
+                                                for n, m in pairs(v.options) do
+                                                    if m and v1.options and v1.options[n] then
+                                                        m.description = v1.options[n].description or m.description
+                                                        m.hover = v1.options[n].hover or m.hover
+                                                    end
                                                 end
                                             end
                                         end
+                                        break
                                     end
-                                    break
                                 end
                             end
                         end
@@ -81,4 +84,19 @@ if not InGamePlay() or ismodloaded("workshop-2893492379") then--如果 不在游
         end
         return modinfo
     end
+
+--为了兼容其他模组使用GetModActualName来定位自己，我们需要修改官方的逻辑 加一个modinfo.old_name
+    KnownModIndex.GetModActualName = function(self, fancyname)
+        for i,v in pairs(self.savedata.known_mods) do
+            if v and v.modinfo and v.modinfo.name then
+                if v.modinfo.name == fancyname then
+                    return i
+                elseif v.modinfo.old_name == fancyname then
+                    return i
+                end
+            end
+        end
+    end
+
 end
+
