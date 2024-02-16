@@ -1,6 +1,6 @@
 --岛屿冒险
 local description = KnownModIndex:GetModInfo("workshop-1467214795").description
-description = description:gsub("version", "版本")
+description = description:gsub("Version", "版本")
 
 local info={
     description = description,
