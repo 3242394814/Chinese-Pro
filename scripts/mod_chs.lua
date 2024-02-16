@@ -45,6 +45,7 @@ for _, v in ipairs(main_list) do
 end
 
 --汉化模组名称、介绍、配置 by.冰冰羊
+if GetModConfigData("mod_info_Chs",true) then
 if not InGamePlay() or ismodloaded("workshop-2893492379") then--如果 不在游戏中 或 开启了“游戏内主菜单”模组 那么进行汉化(节约性能？)
     local old_modname = KnownModIndex.GetModInfo
     KnownModIndex.GetModInfo = function(self, modname)
@@ -99,4 +100,4 @@ if not InGamePlay() or ismodloaded("workshop-2893492379") then--如果 不在游
     end
 
 end
-
+end
