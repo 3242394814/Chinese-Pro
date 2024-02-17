@@ -1,5 +1,5 @@
 local info={
-	name="Tropical Experience Return of Them(热带体验|火山生物群落)[三合一]",
+	name="热带体验|它们的回归(三合一)",
 	description=[[
 注意：我们为此模组添加了一些内容补充。
 其中包含了多项改进游戏体验的玩法变化，请访问此模组创意工坊进行下载。
@@ -11,9 +11,9 @@ local info={
 集成我另一个模组海底世界(Creeps in the Deeps)
 集成：
 绿色世界(Green World)
-大风平原(Windy Plains)"
+大风平原(Windy Plains)
 
-兼容樱花林(Cherry Forest)"
+兼容樱花林(Cherry Forest)
 
 󰀅 此翻译来自 󰀅 ：󰀭 冰冰羊的Chinese++ Pro模组 󰀭]],
 	configuration_options =
@@ -38,6 +38,15 @@ local info={
 			default = "stringsEU",
 		},
 
+		{
+			name = "KIND OF WORLD",
+			label = "世界类型",
+			hover = "",
+			options =	{
+							{description = "", data = 0},
+						},
+			default = 0,
+		},
 
 		{
 			name = "kindofworld",
@@ -47,8 +56,18 @@ local info={
 			options = {
 				{ description = "哈姆雷特", data = 5, hover = "将基于哈姆雷特DLC生成一个世界，请使用哈姆雷特的设置." },
 				{ description = "海难世界", data = 10, hover = "将生成一个基于海难DLC的世界，使用海难的设置." },
-				{ description = "三合一(自定义)", data = 15, hover = "将生成自定义世界，使用自定义世界的设置." },
+				{ description = "自定义(三合一)", data = 15, hover = "将生成自定义世界，使用自定义世界的设置." },
 				{ description = "海洋世界", data = 20, hover = "将生成陆地稀少海洋世界，在茫茫大海中探索生存吧" }, },
+		},
+
+		{
+			name = "for hamlet world",
+			label = "哈姆雷特世界设置",
+			hover = "生成一个仅包含整个哈姆雷特的世界，包括所有废墟、池塘、BFB+巢穴）",
+			options =	{
+							{description = "", data = 0},
+						},
+			default = 0,
 		},
 
 		{
@@ -115,6 +134,16 @@ local info={
 				{ description = "禁用", data = false, hover = "标准数量" },
 			},
 			default = false,
+		},
+
+		{
+			name = "for shipwrecked world",
+			label = "海难世界设置",
+			hover = "",
+			options =	{
+							{description = "", data = 0},
+						},
+			default = 0,
 		},
 
 		{
@@ -189,6 +218,16 @@ local info={
 				{ description = "启用", data = 1, hover = "将生成一个新的洞穴区域" },
 			},
 			default = 1,
+		},
+
+		{
+			name = "for custom world",
+			label = "自定义(三合一)世界设置",
+			hover = "",
+			options =	{
+							{description = "", data = 0},
+						},
+			default = 0,
 		},
 
 		{
@@ -382,19 +421,19 @@ local info={
 		},
 
 		{
-			name = "",
-			label = "全世界",
+			name = "for all worlds",
+			label = "所有世界",
 			hover = "",
-			options = {
-				{ description = "", data = 0 },
-			},
+			options =	{
+							{description = "", data = 0},
+						},
 			default = 0,
 		},
 
 		{
 			name    = "Volcano",
 			label   = "火山",
-			hover   = "在世界中生成火山，如果你的世界启用了洞穴，请选择洞穴选项(只会影响三合一世界和海难世界）",
+			hover   = "在世界中生成火山，如果你的世界启用了洞穴，请选择洞穴选项(只会影响自定义世界和海难世界）",
 			options = {
 				{ description = "完整", data = true, hover = "将在内容方面生成一个完整的火山，需要启用洞穴" },
 				{ description = "小型", data = false, hover = "将生成不需要启用洞穴的小型火山" },
@@ -406,7 +445,7 @@ local info={
 		{
 			name    = "forge",
 			label   = "熔炉竞技场",
-			hover   = "它将在火山内部形成锻造竞技场。（只会影响三合一世界和海难世界）",
+			hover   = "它将在火山内部形成锻造竞技场。（只会影响自定义世界和海难世界）",
 			options = {
 				{ description = "启用", data = 1, hover = "将生成锻造竞技场" },
 				{ description = "禁用", data = 0, hover = "不会生成锻造竞技场" },
@@ -417,7 +456,7 @@ local info={
 		{
 			name    = "underwater",
 			label   = "海底世界",
-			hover   = "它将在表面形成通向海底的入口(只会影响三合一、哈姆雷特和海难世界）",
+			hover   = "它将在表面形成通向海底的入口(只会影响自定义、哈姆雷特和海难世界）",
 			options = {
 				{ description = "启用", data = true, hover = "形成水下生物群落，需要启用洞穴" },
 				{ description = "禁用", data = false, hover = "水下生物群落不会繁殖" },
@@ -428,10 +467,10 @@ local info={
 		{
 			name    = "windyplains",
 			label   = "大风平原群落",
-			hover   = "它将生成Windy Plains模组的地形",
+			hover   = "生成来自大风平原(Windy Plains)模组的生物群落",
 			options = {
-				{ description = "启用", data = true, hover = "将生成Windy Plains Biome" },
-				{ description = "禁用", data = false, hover = "Windy Plains Biome将不会生成" },
+				{ description = "启用", data = true, hover = "启用大风平原生物群落生成" },
+				{ description = "禁用", data = false, hover = "禁用大风平原生物群落生成" },
 			},
 			default = false,
 		},
@@ -439,21 +478,21 @@ local info={
 		{
 			name    = "greenworld",
 			label   = "绿色世界群落",
-			hover   = "它将生成Green World模组的地形",
+			hover   = "生成来自绿色世界(Green World)模组的生物群落",
 			options = {
-				{ description = "启用", data = true, hover = "将生成Green World Biome" },
-				{ description = "禁用", data = false, hover = "Green World Biome将不会生成" },
+				{ description = "启用", data = true, hover = "启用绿色世界生物群落生成" },
+				{ description = "禁用", data = false, hover = "禁用绿色世界生物群落生成" },
 			},
 			default = false,
 		},
 
 		{
-			name = "",
-			label = "海洋设置",
-			hover = "只会影响三合一世界和海难世界",
-			options = {
-				{ description = "", data = 0 },
-			},
+			name = "OCEAN SETTINGS",
+			label = "海洋世界设置",
+			hover = "只会影响自定义世界和海难世界",
+			options =	{
+							{description = "", data = 0},
+						},
 			default = 0,
 		},
 
@@ -560,10 +599,11 @@ local info={
 		},
 
 		{
-			name = "",
+			name = "GAMEPLAY SETTINGS",
 			label = "游戏设置",
 			hover = "",
-			options = {
+			options =
+			{
 				{ description = "", data = 0 },
 			},
 			default = 0,
@@ -624,7 +664,7 @@ local info={
 		},
 
 		{
-			name = "",
+			name = "WEATHER SETTINGS",
 			label = "天气设置",
 			hover = "可以影响所有的世界",
 			options = {
@@ -711,7 +751,7 @@ local info={
 		},
 
 		{
-			name = "",
+			name = "HUD AJUSTMENT",
 			label = "HUD 调整",
 			hover = "",
 			options = {
@@ -799,6 +839,17 @@ local info={
 		},
 
 		{
+			name = "CHARACTERS",
+			label = "角色调整",
+			hover = "",
+			options =
+			{
+				{description = "", data = 0},
+			},
+			default = 0,
+		},
+
+		{
 			name    = "disablecharacters",
 			label   = "禁用人物",
 			hover   = "用于启用或禁用mod中的人物",
@@ -811,10 +862,11 @@ local info={
 		},
 
 		{
-			name = "",
-			label = "专用服务器",
+			name = "SHARD-DEDICATED",
+			label = "多层专用服务器设置",
 			hover = "",
-			options = {
+			options =
+			{
 				{ description = "", data = 0 },
 			},
 			default = 0,
@@ -834,7 +886,7 @@ local info={
 
 		{
 			name = "tropicalshards",
-			label = "多层世界服务器(Tropical shards)",
+			label = "多层世界服务器",
 			hover = "使用服务器Id预设世界和玩家的连接方式, *ID 1 = 始终为主服务器*",
 			--该表是世界ID的数组（其类型为字符串）
 			options =
@@ -861,6 +913,16 @@ local info={
 		},
 
 		{
+			name = "OTHER MODS (need mod enabled)",
+			label = "更多群落（需要启用模组）",
+			hover = "",
+			options =	{
+							{description = "", data = 0},
+						},
+			default = 0,
+		},
+
+		{
 			name = "cherryforest",
 			label = "樱花森林",
 			hover = "仅在启用下面的mod时有效",
@@ -873,6 +935,17 @@ local info={
 				{ description = "月岛", data = 50, hover = "樱花林将并入月岛！" },
 			},
 			default = 20
+		},
+
+		{
+			name = "LUAJIT",
+			label = "进阶玩法",
+			hover = "",
+			options =
+			{
+				{description = "", data = 0},
+			},
+			default = 0,
 		},
 
 		{
