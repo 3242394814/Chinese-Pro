@@ -38,7 +38,7 @@ if not folder_name:find("workshop-") then
             hover = "显示此模组是从哪里获取的",
             options =
             {
-                { description = "本地", hover = "此模组是从github上获取的本地版本", data = "Chinese-Pro" },
+                { description = "本地", hover = "此模组将插入到服务器模组列表中，会影响到其它没下载此模组的玩家进服", data = "Chinese-Pro" },
                 { description = "仅客户端运行",hover = "此模组将不会插入到服务器模组列表中，仅在客户端运行", data = false }
             },
             default = false

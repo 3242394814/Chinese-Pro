@@ -28,8 +28,6 @@ local function BinaryConfig(name, label, hover, default)
 	}
 end
 ------------------------------
-local _version = "1.4.10.0"
-local version = KnownModIndex:GetModInfo("workshop-2039181790").version
 
 local info=
 {
