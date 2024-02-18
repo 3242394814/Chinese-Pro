@@ -1,4 +1,4 @@
-local description = KnownModIndex:GetModInfo("workshop-2850425133").description
+local description = KnownModIndex:GetModInfo("workshop-2850425133").description or ""
 
 description = string.gsub(description,"Brightens the map and improves visibility by removing the fog on previously explored areas of the map. But it may be harder to track your own icon on the map %(this may be fixed later%).",
 "通过消除先前探索过的地图区域上的雾，使地图变亮并提高可见性。但在地图上追踪自己的图标可能会更困难（这可能会在稍后解决）。")

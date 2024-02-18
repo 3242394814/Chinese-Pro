@@ -4,7 +4,7 @@ else
 	modname = KnownModIndex:GetModInfo("workshop-2428854303").name
 end
 
-local description = KnownModIndex:GetModInfo("workshop-2428854303").description
+local description = KnownModIndex:GetModInfo("workshop-2428854303").description or ""
 description = string.gsub(description,"This mod contains huge amount of decorative structures for Base Building. Design and shape the world as you please!","此模组包含大量用于基础建筑的装饰结构。您可以随意设计和塑造世界！")
 description = string.gsub(description,"Also includes tons of special structures, items and easter eggs, go find em' all. They might be right under your nose!","还包括大量的特殊结构、物品和复活节彩蛋，去把它们都找出来吧。\n它们可能就在你的眼皮底下！")
 description = string.gsub(description,"Includes contents from: Shipwrecked, Hamlet, The Forge, The Gorge and exclusive contents!","包括以下内容：海难、哈姆雷特、熔炉、暴食和独家内容！")

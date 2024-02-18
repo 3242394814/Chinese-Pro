@@ -1,4 +1,4 @@
-local description = KnownModIndex:GetModInfo("workshop-1903101575").description
+local description = KnownModIndex:GetModInfo("workshop-1903101575").description or ""
 description = string.gsub(description,"Version:","版本：")
 description = string.gsub(description,"Adds \"Auto%-Join\" and \"Rejoin\" buttons.","添加“自动加入”和“重新加入”按钮。")
 description = string.gsub(description,"The first one allows continuous reconnections to the selected server until joining, and","第一 允许连续重新连接到所选服务器，直到加入，以及")

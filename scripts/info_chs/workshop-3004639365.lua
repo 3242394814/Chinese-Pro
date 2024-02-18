@@ -4,7 +4,7 @@ else
 	modname = KnownModIndex:GetModInfo("workshop-3004639365").name
 end
 
-local description = KnownModIndex:GetModInfo("workshop-3004639365").description
+local description = KnownModIndex:GetModInfo("workshop-3004639365").description or ""
 description = string.gsub(description,"Version ","版本: ")
 description = string.gsub(description,"With Don't Starve: Dehydrated hunger is not the only threat coming for you.","就像饥荒: 口渴并不是你面临的唯一威胁。")
 description = string.gsub(description,"You will have to explore the Constant and gather materials to quench your thirst if you want to survive. ","如果你想生存下去，你必须不断探索并收集材料来解渴。")

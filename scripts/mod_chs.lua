@@ -78,7 +78,7 @@ if not InGamePlay() or ismodloaded("workshop-2893492379") then--如果 不在游
                                         end
                                         break
                                     elseif v.label ~= "" and v.label == v1.label and v1.CH_label then
-                                        v.label = v1.CH_label or v.label --为了汉化那些把标题写在label里的代码 我需要弄一个CH_label
+                                        v.label = v1.CH_label --为了汉化那些把标题写在label里的代码 我需要弄一个CH_label
                                         v.hover = v1.hover or v.hover--某些模组会写一个空选项 里面写着下面的配置项的说明... 比如Adventure Mode模组就这么做了
                                     end
                                 end

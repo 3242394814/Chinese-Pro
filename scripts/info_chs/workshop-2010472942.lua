@@ -95,7 +95,7 @@ local options_hundred = {
 	{data=96,description="96"}, {data=97,description="97"}, {data=98,description="98"}, {data=99,description="99"}, {data=100,description="100"},
 }
 --
-local description = KnownModIndex:GetModInfo("workshop-2010472942").description
+local description = KnownModIndex:GetModInfo("workshop-2010472942").description or ""
 description = string.gsub(description,"The 4 iconic Don't Starve: Reign of Giants bosses reimagined.","《饥荒：巨人国》的4个标志性BOSS重新构想。")
 description = string.gsub(description,"They're looking a little smaller than usual...%?","它们看起来比平时小了点...？")
 description = string.gsub(description,"Skill Tree Spotlight","技能树聚点")

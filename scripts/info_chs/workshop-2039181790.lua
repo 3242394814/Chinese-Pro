@@ -1,5 +1,5 @@
 local modname = KnownModIndex:GetModInfo("workshop-2039181790").name
-local description = KnownModIndex:GetModInfo("workshop-2039181790").description
+local description = KnownModIndex:GetModInfo("workshop-2039181790").description or ""
 description = string.gsub(description,"Version:","版本：")
 description = string.gsub(description,"%- \"Under the Weather Pt.1\"","- \"天气之下 第一章\"")
 description = string.gsub(description,"Uncompromising Mode increases the risk and reward for those who have mastered Don't Starve Together.","永不妥协给熟练饥荒的玩家带来了新的危险与回报")
