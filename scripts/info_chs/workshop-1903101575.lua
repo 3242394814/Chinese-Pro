@@ -10,7 +10,7 @@ description = string.gsub(description,"Improved the \"Dev Tools\" mod submenu","
 description = string.gsub(description,"Refactored modinfo","重构modinfo")
 
 local function AddConfig(name, label, hover, options, default)
-    return { label = label, name = name, options = options, default = default, hover = hover or "" }
+    return {name = name, label = label, options = options, default = default, hover = hover or "" }
 end
 
 local function AddBooleanConfig(name, label, hover, default)
@@ -102,8 +102,8 @@ local function AddKeyListConfig(name, label, hover, default)
     return AddConfig(name, label, hover, list, default)
 end
 
-local function AddSection(title)
-    return AddConfig("", title, nil, { { description = "", data = 0 } }, 0)
+local function AddSection(title,CH_label)
+    return {name = "", label = title, CH_label = CH_label}
 end
 
 local info={
@@ -114,7 +114,7 @@ local info={
         -- General
         --
 
-        AddSection("General"),
+        AddSection("General","全局设置"),
 
         AddConfig(
             "waiting_time",
@@ -141,7 +141,7 @@ local info={
         -- Indicator
         --
 
-        AddSection("Indicator"),
+        AddSection("Indicator","指示器"),
 
         AddBooleanConfig(
             "indicator",
@@ -194,7 +194,7 @@ local info={
         -- Rejoin
         --
 
-        AddSection("Rejoin"),
+        AddSection("Rejoin","重新加入"),
 
         AddKeyListConfig(
             "key_rejoin",
@@ -236,7 +236,7 @@ local info={
         -- Other
         --
 
-        AddSection("Other"),
+        AddSection("Other","其它"),
 
         AddBooleanConfig(
             "hide_changelog",

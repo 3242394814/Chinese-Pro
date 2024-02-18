@@ -100,6 +100,16 @@ local info={
 			default = false,
 		},
 		{
+			name = "",--null_option
+			label = "When activate",
+			CH_label = "当激活时",
+			hover = "洞穴里玩家的东西不会被保存！",
+			options =	{
+							{description = " ", data = 0, hover = " "},
+						},
+			default = 0,
+		},
+		{
 			name = "newworld",
 			label = "生成新世界",
 				hover = "创造一个新的世界，旧的世界将被摧毁。您可以选择其他角色。在下面设置应转移的对象。\n管理员也可以在游戏过程中更改TUNING.TELEPORTATOMOD.TELENEWWORLD 的值来开/关此设置",
@@ -243,6 +253,16 @@ local info={
 							{description = "许多", data = 2, hover = " "},
 						},
 			default = 1,
+		},
+		{
+			name = "",--null_option
+			label = "When completed",
+			CH_label = "完成时",
+			hover = "请设置，当您完成（未激活）传送基座时会发生什么",
+			options =	{
+							{description = " ", data = 0, hover = " "},
+						},
+			default = 0,
 		},
 		{
 			name = "RegeneratePlayerHealth",

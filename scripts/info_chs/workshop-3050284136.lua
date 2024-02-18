@@ -1,11 +1,13 @@
---local function title(label)return{name= "",label=label,options={{description= "",data=0}},default=0,}end-- name=空字符串 内容写label里，我无法汉化！
+local function title(label,CH_label)
+    return{name= "",label=label,CH_label=CH_label,options={{description= "",data=0}},default=0,}
+end
 
 local info =
 {
     name = "Chasni 模组配置 [成就与等级配置]",
     description = [[自定义chasni的模组]],
     configuration_options = {
-        --title("Auto-Achieve Achievement"),
+        title("Auto-Achieve Achievement","自动实现的成就"),
         {
             name = "FIRSTEAT",
             label = "第一口",
@@ -1636,7 +1638,7 @@ local info =
             },
             default = false
         },
-        --title("Disable Perk"),
+        title("Disable Perk","禁用技能"),
         {
             name = "HUNGERUP",
             label = "提升饱腹",

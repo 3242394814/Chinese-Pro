@@ -137,8 +137,11 @@ local info={
 		},
 
 		{
-			name = "for shipwrecked world",
-			label = "海难世界设置",
+			-- name = "for shipwrecked world",
+			-- label = "海难世界设置",
+			name = "",
+			label = "船难设置",
+			CH_label = "海难世界设置",
 			hover = "",
 			options =	{
 							{description = "", data = 0},

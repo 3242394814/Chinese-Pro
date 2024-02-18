@@ -16,15 +16,6 @@ local info=
       default = false,
       },
       {
-        name = "",
-        label = "",
-        hover = "",
-        options =	{
-                {description = "", data = 0},
-              },
-        default = 0,
-      },
-      {
       name = "difficulty",
       label = "难度",
       hover = "您也可以将此设置为DS（单机版难度）！不要为了速通游戏而改变这个",
@@ -72,9 +63,10 @@ local info=
       default = "oceanwormholes",
       },
       {
-      name = "null_option",
-      label = "",
-      hover = "",
+      name = "",--null_option
+      label = "Customize",
+      CH_label = "定制",
+      hover = "自定义一些世界设置",
       options =	{
               {description = "", data = 0},
             },
@@ -801,9 +793,10 @@ local info=
       default = false,
       },
       {
-      name = "null_option",
-      label = "",
-      hover = "",
+      name = "",--null_option
+      label = "WORLDS",
+      CH_label = "世界",
+      hover = "选择应该激活的世界，总共至少需要7个：",
       options =	{
               {description = "", data = 0},
             },

@@ -14,8 +14,8 @@ description = description:gsub("Version", "版本")
 local opt_Empty = {{description = "", data = 0}}
 local function Title(title, label, hover)
     return {
-        name = title,--原作者写的，好评!
-        label = label,--这样我就可以在这填写我汉化后的内容
+        name = title,
+        label = label,
         hover = hover,
         options = opt_Empty,
         default = 0,

@@ -1,8 +1,8 @@
 local info={
 	name = "Starting NovicePacks(小橘子的新手礼包)",
 	description = [[服务器MOD。
-	开局赠送各种新手资源，可给背包，赠送的保暖石随季节加温。
-	背包空间不够时，多余的物品无法获得。]],
+开局赠送各种新手资源，可给背包，赠送的保暖石随季节加温。
+背包空间不够时，多余的物品无法获得。]],
 	configuration_options = {
 		{
 			name = "ANNOUNCE_TIP",

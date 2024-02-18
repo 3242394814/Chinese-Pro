@@ -1,4 +1,5 @@
---local function title(label)return{name="",label=label,options={{description="",data=0}},default=0,}end-- name=空字符串 内容写label里，我无法汉化！
+--我放弃汉化这个了 太多了还看不懂QAQ
+--local function title(label)return{name="",label=label,options={{description="",data=0}},default=0,}end
 local info =
 {
     name = "Chasni 模组配置 [物品配置]",

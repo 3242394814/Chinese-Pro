@@ -61,20 +61,25 @@ if not InGamePlay() or ismodloaded("workshop-2893492379") then--如果 不在游
                         for _, v in pairs(modinfo.configuration_options) do
                             if newinfo.configuration_options and type(newinfo.configuration_options) == "table" then
                                 for _, v1 in pairs(newinfo.configuration_options) do
-                                    if v.name ~= "" and v.name == v1.name then--所以说 如果你想写SkipSpace或是Header或者别的没有配置项的标题 请不要把name设置成空白字符串 然后标题写在label里，不然我没法汉化:( 正确的做法是name = 标题 label不要写 就像这个模组的modinfo里的SkipSpace一样
-                                        if v.name ~= "" and v.name == v1.name then--So if you want to write SkipSpace or Header or other titles without configuration items, please don't set the name to an empty string and write the title in the label, otherwise I can't localize it:( The correct approach is to set name = title and not write the label, just like SkipSpace in the modinfo of this module
+                                    if v.name ~= "" and v.name == v1.name then
+                                        if v.name ~= "" and v.name == v1.name then
                                             v.label = v1.label or v.label
                                             v.hover = v1.hover or v.hover
                                             if v.options then
                                                 for n, m in pairs(v.options) do
                                                     if m and v1.options and v1.options[n] then
-                                                        m.description = v1.options[n].description or m.description
-                                                        m.hover = v1.options[n].hover or m.hover
+                                                        if m.data == v1.options[n].data then
+                                                            m.description = v1.options[n].description or m.description
+                                                            m.hover = v1.options[n].hover or m.hover
+                                                        end
                                                     end
                                                 end
                                             end
                                         end
                                         break
+                                    elseif v.label ~= "" and v.label == v1.label and v1.CH_label then
+                                        v.label = v1.CH_label or v.label --为了汉化那些把标题写在label里的代码 我需要弄一个CH_label
+                                        v.hover = v1.hover or v.hover--某些模组会写一个空选项 里面写着下面的配置项的说明... 比如Adventure Mode模组就这么做了
                                     end
                                 end
                             end

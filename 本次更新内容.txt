@@ -1,4 +1,7 @@
-·为了兼容其他模组使用GetModActualName来定位自己，我修改了官方的KnownModIndex.GetModActualName函数：往里面加了一个modinfo.old_name
+·同步更新[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2039181790] Uncompromising Mode(永不妥协) [/url]汉化
+·优化配置翻译功能
+1.现在只有data数据对应的上才会被翻译 防止翻译错乱
+2.现在支持汉化那些将标题格式写成 name="" label=标题 的模组（已汉化这么写的模组）
 
 这里的更新内容是方便我复制粘贴的，最终以创意工坊里的更新日志为准
 所有更新记录请前往：https://steamcommunity.com/sharedfiles/filedetails/changelog/2941527805 查看

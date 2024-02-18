@@ -1,9 +1,10 @@
 local version = KnownModIndex:GetModInfo("workshop-1918927570").version
 
 local empty = { { description = "", data = 0 } }
-local function Title(title, hover)
+local function Title(title, label, hover)
 	return {
 		name = title,
+		label = label,
 		hover = hover,
 		options = empty,
 		default = 0,
@@ -38,7 +39,7 @@ local info={
 	description = "版本: " .. version,
 	configuration_options =
 	{
-		Title("Vote"),
+		Title("Vote","投票"),
 
 		Config(
 			"kick",
@@ -65,7 +66,7 @@ local info={
 		),
 
 		SEPARATOR,
-		Title("Gameplay"),
+		Title("Gameplay","游戏模式"),
 
 		Config(
 			"fixed_gamemode",

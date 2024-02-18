@@ -14,7 +14,7 @@ description = string.gsub(description,"Another tool for survival is a book that 
 local opt_Empty = {{description = "", data = 0}}
 local function Title(title,label,hover)
 	return {
-		name=title,--可以被汉化，好评！
+		name=title,
 		label=label,
 		hover=hover,
 		options=opt_Empty,
@@ -45,7 +45,7 @@ local info=
 			default = false,
 		},
 		SEPARATOR,
-		Title("WorldGen options","WorldGen 选项"),
+		Title("WorldGen options","世界选项"),
 		{
 			name = "gen_tea_tree",
 			label = "茶树",
