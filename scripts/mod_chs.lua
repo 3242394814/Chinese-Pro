@@ -34,7 +34,7 @@ local modlist=KnownModIndex:GetModNames()
         end
 	end
 
---汉化游戏内MOD语言
+-- 汉化游戏内MOD语言
 for _, v in ipairs(main_list) do
     if GetModConfigData("client_"..v,true) and ismodloaded(v) then--跟随客户端设置
         modimport("scripts/main_chs/" .. v)
@@ -44,18 +44,18 @@ for _, v in ipairs(main_list) do
     end
 end
 
---汉化模组名称、介绍、配置 by.冰冰羊
+-- 汉化模组名称、介绍、配置 by.冰冰羊
 if GetModConfigData("mod_info_Chs",true) then
-if not InGamePlay() or ismodloaded("workshop-2893492379") then--如果 不在游戏中 或 开启了“游戏内主菜单”模组 那么进行汉化(节约性能？)
+if not InGamePlay() or ismodloaded("workshop-2893492379") then -- 如果 不在游戏中 或 开启了“游戏内主菜单”模组 那么进行汉化(节约性能？)
     local old_modname = KnownModIndex.GetModInfo
     KnownModIndex.GetModInfo = function(self, modname)
         local modinfo = old_modname(self, modname)
         local newinfo = info_list[modname]
         if newinfo then
             if modinfo and type(modinfo) == "table" then
-                if not modinfo.old_name then--判断是否运行过汉化代码
+                if not modinfo.old_name then -- 判断是否运行过汉化代码
                     modinfo.old_name = modinfo.name -- 保存旧名称用于兼容其他模组内的GetModActualName
-                    modinfo.name = newinfo.name or modinfo.name      --笔记：modinfo.folder_name 表示MOD路径名称（workshop-xxx）
+                    modinfo.name = newinfo.name or modinfo.name      -- 笔记：modinfo.folder_name 表示MOD路径名称（workshop-xxx）
                     modinfo.description = newinfo.description or modinfo.description
                     if modinfo.configuration_options and type(modinfo.configuration_options) == "table" then
                         for _, v in pairs(modinfo.configuration_options) do
@@ -68,7 +68,7 @@ if not InGamePlay() or ismodloaded("workshop-2893492379") then--如果 不在游
                                             if v.options then
                                                 for n, m in pairs(v.options) do
                                                     if m and v1.options and v1.options[n] then
-                                                        if m.data == v1.options[n].data then
+                                                        if m.data == v1.options[n].data then -- data数据对得上才能汉化
                                                             m.description = v1.options[n].description or m.description
                                                             m.hover = v1.options[n].hover or m.hover
                                                         end
@@ -77,9 +77,9 @@ if not InGamePlay() or ismodloaded("workshop-2893492379") then--如果 不在游
                                             end
                                         end
                                         break
-                                    elseif v.label ~= "" and v.label == v1.label and v1.CH_label then
+                                    elseif v.label == v1.label and v1.CH_label then
                                         v.label = v1.CH_label --为了汉化那些把标题写在label里的代码 我需要弄一个CH_label
-                                        v.hover = v1.hover or v.hover--某些模组会写一个空选项 里面写着下面的配置项的说明... 比如Adventure Mode模组就这么做了
+                                        v.hover = v1.hover or v.hover -- 某些模组会写一个空选项 里面写着下面的配置项的说明... 比如Adventure Mode模组就这么做了
                                     end
                                 end
                             end

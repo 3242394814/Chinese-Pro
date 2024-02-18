@@ -13,10 +13,11 @@ description = string.gsub(description,"Mod Version:","Mod 版本:")
 description = string.gsub(description,"Update:","更新:")
 description = string.gsub(description,"Buildings From Beyond","来自远方的建筑")
 
-local function Title(title, hover)
+local function Title(title, label, hover)
 	return
 	{
 		name = title,
+		label = label,
 		hover = hover,
 		options = {{description = "", data = 0}},
 		default = 0,
@@ -28,7 +29,7 @@ local info=
 	description = description,
 	configuration_options =
 	{
-		Title("Modes", "选择mod将工作的模式"),
+		Title("Modes","模式", "选择mod将工作的模式"),
 		{
 			name = "TAP_BUILDING_MIGRATOR",
 			label = "多层世界模式",
@@ -74,7 +75,7 @@ local info=
 			},
 			default = 0,
 		},
-		Title("Tweaks", "注意：如果启用以下某些选项，可能会影响您的游戏性"),
+		Title("Tweaks","调整", "注意：如果启用以下某些选项，可能会影响您的游戏性"),
 		{
 			name = "TAP_FOOD_FRESH",
 			label = "用烹饪锅保存食物",
@@ -150,7 +151,7 @@ local info=
 			},
 			default = 0,
 		},
-		Title("End Table", "茶几的选项"),
+		Title("End Table","茶几选项", "茶几的选项"),
 		{
 			name = "TAP_ENDTABLE_LIGHT",
 			label = "无限光",
@@ -181,7 +182,7 @@ local info=
 			},
 			default = 0,
 		},
-		Title("Infinite Light", "菌伞灯、蘑菇灯和冬季盛宴树的选项"),
+		Title("Infinite Light","无限光", "菌伞灯、蘑菇灯和冬季盛宴树的选项"),
 		{
 			name = "TAP_WINTER_TREE",
 			label = "冬季盛宴树",
@@ -227,7 +228,7 @@ local info=
 			},
 			default = 0,
 		},
-		Title("Extras", "注意：如果启用以下某些选项，可能会影响您的游戏体验"),
+		Title("Extras","额外内容", "注意：如果启用以下某些选项，可能会影响您的游戏体验"),
 		{
 			name = "TAP_VANITY",
 			label = "虚荣物品",
