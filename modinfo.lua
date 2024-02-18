@@ -1,5 +1,5 @@
 name = "Chinese++ Pro"
-version = "3.5"
+version = "3.5.1"
 description = "当前版本：" ..version .. "\n更新日期：2024年2月18日\n" ..
 [[
 
@@ -102,7 +102,8 @@ local function setConfig(name, label, options, default, desc, client_config)--�
         label = label,
         hover = desc,
         options = options,
-        default = default
+        default = default,
+        client = client_config
     }
 end
 

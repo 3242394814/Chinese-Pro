@@ -1,4 +1,6 @@
 ·补上建筑师模组设置中被遗漏汉化的标题
+·删除前几个版本增加的一个判断代码：[u]在开启MOD信息汉化的前提下
+如果 玩家不在游戏中 或 玩家开启了[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2893492379]“游戏内主菜单”模组[/url] 那么进行汉化[/u] 因为我发现这么做是没有用的 而且可能引起BUG
 
 这里的更新内容是方便我复制粘贴的，最终以创意工坊里的更新日志为准
 所有更新记录请前往：https://steamcommunity.com/sharedfiles/filedetails/changelog/2941527805 查看
