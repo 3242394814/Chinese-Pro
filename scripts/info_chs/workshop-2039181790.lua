@@ -59,7 +59,7 @@ local info=
 		BinaryConfig("worldgenmastertoggle", "主世界开关", "如果开了海难，请务必关闭", true),
 
 		Header("In Development","开发中"),
-		BinaryConfig("ck_loot", "额外的帝王蟹凋落物", "帝王蟹现在根据使用的宝石掉落独特的战利品。\n缺少assets",false),
+		BinaryConfig("ck_loot", "额外的帝王蟹掉落物", "帝王蟹现在根据使用的宝石掉落独特的战利品。\n缺少assets",false),
 
 		Header("Core Gameplay","核心玩法"),
 		BinaryConfig("foodregen", "食物收益随时间缓慢生效", "食物的生命和精神值恢复会变为类似一个缓慢恢复的buff,而不是立马恢复",true),
@@ -476,7 +476,7 @@ local info=
 		BinaryConfig("hambatnerf", "火腿棒修改", "腐烂速度更快，最小伤害更低。", true),
 		BinaryConfig("lifeinjector_rework", "强心针修改", "强心针能恢复你最大生命损失的50%。", true),
 		BinaryConfig("cookiecutterhat", "饼干切割机帽", "现在可以反弹攻击者，是其受到伤害", true),
-		BinaryConfig("beefalo_nerf", "骑乘皮伏楼牛", "骑牛时，牛不再承受全部伤害，而是各自一半。",
+		BinaryConfig("beefalo_nerf", "骑乘皮弗娄牛", "骑牛时，牛不再承受全部伤害，而是各自一半。",
 		false),
 
 
@@ -705,14 +705,14 @@ local info=
 		true),
 		BinaryConfig("harder_leifs", "更难的树精", "启用此选项会让树精执行树根攻击、强制击退和召唤树桩怪。",true),
 
-		Header("Raid Bosses","领地boss"),
+		Header("Raid Bosses","领地BOSS"),
 		BinaryConfig("harder_lavae", "岩浆虫爆炸", "熔岩死亡后会留下爆炸糊，破坏墙体", true),
-		BinaryConfig("harder_beequeen", "更难的蜂后", "蜂后现在有AOE附加到她的主要攻击。", true),
-		BinaryConfig("rework_minotaur", "远古守护者", "[当前已改动]远古守护者的战斗被重新制作，包括更多的攻击",true),
-		BinaryConfig("reworked_eyes", "双子魔眼", "恐怖之眼和双子魔眼有新的攻击，灵感来自他们的Terraria同行。",true),
-		BinaryConfig("reworked_ck", "帝王蟹", "螃蟹王改变了他的主要攻击，移除了冻结并增加了一些机制。",true),
-		BinaryConfig("changed_shadow_pieces", "暗影三基佬",
-			"暗影主教的攻击方式不同，暗影骑士的数值也发生了变化。", true),
+		BinaryConfig("harder_beequeen", "蜂后重做", "蜜蜂女王现在可以利用新型蜜蜂进行各种攻击。", true),
+		BinaryConfig("rework_minotaur", "远古守护者重做", "远古守护者的战斗被重新制作，包括更多的攻击",true),
+		BinaryConfig("reworked_eyes", "魔眼重做", "恐怖之眼和双子魔眼有新的攻击，灵感来自他们的Terraria同行。",true),
+		BinaryConfig("reworked_ck", "帝王蟹重做", "螃蟹王改变了他的主要攻击，移除了冻结并增加了一些机制。",true),
+		BinaryConfig("changed_shadow_pieces", "暗影三基佬重做",
+			"暗影主教现在有不同的攻击方式", true),
 
 		Header("Boss Quality of Life","BOSS生命值"),
 

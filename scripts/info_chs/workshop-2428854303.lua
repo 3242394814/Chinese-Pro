@@ -33,7 +33,7 @@ local info=
 		{
 			name = "TAP_BUILDING_MIGRATOR",
 			label = "多层世界模式",
-			hover = "选择mod是否可以使用多层世界链接",
+			hover = "选择mod是否可以使用多层世界连接",
 			options =
 			{
 				{description = "否",

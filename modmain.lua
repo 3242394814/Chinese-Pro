@@ -1,6 +1,27 @@
 if GetModConfigData("冰冰羊的个人汉化",true) then
     LoadPOFile("scripts/BBGOAT_chs.po", "zh")
     --GLOBAL.TranslateStringTable( GLOBAL.STRINGS ) --同时应用到游戏内文本汉化
+
+	-- 修复在服务器中[Host]为【主机】 代码来自模组Chinese Plus
+	if GLOBAL.TheNet.GetClientTable then
+		GLOBAL.getmetatable(GLOBAL.TheNet).__index.GetClientTable = (function()
+			local oldGetClientTable = GLOBAL.getmetatable(GLOBAL.TheNet).__index.GetClientTable
+			return function(self, ... )
+				local res=oldGetClientTable(self, ...)
+				if res and type(res)=="table" then
+					for i,v in pairs(res) do
+						if v.name and v.prefab then--笔记：userid表示用户科雷ID 游戏内光标指向玩家名时会显示这个userid
+							if v.name=="[Host]" then
+								v.name="【主机】"
+							end
+						end
+					end
+				end
+				return res
+			end
+		end)()
+	end
+
 end
 
 if GetModConfigData("Pigman_Strings",true) then--煤式猪人语言包
