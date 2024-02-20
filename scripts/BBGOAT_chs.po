@@ -184,11 +184,6 @@ msgid "Veggie"
 msgstr "素食"
 
 
-#MOD崩溃的“警告”标题
-#: STRINGS.UI.MAINSCREEN.MODFAILTITLE
-msgid "WARNING!"
-msgstr "警告！"
-
 #: STRINGS.UI.MAINSCREEN.SCRIPTERRORMODWARNING
 msgid "This error may have occurred due to a mod you have enabled!\nYou have the following mods enabled:\n"
 msgstr "此错误可能是由于你启用的某个模组所致！\n你可以尝试通过订阅【错误追踪】模组排查问题\n你启用了下列模组：\n"
@@ -355,9 +350,37 @@ msgstr "热带"
 msgid "Default"
 msgstr "默认"
 
-#季节：由于IA模组内的string.pot没有使用翻译文件，所以是英文，IA自带了四季名称的翻译(怎么回事呢?)
+#季节
+#: STRINGS.UI.CUSTOMIZATIONSCREEN.MILD
+msgid "Mild"
+msgstr "温和季"
 
-#Shipwrecked世界
+#: STRINGS.UI.CUSTOMIZATIONSCREEN.HURRICANE
+msgid "Hurricane"
+msgstr "飓风季"
+
+#: STRINGS.UI.CUSTOMIZATIONSCREEN.MONSOON
+msgid "Monsoon"
+msgstr "雨季"
+
+#: STRINGS.UI.CUSTOMIZATIONSCREEN.DRY
+msgid "Dry"
+msgstr "旱季"
+
+#Shipwrecked 世界
+
+#: STRINGS.UI.CUSTOMIZATIONSCREEN.NO_DST_BOATS
+msgid "DST Boats (WIP)"
+msgstr "联机版大饼船(WIP)"
+
+#: STRINGS.UI.CUSTOMIZATIONSCREEN.HAS_IA_BOATS
+msgid "IA Boats (WIP)"
+msgstr "岛屿冒险小船(WIP)"
+
+#: STRINGS.UI.CUSTOMIZATIONSCREEN.HAS_IA_DROWNING
+msgid "Deadly Drowning"
+msgstr "溺水致命"
+
 #: STRINGS.UI.CUSTOMIZATIONSCREEN.CROCODOG
 msgid "Crocodogs"
 msgstr "鳄鱼"
@@ -382,7 +405,9 @@ msgstr "海浪"
 msgid "Dragoon Eggs"
 msgstr "龙蛋"
 
-#Shipwrecked巨兽
+#Shipwrecked 资源再生
+
+#Shipwrecked 巨兽
 #: STRINGS.UI.CUSTOMIZATIONSCREEN.KRAKEN
 msgid "Quacken"
 msgstr "海妖"
@@ -445,9 +470,20 @@ msgstr "条板箱"
 msgid "Limpets"
 msgstr "帽贝岩"
 
-#以下为Shipwrecked资源
+#以下为Shipwrecked 资源再生
+#: STRINGS.UI.CUSTOMIZATIONSCREEN.JUNGLETREE_REGROWTH
+msgid "Jungle Trees"
+msgstr "丛林树"
 
-#Shipwrecked世界
+#: STRINGS.UI.CUSTOMIZATIONSCREEN.PALMTREE_REGROWTH
+msgid "Palm Trees"
+msgstr "椰树"
+
+#: STRINGS.UI.CUSTOMIZATIONSCREEN.SWEET_POTATO_REGROWTH
+msgid "Sweet Potatoes"
+msgstr "甘薯"
+
+#Shipwrecked 世界
 #: STRINGS.UI.CUSTOMIZATIONSCREEN.BERMUDATRIANGLE
 msgid "Electric Isosceles"
 msgstr "电光三角"
@@ -460,7 +496,9 @@ msgstr "火山"
 msgid "Volcano Island"
 msgstr "火山岛"
 
-#"Magma Rocks" 无法汉化
+#: STRINGS.UI.CUSTOMIZATIONSCREEN.MAGMA_ROCKS
+msgid "Magma Rocks"
+msgstr "岩浆矿"
 
 #: STRINGS.UI.CUSTOMIZATIONSCREEN.MUSSEL_FARM
 msgid "Mussels"
@@ -482,7 +520,9 @@ msgstr "贝壳"
 msgid "Seaweeds"
 msgstr "海带"
 
-#Tar Pools无法汉化
+#: STRINGS.UI.CUSTOMIZATIONSCREEN.TAR_POOL
+msgid "Tar Pools"
+msgstr "焦油"
 
 #: STRINGS.UI.CUSTOMIZATIONSCREEN.TIDALPOOL
 msgid "Tidal Pools"
@@ -493,7 +533,9 @@ msgid "Viney Bushes"
 msgstr "藤蔓根"
 
 #以下为Shipwrecked 生物及刷新点
-#"Crabbit Holes" 无法汉化
+#: STRINGS.UI.CUSTOMIZATIONSCREEN.CRABHOLE
+msgid "Crabbit Holes"
+msgstr "兔蟹洞"
 
 #: STRINGS.UI.CUSTOMIZATIONSCREEN.SOLOFISH
 msgid "Dogfish"
@@ -504,13 +546,17 @@ msgctxt "STRINGS.UI.CUSTOMIZATIONSCREEN.DOYDOY"
 msgid "Doydoys"
 msgstr "渡渡鸟"
 
-#"Fisher Merm Huts"无法汉化
+#: STRINGS.UI.CUSTOMIZATIONSCREEN.FISHERMERM
+msgid "Fisher Merm Huts"
+msgstr "红鱼人房"
 
 #: STRINGS.UI.CUSTOMIZATIONSCREEN.JELLYFISH
 msgid "Jellyfish"
 msgstr "水母"
 
-#"Prime Ape Huts" 无法汉化
+#: STRINGS.UI.CUSTOMIZATIONSCREEN.PRIMEAPE
+msgid "Prime Ape Huts"
+msgstr "猴子窝"
 
 #: STRINGS.UI.CUSTOMIZATIONSCREEN.SEAGULL
 msgid "Seagulls"
@@ -524,7 +570,9 @@ msgstr "鱼群"
 msgid "Water Beefalos"
 msgstr "水牛"
 
-#"wildbore houses" 无法汉化
+#: STRINGS.UI.CUSTOMIZATIONSCREEN.WILDBORES
+msgid "Wildbore Houses"
+msgstr "野猪房"
 
 #: STRINGS.UI.CUSTOMIZATIONSCREEN.SWEET_POTATO
 msgid "Sweet Potatoes"
@@ -538,7 +586,7 @@ msgstr "海豚宫殿"
 msgid "Wobsters"
 msgstr "龙虾"
 
-#Shipwrecked敌对生物及刷新点
+#Shipwrecked 敌对生物及刷新点
 #: STRINGS.UI.CUSTOMIZATIONSCREEN.FLUP
 msgid "Flup"
 msgstr "大眼鱼"
