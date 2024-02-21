@@ -115,7 +115,7 @@ msgstr "客户端网络性能：较差"
 
 #: STRINGS.UI.PLAYERSTATUSSCREEN.PERF_CLIENT_LEVEL_UNKNOWN
 msgid "Client Performance: Unknown"
-msgstr "客户端网络：未知"
+msgstr "客户端网络性能：未知"
 
 #: STRINGS.UI.PLAYERSTATUSSCREEN.PERF_HOST_LEVELS.1
 msgid "Host Performance: Good"
@@ -132,7 +132,7 @@ msgstr "主机性能：较差"
 
 #: STRINGS.UI.MODSSCREEN.MOD_WARNING
 msgid "This is not a Steam Workshop mod. Players will need to download it manually if you host a server."
-msgstr "这不是Steam创意工坊的模组。\n如果你是主服务器，玩家必须手动下载这个MOD才能进入你的世界。"
+msgstr "这不是Steam创意工坊的模组。\n如果你是服主，其他玩家必须手动下载这个MOD才能进入你的世界。"
 
 #: STRINGS.UI.SKINSSCREEN.FILTERS
 msgid "Filters"
@@ -183,10 +183,10 @@ msgstr "甜点"
 msgid "Veggie"
 msgstr "素食"
 
+
 #: STRINGS.UI.LOBBY_WAITING_FOR_PLAYERS_SCREEN.SPAWN_DELAY
 msgid "Match starts in {time}"
 msgstr "{time} 秒后开始游戏"
-
 
 #: STRINGS.UI.MAINSCREEN.SCRIPTERRORMODWARNING
 msgid "This error may have occurred due to a mod you have enabled!\nYou have the following mods enabled:\n"
@@ -277,11 +277,6 @@ msgid "Maybe not..."
 msgstr "还是算了…"
 
 
-#主界面“进入游戏”
-#: STRINGS.UI.MAINSCREEN.PLAY
-msgid "Play!"
-msgstr "进入游戏！"
-
 #登录中
 #: STRINGS.UI.NOTIFICATION.LOGIN
 msgid "Logging in"
@@ -307,14 +302,14 @@ msgstr "是"
 msgid "No"
 msgstr "否"
 
+#: STRINGS.UI.SERVERLISTINGSCREEN.MOD_WARNING_BODY
+msgid "This server has mods enabled. Klei won't be able to help if you encounter issues while playing on a modded server."
+msgstr "此服务器已启用模组。在启用模组的服务器上打游戏时，\n如果您遇到问题，Klei无法提供帮助。"
+
 #预留位置说明（原版没有换行会导致无法显示）
 #: STRINGS.UI.NETWORKDISCONNECT.BODY.ID_DST_SLOT_RESERVATION
 msgid "Attempt to join server failed because remaining player slots are reserved. Please try again once a slot frees up."
 msgstr "尝试加入服务器失败，因为剩余玩家位置已被预留。\n当位置空出来之后，请再次尝试。"
-
-#: STRINGS.UI.SERVERLISTINGSCREEN.MOD_WARNING_BODY
-msgid "This server has mods enabled. Klei won't be able to help if you encounter issues while playing on a modded server."
-msgstr "此服务器已启用模组。在启用模组的服务器上打游戏时，\n如果您遇到问题，Klei无法提供帮助。"
 
 #: STRINGS.UI.NETWORKDISCONNECT.TITLE.ID_DST_DEDICATED_SERVER_STARTUP_FAILED
 msgid "Dedicated Server Failed To Start"
@@ -330,11 +325,11 @@ msgstr "授权失败。请再次尝试。\n如果你的网络没问题，那么�
 
 #: STRINGS.UI.NETWORKDISCONNECT.BODY.ID_CONNECTION_BANNED
 msgid "You have been banned from this server."
-msgstr "你已经被这个服务器Ban了！"
+msgstr "你已经被这个服务器封禁了！"
 
 #: STRINGS.UI.NETWORKDISCONNECT.BODY.ID_CONNECTION_LOST
 msgid "You have lost connection to the server."
-msgstr "你已经失去与服务器的连接。\n如果你与服务器的网络都没问题且所有玩家掉线，那么100%是服务器崩溃了，\n请检查服务器日志查看崩溃原因。"
+msgstr "你已经失去与服务器的连接。\n如果服主没有关服且所有玩家掉线，请检查网络与服务器日志"
 
 #: STRINGS.UI.NETWORKDISCONNECT.BODY.ID_DST_DESTINATION_SERVER_NOT_AVAILABLE
 msgid "The server you were playing on is unavailable. Please try again later."
@@ -387,7 +382,7 @@ msgstr "溺水致命"
 
 #: STRINGS.UI.CUSTOMIZATIONSCREEN.CROCODOG
 msgid "Crocodogs"
-msgstr "鳄鱼"
+msgstr "鳄狗"
 
 #: STRINGS.UI.CUSTOMIZATIONSCREEN.POISON
 msgid "Poison"
@@ -602,3 +597,8 @@ msgstr "黄貂鱼"
 #: STRINGS.UI.CUSTOMIZATIONSCREEN.SWORDFISH
 msgid "Swordfish"
 msgstr "剑鱼"
+
+#岛屿冒险 其它
+#: STRINGS.NAMES.CROCODOG
+msgid "Crocodog"
+msgstr "鳄狗"
