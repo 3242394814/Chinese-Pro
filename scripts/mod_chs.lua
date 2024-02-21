@@ -50,7 +50,7 @@ if GetModConfigData("mod_info_Chs",true) then
     KnownModIndex.GetModInfo = function(self, modname)
         local modinfo = old_modname(self, modname)
         local newinfo = info_list[modname]
-        if newinfo then
+        if newinfo and type(newinfo) == "table" then
             if modinfo and type(modinfo) == "table" then
                 if not modinfo.old_name then -- 判断是否运行过汉化代码
                     modinfo.old_name = modinfo.name -- 保存旧名称用于兼容其他模组内的GetModActualName

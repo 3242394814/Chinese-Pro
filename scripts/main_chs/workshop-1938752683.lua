@@ -1,9 +1,8 @@
 LoadPOFile("scripts/languages/chinese_s_reforged.po", "zh")
 local STRINGS = GLOBAL.STRINGS
+STRINGS.UI.WXPLOBBYPANEL.LEVEL = "等级 {val}"
 
-STRINGS.UI.ACHIEVEMENTS_PANEL = {
-	TAB = "成就",
-}
+STRINGS.UI.ACHIEVEMENTS_PANEL.TAB = "成就"
 STRINGS.UI.NEWS_PANEL = {
 	TAB = "新闻",
 	SERVER = {
@@ -12,9 +11,9 @@ STRINGS.UI.NEWS_PANEL = {
 	},
 	EVENTS = {
 		TITLE = STRINGS.UI.CUSTOMIZATIONSCREEN.SPECIALEVENT,
-		--TITLE = "Mod Contest",
+		--TITLE = "Mod竞赛",
 		BODY = "当前没有活动",
-		--BODY = "Klei is currently running an event where users can vote for their favorite spooky themed mod. If you like Hallowed Forge and want to help us win, then go to their discord and vote for us! Be sure to check out the other mods that have been submitted and feel free to vote for whichever you want, but remember you only get one vote (You can change your vote at any time though).\n_________________________________\nVote Here: discord:klei",
+		--BODY = "Klei 目前正在举办一个活动，用户可以投票选出他们最喜欢的恐怖主题模组。如果你喜欢Hallowed Forge并想帮助我们获胜，那么请前往他们的 Discord 并为我们投票！一定要查看已提交的其他模组，并随意投票给你想要的任何模组，但记住你只有一票（不过你可以随时更改你的投票）.\n_________________________________\n投票请到：discord:klei",
 	},
 	PATCH_NOTES = "更新日志",
 }
@@ -85,5 +84,3 @@ STRINGS.ACTIONS.CASTAOE.SPICE_BOMB_DEFENSE = "防御炸弹"
 STRINGS.ACTIONS.CASTAOE.SPICE_BOMB_SPEED   = "速度炸弹"
 
 STRINGS.NAMES.LAVAARENA_GAUNTLET = "长手套"
-
-STRINGS.UI.WXPLOBBYPANEL.LEVEL = "等级 {val}"
