@@ -1,11 +1,13 @@
+_G = GLOBAL
+
 if GetModConfigData("冰冰羊的个人汉化",true) then
     LoadPOFile("scripts/BBGOAT_chs.po", "zh")
-    --GLOBAL.TranslateStringTable( GLOBAL.STRINGS ) --同时应用到游戏内文本汉化
+    --_G.TranslateStringTable( _G.STRINGS ) --同时应用到游戏内文本汉化
 
 	-- 修复在服务器中[Host]为【主机】 代码来自模组Chinese Plus
-	if GLOBAL.TheNet.GetClientTable then
-		GLOBAL.getmetatable(GLOBAL.TheNet).__index.GetClientTable = (function()
-			local oldGetClientTable = GLOBAL.getmetatable(GLOBAL.TheNet).__index.GetClientTable
+	if _G.TheNet.GetClientTable then
+		_G.getmetatable(_G.TheNet).__index.GetClientTable = (function()
+			local oldGetClientTable = _G.getmetatable(_G.TheNet).__index.GetClientTable
 			return function(self, ... )
 				local res=oldGetClientTable(self, ...)
 				if res and type(res)=="table" then
@@ -29,9 +31,9 @@ if GetModConfigData("Pigman_Strings",true) then--煤式猪人语言包
 end
 --公共函数部分
 function fileexists(name)
-	local f=GLOBAL.io.open(name,"r")
+	local f=_G.io.open(name,"r")
 	if f~=nil then
-		GLOBAL.io.close(f)
+		_G.io.close(f)
 		return true
 	else
 		return false
@@ -45,10 +47,10 @@ modimport("scripts/mod_chs")--MOD汉化
 --部分翻译需要让服务器也加载此MOD才能生效。当本模组开启时，会自动插入到服务器模组中
 local this_mod = GetModConfigData("Test-Mode")
 if this_mod then
-	local OldGetEnabledServerModNames = GLOBAL.ModManager.GetEnabledServerModNames
-	GLOBAL.ModManager.GetEnabledServerModNames=function(self)
+	local OldGetEnabledServerModNames = _G.ModManager.GetEnabledServerModNames
+	_G.ModManager.GetEnabledServerModNames=function(self)
 		local server_mods = OldGetEnabledServerModNames(self)
-			if GLOBAL.IsNotConsole() then
+			if _G.IsNotConsole() then
 			table.insert(server_mods, this_mod)--将本模组插入到服务器模组列表中。开启洞穴时、直接复制存档文件夹到专服时也会加载此模组
 			end
 		return server_mods
@@ -56,8 +58,8 @@ if this_mod then
 end
 --检测是否有其它字体模组
 local function ismodloaded(name)
-	if GLOBAL.KnownModIndex:IsModEnabled(name) then return true end
-	for _, v in ipairs(GLOBAL.KnownModIndex:GetModsToLoad()) do
+	if _G.KnownModIndex:IsModEnabled(name) then return true end
+	for _, v in ipairs(_G.KnownModIndex:GetModsToLoad()) do
 		if v == name then return true end
 	end
 end
@@ -93,18 +95,18 @@ end
 
 -- 高清字体
 local function load_clear_font()
-    TheSim = GLOBAL.TheSim
+    TheSim = _G.TheSim
     
 	local Assets = {}
 	if fileexists("../data/fonts/normal.zip") then
-		table.insert(Assets,GLOBAL.Asset("FONT", "../data/fonts/normal.zip"))
+		table.insert(Assets,_G.Asset("FONT", "../data/fonts/normal.zip"))
 	else
-		table.insert(Assets,GLOBAL.Asset("FONT", MODROOT.."fonts/normal.zip"))
+		table.insert(Assets,_G.Asset("FONT", MODROOT.."fonts/normal.zip"))
 	end
 	if fileexists("../data/fonts/normal_outline.zip") then
-		table.insert(Assets,GLOBAL.Asset("FONT", "../data/fonts/normal_outline.zip"))
+		table.insert(Assets,_G.Asset("FONT", "../data/fonts/normal_outline.zip"))
 	else
-		table.insert(Assets,GLOBAL.Asset("FONT", MODROOT.."fonts/normal_outline.zip"))
+		table.insert(Assets,_G.Asset("FONT", MODROOT.."fonts/normal_outline.zip"))
 	end
 
 	local FONT_TABLE = {
@@ -143,21 +145,21 @@ local function load_clear_font()
 		else
 			TheSim:LoadFont(MODROOT.."fonts/normal_outline.zip", "cnfont_outline")
 		end
-		TheSim:SetupFontFallbacks("cnfont", GLOBAL.DEFAULT_FALLBACK_TABLE)
-		TheSim:SetupFontFallbacks("cnfont_outline", GLOBAL.DEFAULT_FALLBACK_TABLE_OUTLINE)
+		TheSim:SetupFontFallbacks("cnfont", _G.DEFAULT_FALLBACK_TABLE)
+		TheSim:SetupFontFallbacks("cnfont_outline", _G.DEFAULT_FALLBACK_TABLE_OUTLINE)
 		for k,v in pairs(FONT_TABLE) do
-			GLOBAL[k]=v
+			_G[k]=v
 		end
 	end
 	
-	local OldStart=GLOBAL.Start
-	GLOBAL.Start=function()
+	local OldStart=_G.Start
+	_G.Start=function()
 		registerfont()
 		OldStart()
 	end
 	
-	local OldRegisterPrefabs=GLOBAL.ModManager.RegisterPrefabs
-	GLOBAL.ModManager.RegisterPrefabs = function(...)
+	local OldRegisterPrefabs=_G.ModManager.RegisterPrefabs
+	_G.ModManager.RegisterPrefabs = function(...)
 		OldRegisterPrefabs(...)
 		registerfont()
 	end

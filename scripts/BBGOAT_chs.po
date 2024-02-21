@@ -129,6 +129,9 @@ msgstr "主机性能：良好"
 msgid "Host Performance: Bad"
 msgstr "主机性能：较差"
 
+#: STRINGS.UI.SERVERLISTINGSCREEN.OFFLINE_MODE_BODY
+msgid "You are not logged in and can't play in online games.\nTry playing over LAN or restarting the game to log in."
+msgstr "您未登录，无法玩在线游戏。\n请尝试通过局域网玩游戏或重启游戏以登录。"
 
 #: STRINGS.UI.MODSSCREEN.MOD_WARNING
 msgid "This is not a Steam Workshop mod. Players will need to download it manually if you host a server."
@@ -146,7 +149,7 @@ msgstr "筛选"
 msgid "This requires running multiple servers at the same time.\nIs your computer up to the task?"
 msgstr "这需要同时运行多个服务器。\n所以会导致房主也以客户端的形式连接到服务器从而产生游戏延迟\n确认添加？"
 
-#暴食内容
+#####################################################暴食内容#####################################################
 #: STRINGS.UI.RECIPE_BOOK.CRAVINGS.BREAD
 msgid "Bread"
 msgstr "面包"
@@ -182,7 +185,7 @@ msgstr "甜点"
 #: STRINGS.UI.RECIPE_BOOK.CRAVINGS.VEGGIE
 msgid "Veggie"
 msgstr "素食"
-
+#####################################################暴食内容#####################################################
 
 #: STRINGS.UI.LOBBY_WAITING_FOR_PLAYERS_SCREEN.SPAWN_DELAY
 msgid "Match starts in {time}"
@@ -329,13 +332,59 @@ msgstr "你已经被这个服务器封禁了！"
 
 #: STRINGS.UI.NETWORKDISCONNECT.BODY.ID_CONNECTION_LOST
 msgid "You have lost connection to the server."
-msgstr "你已经失去与服务器的连接。\n如果服主没有关服且所有玩家掉线，请检查网络与服务器日志"
+msgstr "你已经失去与服务器的连接。\n如果服主没有关服且所有玩家掉线，那么请检查服务器日志"
 
 #: STRINGS.UI.NETWORKDISCONNECT.BODY.ID_DST_DESTINATION_SERVER_NOT_AVAILABLE
 msgid "The server you were playing on is unavailable. Please try again later."
 msgstr "你正在使用的服务器不可用。请稍后再次尝试。\n这意味着主世界服务器与本世界断开连接了，\n如果服主没有关服 请检查主世界服务器日志。"
 
-#岛屿冒险汉化
+
+#####################################################交易小店游戏#####################################################
+#: STRINGS.UI.TRADESCREEN.CROWKID_GAME.HELP_BODY
+msgid "The Crows left a mess in the maze after last year's Cawnival. Move around the maze to pick up all of the leftover junk."
+msgstr "去年的鸦年华上，乌鸦们在迷宫里留下了一个烂摊子。\n在迷宫里移动，捡起所有剩下的垃圾。"
+
+#: STRINGS.UI.TRADESCREEN.CROW_GAME.GAME_OVER_POPUP_BODY
+msgid "Great job tidyin' up.\nYou completed {moves} moves, for a score of {score}!"
+msgstr "整理的很好。\n你完成了{moves} 步，\n得到了{score}分！"
+
+#: STRINGS.UI.TRADESCREEN.SKIN_COLLECTOR_SPEECH_CROWKID.START.1
+msgid "Those pesky crows always leave a mess! Mind tidying up?"
+msgstr "那些讨厌的乌鸦\n总是弄出一团糟！\n介意整理一下吗？"
+
+#: STRINGS.UI.TRADESCREEN.SKIN_COLLECTOR_SPEECH_CROWKID.START.2
+msgid "Those birdbrains left their Cawnival stuff all over the place! Go clear it out, would ya?"
+msgstr "这些乌鸦把鸦年华的\n东西丢得到处都是！\n你能帮我打扫干净吗？"
+
+#: STRINGS.UI.TRADESCREEN.SKIN_COLLECTOR_SPEECH_CROWKID.START.3
+msgid "This place is littered with old Cawnival junk. Mind taking care of it for me?"
+msgstr "这个地方到处都是旧的\n鸦年华垃圾。\n你愿意为我处理一下吗？"
+
+#: STRINGS.UI.TRADESCREEN.SKIN_COLLECTOR_SPEECH_REDBIRD.START.1
+msgid "I've got a challenge for ya! Add tiles up to 100. Let's see how many points ya can score!"
+msgstr "我有份挑战给你！\n把这些数字\n加起来得到100。\n看看你能得多少分！"
+
+#: STRINGS.UI.TRADESCREEN.SKIN_COLLECTOR_SPEECH_REDBIRD.START.2
+msgid "Can ya get me half-a-dozen eggs? A full dozen would be grand!"
+msgstr "你能不能给我\n半打鸟蛋？半打就好！"
+
+#: STRINGS.UI.TRADESCREEN.SKIN_COLLECTOR_SPEECH_REDBIRD.START.3
+msgid "Better be quick getting those eggs for me. I can't use any rotten ones."
+msgstr "你拿鸟蛋的时候\n最好快一点。\n要是坏掉了\n我就用不了了。"
+
+#: STRINGS.UI.TRADESCREEN.SKIN_COLLECTOR_SPEECH_REDBIRD.START.4
+msgid "Use y'er noggin to add up numbers. Get to 100 exactly and a Redbird will lay an egg!"
+msgstr "开动脑筋做加法。\n两两相加得到100之后，\n红雀就会生下一颗蛋！"
+
+#: STRINGS.UI.TRADESCREEN.SKIN_COLLECTOR_SPEECH_REDBIRD.START.5
+msgid "Countin' is my specialty. Let's see how good ya can do."
+msgstr "数数是我的专长。\n让我们看看你能做到多好。"
+
+#: STRINGS.UI.TRADESCREEN.KITCOON_GAME.ABANDONED_BODY
+msgid "Sadly, {name} was feeling neglected. They went looking for the affection, food and tidier home that they felt they deserved."
+msgstr "{name}很难过，因为感到被冷落了。\n它去别的地方寻找好感、食物和更整洁的家了。 "
+
+#####################################################岛屿冒险汉化#####################################################
 #世界规则
 #: STRINGS.UI.CUSTOMIZATIONSCREEN.CLOCKTYPE
 msgid "Clock Type"

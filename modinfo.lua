@@ -77,7 +77,8 @@ local function mainConfig(name, label, hover, default, client_config)--选项名
 		options =
         {
             { description = "自动检测并开启", data = true, hover = v_hover },
-			{ description = "关闭", data = false, hover = "关闭？所以是有问题嘛？有问题请去评论区留言哦QAQ" }, },
+			{ description = "关闭", data = false, hover = "关闭？所以是有问题嘛？有问题请去评论区留言哦QAQ" }, 
+        },
 		default = default,
         client = client_config,
 	    }
