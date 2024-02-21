@@ -183,6 +183,10 @@ msgstr "甜点"
 msgid "Veggie"
 msgstr "素食"
 
+#: STRINGS.UI.LOBBY_WAITING_FOR_PLAYERS_SCREEN.SPAWN_DELAY
+msgid "Match starts in {time}"
+msgstr "{time} 秒后开始游戏"
+
 
 #: STRINGS.UI.MAINSCREEN.SCRIPTERRORMODWARNING
 msgid "This error may have occurred due to a mod you have enabled!\nYou have the following mods enabled:\n"
