@@ -661,4 +661,155 @@ msgstr "海洋之椅"
 msgid "Seaworthy"
 msgstr "海洋之椅"
 
+#各人物检查损坏的船
+#: STRINGS.CHARACTERS.GENERIC.DESCRIBE.PORTAL_SHIPWRECKED
+msgid "It's broken."
+msgstr "它坏掉了。\n需要搭建多层世界专用服务器并在MOD设置中设置世界ID才能使用"
+
+#: STRINGS.CHARACTERS.WILLOW.DESCRIBE.PORTAL_SHIPWRECKED
+msgid "Time to get outta here."
+msgstr "是时候离开这儿了。\n但我需要搭建多层世界专用服务器并在MOD设置中设置世界ID才能使用你"
+
+#: STRINGS.CHARACTERS.WOLFGANG.DESCRIBE.PORTAL_SHIPWRECKED
+msgid "Where do you go?"
+msgstr "你通往何处？\n我需要搭建多层世界专用服务器并在MOD设置中设置世界ID才能知道"
+
+#: STRINGS.CHARACTERS.WENDY.DESCRIBE.PORTAL_SHIPWRECKED
+msgid "Like my beloved sister, I can never return."
+msgstr "像我亲爱的姐姐一样，我永远也回不去了。\n除非我搭建了多层世界专用服务器并在MOD设置中设置了世界ID"
+
+#: STRINGS.CHARACTERS.WX78.DESCRIBE.PORTAL_SHIPWRECKED
+msgid "MALFUNCTIONING"
+msgstr "功能故障\n需要搭建多层世界专用服务器并在MOD设置中设置世界ID才能使用"
+
+#: STRINGS.CHARACTERS.WICKERBOTTOM.DESCRIBE.PORTAL_SHIPWRECKED
+msgid "I sense magic here."
+msgstr "我感应到这里有魔力。\n我需要搭建多层世界专用服务器并在MOD设置中设置世界ID"
+
+#: STRINGS.CHARACTERS.WOODIE.DESCRIBE.PORTAL_SHIPWRECKED
+msgid "Looks hooped to me."
+msgstr "感觉进去就会出不来。\n需要搭建多层世界专用服务器并在MOD设置中设置世界ID才能正常使用！"
+
+#: STRINGS.CHARACTERS.WAXWELL.DESCRIBE.PORTAL_SHIPWRECKED
+msgid "Useless!"
+msgstr "一无所用！\n我需要搭建多层世界专用服务器并在MOD设置中设置世界ID！"
+
+#: STRINGS.CHARACTERS.WATHGRITHR.DESCRIBE.PORTAL_SHIPWRECKED
+msgid "This longship looks unfit for a warrior."
+msgstr "这艘船看起来不适合战士。\n需要搭建多层世界专用服务器并在MOD设置中设置世界ID才行"
+
+#: STRINGS.CHARACTERS.WEBBER.DESCRIBE.PORTAL_SHIPWRECKED
+msgid "No one's going through this."
+msgstr "没有人能坐上这艘船。\n服主需要搭建多层世界专用服务器并在MOD设置中设置世界ID才能坐上去"
+
+#: STRINGS.CHARACTERS.WINONA.DESCRIBE.PORTAL_SHIPWRECKED
+msgid "Wonder what happened there?"
+msgstr "不知道那里发生了什么事？\n搭建多层世界专用服务器并在MOD设置中设置世界ID就知道啦"
+
+#: STRINGS.CHARACTERS.WARLY.DESCRIBE.PORTAL_SHIPWRECKED
+msgid "Looks too rickety to ride to someplace."
+msgstr "摇摇欲坠的船，似乎通向某个地方...\n搭建多层世界专用服务器并在MOD设置中设置世界ID才能使用它"
+
+#: STRINGS.CHARACTERS.WORTOX.DESCRIBE.PORTAL_SHIPWRECKED
+msgid "I've had enough of plane-hopping."
+msgstr "够了，不要再穿梭在不同的世界了！\n服主也别去搭建多层世界专用服务器并在MOD设置中设置世界ID！"
+
+#: STRINGS.CHARACTERS.WORMWOOD.DESCRIBE.PORTAL_SHIPWRECKED
+msgid "Oh. Broken"
+msgstr "噢。坏了\n需要搭建多层世界专用服务器并在MOD设置中设置世界ID才能使用"
+
+#: STRINGS.CHARACTERS.WURT.DESCRIBE.PORTAL_SHIPWRECKED
+msgid "It broken."
+msgstr "它坏掉了。\n需要搭建多层世界专用服务器并在MOD设置中设置世界ID才能使用"
+
+#: STRINGS.CHARACTERS.WALTER.DESCRIBE.PORTAL_SHIPWRECKED
+msgid "It's not working."
+msgstr "它不起作用。\n需要搭建多层世界专用服务器并在MOD设置中设置世界ID才能使用"
+
+#: STRINGS.CHARACTERS.WANDA.DESCRIBE.PORTAL_SHIPWRECKED
+msgid "It's broken."
+msgstr "它坏掉了。\n需要搭建多层世界专用服务器并在MOD设置中设置世界ID才能使用"
+
+#: STRINGS.CHARACTERS.WALANI.DESCRIBE.PORTAL_SHIPWRECKED
+msgid "I wonder what this does..."
+msgstr "我很好奇这是干什么用的...\ntips:需要搭建多层世界专用服务器并在MOD设置中设置世界ID才能使用它"
+
+#: STRINGS.CHARACTERS.WOODLEGS.DESCRIBE.PORTAL_SHIPWRECKED
+msgid "Looks a delightful lil ride!"
+msgstr "看来会是一段愉快的旅程！\n我需要搭建多层世界专用服务器并在MOD设置中设置世界ID才能使用它。"
+
+#各人物检查海洋之椅
+#薇格弗德
+#: STRINGS.CHARACTERS.WATHGRITHR.DESCRIBE.SHIPWRECKED_ENTRANCE
+msgid "A new land to plunder and pillage!"
+msgstr "一个供掠夺和搜刮的新领地！"
+
+#: STRINGS.CHARACTERS.WATHGRITHR.DESCRIBE.SHIPWRECKED_EXIT
+msgid "Off to a new land..."
+msgstr "前往新的大陆..."
+
+#韦伯
+#: STRINGS.CHARACTERS.WEBBER.DESCRIBE.SHIPWRECKED_ENTRANCE
+msgid "Let the adventure begin!"
+msgstr "让冒险开始吧！"
+
+#: STRINGS.CHARACTERS.WEBBER.DESCRIBE.SHIPWRECKED_EXIT
+msgid "Bye-bye!"
+msgstr "再见！"
+
+#薇诺娜
+#: STRINGS.CHARACTERS.WINONA.DESCRIBE.SHIPWRECKED_ENTRANCE
+msgid "I think I've saved up enough vacation days."
+msgstr "我想我已经攒够了假期。"
+
+#: STRINGS.CHARACTERS.WINONA.DESCRIBE.SHIPWRECKED_EXIT
+msgid "That's enough tropical getaway for this gal."
+msgstr "热带假期已经够多了。"
+
+#沃拓克斯
+#: STRINGS.CHARACTERS.WORTOX.DESCRIBE.SHIPWRECKED_ENTRANCE
+msgid "The mortals are finally figuring out plane-hopping."
+msgstr "凡人们终于学会了如何穿梭在不同的世界。"
+
+#: STRINGS.CHARACTERS.WORTOX.DESCRIBE.SHIPWRECKED_EXIT
+msgid "I'll admit, hopping like that is convinient."
+msgstr "我承认，这样跳是很方便的。"
+
+#沃姆伍德
+#: STRINGS.CHARACTERS.WORMWOOD.DESCRIBE.SHIPWRECKED_ENTRANCE
+msgid "Where to?"
+msgstr "要去哪儿？"
+
+#: STRINGS.CHARACTERS.WORMWOOD.DESCRIBE.SHIPWRECKED_EXIT
+msgid "Goes where?"
+msgstr "去哪里？"
+
+#沃特
+#: STRINGS.CHARACTERS.WURT.DESCRIBE.SHIPWRECKED_ENTRANCE
+msgid "Wonder where it goes, florp!"
+msgstr "想知道它是去哪里的，浮浪噗！"
+
+#: STRINGS.CHARACTERS.WURT.DESCRIBE.SHIPWRECKED_EXIT
+msgid "But it so nice in here..."
+msgstr "但这里太好了..."
+
+#沃尔特
+#: STRINGS.CHARACTERS.WALTER.DESCRIBE.SHIPWRECKED_ENTRANCE
+msgid "Just a kid's novelty ride... Or is it? Aah, the suspense!"
+msgstr "只是个孩子们的新奇游乐设施...还是什么？啊，悬念！"
+
+#: STRINGS.CHARACTERS.WALTER.DESCRIBE.SHIPWRECKED_EXIT
+msgid "I don't know why I never expected this to work, honestly."
+msgstr "老实说，我不知道为什么我从来没指望这能成功。"
+
+#旺达
+#: STRINGS.CHARACTERS.WANDA.DESCRIBE.SHIPWRECKED_ENTRANCE
+msgid "Ooh, a fancy stationary device for interdimensional travel!"
+msgstr "噢，一个用于跨维度旅行的花哨建筑！"
+
+#: STRINGS.CHARACTERS.WANDA.DESCRIBE.SHIPWRECKED_EXIT
+msgid "Is it time to go back already?"
+msgstr "是时候回去了吗？"
+
+
 #####################################################岛屿冒险汉化#####################################################
