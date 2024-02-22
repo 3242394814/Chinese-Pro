@@ -653,5 +653,12 @@ msgstr "剑鱼"
 msgid "Crocodog"
 msgstr "鳄狗"
 
+#: STRINGS.NAMES.SHIPWRECKED_EXIT
+msgid "Seaworthy"
+msgstr "海洋之椅"
+
+#: STRINGS.NAMES.SHIPWRECKED_ENTRANCE
+msgid "Seaworthy"
+msgstr "海洋之椅"
 
 #####################################################岛屿冒险汉化#####################################################

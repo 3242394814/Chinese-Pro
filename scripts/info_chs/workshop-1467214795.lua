@@ -1,4 +1,13 @@
 --岛屿冒险
+local options_count = {
+	{description = "自动(默认)", data = false},
+	{description = "1", data = "1"},
+	{description = "2", data = "2"},
+	{description = "3", data = "3"},
+	{description = "4", data = "4"},
+	{description = "5", data = "5"},
+}
+
 local description = KnownModIndex:GetModInfo("workshop-1467214795").description
 description = description:gsub("Version", "版本")
 
@@ -28,18 +37,22 @@ local info={
         {
             name = "forestid",
             label = "森林世界ID\n不是用专用服务器开服不要设置这个！！！",
+            options = options_count,
         },
         {
             name = "caveid",
             label = "洞穴世界ID\n不是用专用服务器开服不要设置这个！！！",
+            options = options_count,
         },
         {
             name = "shipwreckedid",
             label = "海难世界ID\n不是用专用服务器开服不要设置这个！！！",
+            options = options_count,
         },
         {
             name = "volcanoid",
             label = "火山世界ID\n不是用专用服务器开服不要设置这个！！！",
+            options = options_count,
         },
     }
 }

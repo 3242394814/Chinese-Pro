@@ -29,17 +29,17 @@ local modlist=KnownModIndex:GetModNames()
 		if fileexists(MODROOT.."scripts/info_chs/"..v..".lua") and GetModConfigData("mod_info_Chs",true) then--检测本模组内的配置汉化文件
 			info_list[v] = require("info_chs/"..v)
 		end
-        if fileexists(MODROOT.."scripts/main_chs/"..v..".lua") then--检测本模组内的游戏内汉化文件
+        if fileexists(MODROOT.."scripts/main_chs/"..v..".lua") then -- 检测本模组内的游戏内汉化文件
             table.insert(main_list,v)
         end
 	end
 
 -- 汉化游戏内MOD语言
 for _, v in ipairs(main_list) do
-    if GetModConfigData("client_"..v,true) and ismodloaded(v) then--跟随客户端设置
+    if GetModConfigData("client_"..v,true) and ismodloaded(v) then -- 跟随客户端设置
         modimport("scripts/main_chs/" .. v)
     end
-    if GetModConfigData("server_"..v) and ismodloaded(v) then--跟随服务器设置
+    if GetModConfigData("server_"..v) and ismodloaded(v) then -- 跟随服务器设置
         modimport("scripts/main_chs/" .. v)
     end
 end
@@ -77,7 +77,7 @@ if GetModConfigData("mod_info_Chs",true) then
                                         end
                                         break
                                     elseif v.label == v1.label and v1.CH_label then
-                                        v.label = v1.CH_label --为了汉化那些把标题写在label里的代码 我需要弄一个CH_label
+                                        v.label = v1.CH_label -- 为了汉化那些把标题写在label里的代码 我需要弄一个CH_label
                                         v.hover = v1.hover or v.hover -- 某些模组会写一个空选项 里面写着下面的配置项的说明... 比如Adventure Mode模组就这么做了
                                     end
                                 end
@@ -90,7 +90,7 @@ if GetModConfigData("mod_info_Chs",true) then
         return modinfo
     end
 
---为了兼容其他模组使用GetModActualName来定位自己，我们需要修改官方的逻辑 加一个modinfo.old_name
+-- 为了兼容其他模组使用GetModActualName来定位自己，我们需要修改官方的逻辑 加一个modinfo.old_name
     local old_GetModActualName = KnownModIndex.GetModActualName
     KnownModIndex.GetModActualName = function(self,fancyname,...)
         old_GetModActualName(self,fancyname,...)
@@ -103,8 +103,8 @@ if GetModConfigData("mod_info_Chs",true) then
         end
     end
 
---强制汉化某些模组内容
-local old_UpdateModInfo = KnownModIndex.UpdateModInfo--看起来进行有关MODS操作的时候就会执行这个函数 那我就HOOK一下它吧
+-- 强制汉化某些模组内容
+local old_UpdateModInfo = KnownModIndex.UpdateModInfo -- 看起来进行有关MODS操作的时候就会执行这个函数 那我就HOOK一下它吧
 KnownModIndex.UpdateModInfo = function(...)
     old_UpdateModInfo(...)
     modimport("scripts/mods_chs_fix")
