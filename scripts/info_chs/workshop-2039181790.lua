@@ -186,8 +186,10 @@ local info=
 		BinaryConfig("winona_portables_", "女工:便携式建筑", "使女工的建筑可移植，并将工具箱改造成装置容器",true),
 		BinaryConfig("wortox", "沃拓克斯","传送效果更好，理智和灵魂治疗效果更差。鸟类和蝴蝶不再掉落灵魂。",true),
 		{
-			name = "wicker_inv_regen",
-			label = "老奶奶:书本耐久回复",
+			--name = "wicker_inv_regen",
+			name = "",
+			label = "Wicker's Regeneration",
+			CH_label = "老奶奶:书本耐久回复",
 			hover = "配置薇克巴顿的书本如何恢复耐久",
 			options = {
 				{
