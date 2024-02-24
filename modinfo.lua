@@ -1,5 +1,5 @@
 name = "Chinese++ Pro"
-version = "3.6"
+version = "3.6.1"
 description = "当前版本：" ..version .. "\n更新日期：2024年2月24日\n" ..
 [[
 
@@ -113,7 +113,7 @@ configuration_options =
     SkipSpace("游戏内汉化"),
     setConfig("try_off_clearfont","关闭高清字体",{{"启用",true,"启用此功能"},{"禁用",false,"不启用此功能"}},false,"当启用此选项后 如果客户端的“高清字体”设置为\"自动\"(默认选项) 那么将不再加载高清字体\n防止未订阅此模组的人不喜欢高清字体功能"),
     setConfig("clear_font","高清字体",{{"自动","auto","如果服务器启用了此模组的“关闭高清字体”功能则不加载高清字体"},{"开启",true,"如果启用了“自动检测是否有其它字体模组”功能且检测到其它字体模组，则不加载高清字体"},{"关闭",false,"不加载高清字体功能"}},"auto","是否启用高清字体(思源黑体)",true),
-    setConfig("冰冰羊的个人汉化","冰冰羊的中文翻译",{{"开启",true,"打开 打开 一定要打开"},{"关闭",false,"为什么要关掉？ QAQ"}},true,"修改了一些令人不爽的汉化内容、添加了一些提示、汉化岛屿冒险MOD的世界设置（推荐开启）",true),
+    setConfig("冰冰羊的个人汉化","冰冰羊的中文翻译",{{"开启",true,"打开 打开 一定要打开"},{"关闭",false,"为什么要关掉？ QAQ"}},true,"修改了一些令人不爽的汉化内容、添加了一些提示...（推荐开启）",true),
     setConfig("Pigman_Strings","梅式󰀐语言包",{{"开启",true},{"关闭",false}},false,"将游戏中猪人的台词变得和bilibili·踏雪寻梅3124的猪人一样骚",true),
     SkipSpace("常用模组",true),
     mainConfig("workshop-376333686","Combined Status(综合状态显示汉化)","汉化游戏内Combined Status显示的内容\n 例如：Max → 最大值",true,true),

@@ -91,12 +91,12 @@ if GetModConfigData("mod_info_Chs",true) then
     end
 
 -- 为了兼容其他模组使用GetModActualName来定位自己，我们需要修改官方的逻辑 加一个modinfo.old_name
-    local old_GetModActualName = KnownModIndex.GetModActualName
-    KnownModIndex.GetModActualName = function(self,fancyname,...)
-        old_GetModActualName(self,fancyname,...)
+    KnownModIndex.GetModActualName = function(self, fancyname)
         for i,v in pairs(self.savedata.known_mods) do
             if v and v.modinfo and v.modinfo.name then
-                if v.modinfo.old_name == fancyname then
+                if v.modinfo.name == fancyname then
+                    return i
+                elseif v.modinfo.old_name == fancyname then
                     return i
                 end
             end
