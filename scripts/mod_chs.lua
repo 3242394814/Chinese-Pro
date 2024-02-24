@@ -26,7 +26,7 @@ local main_list = {}
 -- 加载MOD配置汉化
 local modlist=KnownModIndex:GetModNames()
 	for _,v in ipairs(modlist) do
-		if fileexists(MODROOT.."scripts/info_chs/"..v..".lua") and GetModConfigData("mod_info_Chs",true) then--检测本模组内的配置汉化文件
+		if fileexists(MODROOT.."scripts/info_chs/"..v..".lua") and GetModConfigData("mod_info_Chs",true) then--检测本模组内的MOD信息翻译文件（补充: v1.CH_label 是我的翻译文件内新定义的一个东西）
 			info_list[v] = require("info_chs/"..v)
 		end
         if fileexists(MODROOT.."scripts/main_chs/"..v..".lua") then -- 检测本模组内的游戏内汉化文件
@@ -60,9 +60,9 @@ if GetModConfigData("mod_info_Chs",true) then
                         for _, v in pairs(modinfo.configuration_options) do
                             if newinfo.configuration_options and type(newinfo.configuration_options) == "table" then
                                 for _, v1 in pairs(newinfo.configuration_options) do
-                                    if v.name ~= "" and v.name == v1.name then
+                                    if v.name ~= "" and v.name == v1.name then -- 方式1：通过对比 name 来找到目标内容 进行翻译
                                         if v.name ~= "" and v.name == v1.name then
-                                            v.label = v1.label or v.label
+                                            v.label = v1.CH_label or v1.label or v.label
                                             v.hover = v1.hover or v.hover
                                             if v.options then
                                                 for n, m in pairs(v.options) do
@@ -76,7 +76,7 @@ if GetModConfigData("mod_info_Chs",true) then
                                             end
                                         end
                                         break
-                                    elseif v.label == v1.label and v1.CH_label then
+                                    elseif v.label == v1.label and v1.CH_label then -- 方式2：对比label来找到目标内容进行翻译
                                         v.label = v1.CH_label
                                         v.hover = v1.hover or v.hover
                                         if v.options then
