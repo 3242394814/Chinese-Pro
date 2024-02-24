@@ -186,7 +186,7 @@ local info=
 		BinaryConfig("winona_portables_", "女工:便携式建筑", "使女工的建筑可移植，并将工具箱改造成装置容器",true),
 		BinaryConfig("wortox", "沃拓克斯","传送效果更好，理智和灵魂治疗效果更差。鸟类和蝴蝶不再掉落灵魂。",true),
 		{
-			name = "wicker_inv_regen_",
+			name = "wicker_inv_regen",
 			label = "老奶奶:书本耐久回复",
 			hover = "配置薇克巴顿的书本如何恢复耐久",
 			options = {
@@ -206,7 +206,7 @@ local info=
 					hover = "像原版一样"
 				}
 			},
-			default = "inv",
+			default = "vanilla",
 
 		},
 		BinaryConfig("wickerbottom", "老奶奶:读书", "老奶奶和麦斯威尔在精神值低的时候不能再读书",true),
@@ -229,7 +229,7 @@ local info=
 		BinaryConfig("wendy", "温蒂", "阿比盖尔不再能够为温蒂提供易伤的效果", true),
 		BinaryConfig("wx78", "机器人", "不再从闪电中恢复电量", true),
 		BinaryConfig("wxless", "机器人重做","更改机器人的电荷和电路系统的工作方式，以及电路的影响", true),
-    BinaryConfig("wxlessspeedbump", "机器人:速度电路碰撞","启用此选项，使重做后的机器人不会因速度电路而撞到怪物", false),
+    	BinaryConfig("wxlessspeedbump", "机器人:速度电路碰撞","启用此选项，使重做后的机器人不会因速度电路而撞到怪物", false),
 
 		------------------------------
 		-- Weather --
