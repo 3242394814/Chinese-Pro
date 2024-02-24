@@ -192,9 +192,9 @@ local info=
 			hover = "配置薇克巴顿的书本如何恢复耐久",
 			options = {
 				{
-					description = "修改书架制作配方",
+					description = "书在物品栏中回复耐久",
 					data = "inv",
-					hover = "现在需要4块木板，而不是2个活木"
+					hover = "此外，书架现在需要4块木板，而不是2块活木"
 				},
 				{
 					description = "不可恢复",
