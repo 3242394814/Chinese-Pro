@@ -385,6 +385,10 @@ msgid "Sadly, {name} was feeling neglected. They went looking for the affection,
 msgstr "{name}很难过，因为感到被冷落了。\n它去别的地方寻找好感、食物和更整洁的家了。 "
 
 #####################################################岛屿冒险汉化#####################################################
+#临时内容
+#: STRINGS.UI.CUSTOMIZATIONSCREEN.WILDBORES
+msgid "野猪舍"
+msgstr "野猪舍"
 #各人物检查损坏的船(原内容+更多提示)
 #: STRINGS.CHARACTERS.GENERIC.DESCRIBE.PORTAL_SHIPWRECKED
 msgid "It's broken."
