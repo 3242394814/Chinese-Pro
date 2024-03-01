@@ -166,7 +166,7 @@ local info=
 			},
 			default = true,
 		},
-		BinaryConfig("wathom_undeath", "Wathom:不死", "当他在肾上腺素高的情况下死亡时，启用Wathom不死机制。",true),
+		BinaryConfig("wathom_undeath", "Wathom:鬼魂", "当他在肾上腺素高的情况下死亡时，启用Wathom鬼魂。",true),
 		BinaryConfig("willow", "薇洛", "薇洛的打火机使用时不会掉落耐久度，当她拿着它时，她会在受到阴影攻击时会产生爆炸。",true),
 		--BinaryConfig("willow insulation", "薇洛:实验性隔热",
 			--"薇洛的隔热度在夏季调整为 120，在冬季调整为 -120。", false),
@@ -184,7 +184,7 @@ local info=
 		BinaryConfig("winonawackycats", "女工:投石器", "不再再生，生命值降低，34 AOE伤害", false),
 		BinaryConfig("winona_gen_", "女工:发电机", "只允许女工使用发电机", true),
 		BinaryConfig("winona_portables_", "女工:便携式建筑", "使女工的建筑可移植，并将工具箱改造成装置容器",true),
-		BinaryConfig("wortox", "沃拓克斯","传送效果更好，理智和灵魂治疗效果更差。鸟类和蝴蝶不再掉落灵魂。",true),
+		BinaryConfig("wortox", "小恶魔","传送效果更好，理智和灵魂治疗效果更差。鸟类和蝴蝶不再掉落灵魂。",true),
 		{
 			name = "wicker_inv_regen",
 			label = "Wicker's Regeneration",
@@ -340,7 +340,7 @@ local info=
 		------------------------------
 		Header("World Gen","世界配置"),
 		------------------------------
-		BinaryConfig("hoodedforest", "连帽森林", "连帽森林取代了月台森林，拥有全新的探索内容，包括一个新的 Boss！",true),
+		BinaryConfig("hoodedforest", "连帽森林", "连帽森林取代了月台森林，拥有全新的探索内容，包括一个新的 BOSS！",true),
 		{
 			name = "ghostwalrus",
 			label = "海象陷阱",
@@ -661,7 +661,7 @@ local info=
 		BinaryConfig("cowardfrogs", "青蛙不吃芝士蛋糕", "青蛙会逃离芝士蛋糕", true),
 		BinaryConfig("toads", "毒青蛙", "毒青蛙在第二个秋天取代青蛙，死亡时释放毒云。", true),
 		BinaryConfig("fiendforcedmetodothis", "火药猴调整", "攻击更快，生命值更低，开炮更频繁。", true),
-		BinaryConfig("sharpshooter_monkeys", "神枪手火药猴", "事实上，火药猴会瞄准任何他们认为“有趣”的射击对象。", true),
+		BinaryConfig("sharpshooter_monkeys", "火药猴射击调整", "火药猴会用大炮瞄准任何他们认为“有趣”的射击目标。", true),
 
 		-----------------------------
 		-- Bosses --
@@ -696,7 +696,7 @@ local info=
 			default = 26,
 		},
 
-		Header("Giants & Bosses","巨兽和boss"),
+		Header("Giants & Bosses","巨兽和BOSS"),
 		BinaryConfig("harder_deerclops", "巨鹿变异", "三种不同的巨鹿", true),
 		BinaryConfig("disable_megaflare", "禁用敌对照明弹", "敌对照明弹不再生成巨鹿。", true),
 		BinaryConfig("harder_bearger", "更难的熊獾", "启用这个选项会让熊大的战斗包含更多的攻击，并且会让熊大更积极地寻找你。",
@@ -1156,18 +1156,18 @@ local info=
 		{
 			name = "boss_resistance_",
 			label = "Dynamic Boss Res.",
-			CH_label = "boss数值调整",
-			hover = "Boss的各项数值随着玩家数量做调整",
+			CH_label = "BOSS数值调整",
+			hover = "BOSS的各项数值随着玩家数量做调整",
 			options = {
 				{
 					description = "动态调整",
-					hover = "Boss根据受到的攻击的多少调整它们的数值。",
+					hover = "BOSS根据受到的攻击的多少调整它们的数值。",
 					data =
 					1
 				},
 				{
 					description = "静态调整",
-					hover = "Boss根据附近的玩家的数量调整它们的数值。",
+					hover = "BOSS根据附近的玩家的数量调整它们的数值。",
 					data =
 					2
 				},
