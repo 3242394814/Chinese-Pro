@@ -88,6 +88,20 @@ local info=
 			},
 			default = 1.2,
 		},
+		{
+			name = "re_retrofit",
+			label = "重新改造植物",
+			hover = "重新应用模式",
+			options =
+			{
+				{description = "不需要", data = 0},
+				{description = "全部", data = 1},
+				{description = "只有树", data = 2},
+				{description = "只有咖啡植物", data = 3},
+				{description = "只有可可植物", data = 4},
+			},
+			default = 0
+		},
 		SEPARATOR,
 		Title("Thirst options","口渴 选项"),
 		{
@@ -268,8 +282,7 @@ local info=
 		},
 		{
 			name = "resistance_time",
-			label = "Sanity Depression Arua Resistance",
-			hover = "Chinese++ Pro: 我也看不懂这是什么意思",
+			label = "精神抑郁光环抵抗能力",
 			options =
 			{
 				{description = "更短", data = .125},
