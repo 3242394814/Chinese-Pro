@@ -10,24 +10,24 @@ description = string.gsub(description,"Krampii will more effectively steal thing
 description = string.gsub(description,"A ton of misc. changes, ranging from Wickerbottom's books to hounds.","从薇克巴顿的书到猎犬，进行了大量杂项更改。")
 description = string.gsub(description,"NEXT UPDATE:","下一次更新:")
 
-
 -- 汉化文本初版均由由鱼仔master编写
 
 local function Header(title,CH_label)
     return {
         name = "",
         label = title,
-		CH_label = CH_label,--为了汉化label 我不得不搞一个CH_label
+		CH_label = CH_label,
         hover = "",
         options = { { description = "", data = false } },
         default = false
     }
 end
 
-local function BinaryConfig(name, label, hover, default)
+local function BinaryConfig(name, label, hover, default, CH_label)
 	return {
 		name = name,
 		label = label,
+		CH_label = CH_label,
 		hover = hover,
 		options = { { description = "开启", data = true, hover = "开启" },
 			{ description = "关闭", data = false, hover = "关闭" }, },
@@ -413,7 +413,7 @@ local info=
 		-----------------------------
 		BinaryConfig("ac_does_ac", "空调", " 空调就像一个吸热篝火，在小范围内冷却并去除周围的雾。", false),
 		BinaryConfig("compostoverrot", "堆肥代替腐烂物", "堆肥替代了大多数物品制作材料中的腐烂物。\n请记住堆肥桶被强化了。强心针需要红蘑菇制作。", true),
-		BinaryConfig("cooldown_orangestaff_", "懒人手杖修改", "懒人手杖修改不再具有耐久性，而是具有冷却时间，就像 Wanda 的手表一样。",
+		BinaryConfig("cooldown_orangestaff_", "懒人手杖修改", "懒人手杖修改不再具有耐久性，而是具有冷却时间，就像旺达的手表一样。",
 			false),
 		BinaryConfig("townportal_rework", "懒人塔修改", "通过自动收获附近的植物和物体，在单人游戏中变得有用。",true),
 		BinaryConfig("telestaff_rework", "传送法阵修改", "您现在可以选择要传送到的焦点。 现在花费 3 颗紫色宝石而不是黄金。\n法杖的使用次数翻倍。",true),
@@ -715,11 +715,13 @@ local info=
 		BinaryConfig("changed_shadow_pieces", "暗影三基佬重做",
 			"暗影主教现在有不同的攻击方式", true),
 
-		Header("Boss Quality of Life","BOSS生命值"),
+		--Header("Boss Quality of Life","BOSS生命值"),
+		Header("Health Adjustment","生命值调整"),
 
 		{
-			name = "Ancient Fuelweaver's Health",
-			label = "远古织影者的血量",
+			name = "stalker_atrium_health_",
+			label = "Ancient Fuelweaver's Health",
+			CH_label = "远古织影者的血量",
 			hover = "根据您的喜好调整远古织影者的生命值！",
 			options = {
 				{ description = "最低 (/4)",   data = 0.25 },
@@ -731,8 +733,9 @@ local info=
 			default = 1
 		},
 		{
-			name = "Ancient Guardian's Health",
-			label = "远古守护者的血量",
+			name = "minotaur_health_",
+			label = "Ancient Guardian's Health",
+			CH_label = "远古守护者的血量",
 			hover = "根据您的喜好调整远古守护者的生命值！",
 			options = {
 				{ description = "最低 (/4)",   data = 0.25 },
@@ -744,21 +747,23 @@ local info=
 			default = 1
 		},
 		{
-			name = "Antlion's Health",
-			label = "蚁狮的血量",
+			name = "antlion_health_",
+			label = "Antlion's Health",
+			CH_label = "蚁狮的血量",
 			hover = "根据您的喜好调整蚁狮的生命值！",
 			options = {
-				{ description = "最低 (/4)",   data = 2000 },
-				{ description = "降低 (/2)",  data = 3000 },
-				{ description = "默认",       data = 6000 },
-				{ description = "更高 (x1.5)", data = 9000 },
-				{ description = "最高 (x2)",  data = 12000 },
-				{ description = "不妥协 (x3)",   data = 18000 } },
-			default = 6000
+				{ description = "最低 (/4)",   data = 0.25 },
+				{ description = "降低 (/2)",  data = 0.5 },
+				{ description = "默认",       data = 1 },
+				{ description = "更高 (x1.5)", data = 1.5 },
+				{ description = "最高 (x2)",  data = 2 },
+				{ description = "不妥协 (x3)",   data = 3 } },
+			default = 1
 		},
 		{
-			name = "Bearger's Health",
-			label = "熊獾的血量",
+			name = "bearger_health_",
+			label = "Bearger's Health",
+			CH_label = "熊獾的血量",
 			hover = "根据您的喜好调整熊獾的生命值！",
 			options = {
 				{ description = "最低 (/4)",   data = 0.25 },
@@ -770,8 +775,9 @@ local info=
 			default = 1
 		},
 		{
-			name = "Bee Queen's Health",
-			label = "蜂后的血量",
+			name = "beequeen_health_",
+			label = "Bee Queen's Health",
+			CH_label = "蜂后的血量",
 			hover = "根据您的喜好调整蜂后的生命值！",
 			options = {
 				{ description = "最低 (/4)",   data = 0.25 },
@@ -783,8 +789,9 @@ local info=
 			default = 1
 		},
 		{
-			name = "Celestial Champion's Health",
-			label = "天体英雄的血量",
+			name = "alterguardian_health_",
+			label = "Celestial Champion's Health",
+			CH_label = "天体英雄的血量",
 			hover = "根据您的喜好调整天体影响的生命值！",
 			options = {
 				{ description = "最低 (/4)",   data = 0.25 },
@@ -796,22 +803,10 @@ local info=
 			default = 1
 		},
 		{
-			name = "Crab King's Health",
-			label = "帝王蟹的血量",
+			name = "crabking_health_",
+			label = "Crab King's Health",
+			CH_label = "帝王蟹的血量",
 			hover = "根据您的喜好调整帝王蟹的生命值！",
-			options = {
-				{ description = "最低 (/4)",   data = 5000 },
-				{ description = "降低 (/2)",  data = 10000 },
-				{ description = "默认",       data = 20000 },
-				{ description = "更高 (x1.5)", data = 30000 },
-				{ description = "最高 (x2)",  data = 40000 },
-				{ description = "不妥协 (x3)",   data = 60000 } },
-			default = 20000
-		},
-		{
-			name = "Deerclops's Health",
-			label = "独眼巨鹿的血量",
-			hover = "根据您的喜好调整独眼巨鹿的生命值！",
 			options = {
 				{ description = "最低 (/4)",   data = 0.25 },
 				{ description = "降低 (/2)",  data = 0.5 },
@@ -822,8 +817,22 @@ local info=
 			default = 1
 		},
 		{
-			name = "Dragonfly's Health",
-			label = "龙蝇的血量",
+			name = "deerclops_health_",
+			label = "Deerclops's Health",
+			CH_label = "独眼巨鹿的血量",
+			hover = "根据您的喜好调整独眼巨鹿的生命值！",
+			options = {
+				{ description = "降低 (/2)",  data = 0.5 },
+				{ description = "默认",       data = 1 },
+				{ description = "更高 (x1.5)", data = 1.5 },
+				{ description = "最高 (x2)",  data = 2 },
+				{ description = "不妥协 (x3)",   data = 3 } },
+			default = 1
+		},
+		{
+			name = "dragonfly_health_",
+			label = "Dragonfly's Health",
+			CH_label = "龙蝇的血量",
 			hover = "根据您的喜好调整龙蝇的生命值！",
 			options = {
 				{ description = "最低 (/4)",   data = 0.25 },
@@ -835,8 +844,9 @@ local info=
 			default = 1
 		},
 		{
-			name = "Eye of Terror's Health",
-			label = "恐怖之眼的血量",
+			name = "eyeofterror_health_",
+			label = "Eye of Terror's Health",
+			CH_label = "恐怖之眼的血量",
 			hover = "根据您的喜好调整恐怖之眼的生命值！",
 			options = {
 				{ description = "最低 (/4)",   data = 0.25 },
@@ -848,8 +858,9 @@ local info=
 			default = 1
 		},
 		{
-			name = "Frostjaw's Health",
-			label = "冰鲨的血量",
+			name = "sharkboi_health_",
+			label = "Frostjaw's Health",
+			CH_label = "冰鲨的血量",
 			hover = "根据您的喜好调整冰鲨的生命值！",
 			options = {
 				{ description = "最低 (/4)",   data = 0.25 },
@@ -861,8 +872,9 @@ local info=
 			default = 1
 		},
 		{
-			name = "Hooded Widow's Health",
-			label = "黑寡妇蜘蛛的血量",
+			name = "hoodedwidow_health_",
+			label = "Hooded Widow's Health",
+			CH_label = "黑寡妇蜘蛛的血量",
 			hover = "根据您的喜好调整黑寡妇蜘蛛的生命值！",
 			options = {
 				{ description = "最低 (/4)",   data = 0.25 },
@@ -874,21 +886,23 @@ local info=
 			default = 1
 		},
 		{
-			name = "Klaus's Health",
-			label = "克劳斯的血量",
+			name = "klaus_health_",
+			label = "Klaus's Health",
+			CH_label = "克劳斯的血量",
 			hover = "根据您的喜好调整克劳斯的生命值！",
 			options = {
-				{ description = "最低 (/4)",   data = 2500 },
-				{ description = "降低 (/2)",  data = 5000 },
-				{ description = "默认",       data = 10000 },
-				{ description = "更高 (x1.5)", data = 15000 },
-				{ description = "最高 (x2)",  data = 20000 },
-				{ description = "不妥协 (x3)",   data = 30000 } },
-			default = 10000
+				{ description = "最低 (/4)",   data = 0.25 },
+				{ description = "降低 (/2)",  data = 0.5 },
+				{ description = "默认",       data = 1 },
+				{ description = "更高 (x1.5)", data = 1.5 },
+				{ description = "最高 (x2)",  data = 2 },
+				{ description = "不妥协 (x3)",   data = 3 } },
+			default = 1
 		},
 		{
-			name = "Lord of the Fruit Flies's Health",
-			label = "果蝇王的血量",
+			name = "lordfruitfly_health_",
+			label = "Lord of the Fruit Flies's Health",
+			CH_label = "果蝇王的血量",
 			hover = "根据您的喜好调整果蝇王的生命值！",
 			options = {
 				{ description = "最低 (/4)",   data = 0.25 },
@@ -900,8 +914,9 @@ local info=
 			default = 1
 		},
 		{
-			name = "Malbatross's Health",
-			label = "邪天翁的血量",
+			name = "malbatross_health_",
+			label = "Malbatross's Health",
+			CH_label = "邪天翁的血量",
 			hover = "根据您的喜好调整邪天翁的生命值！",
 			options = {
 				{ description = "最低 (/4)",   data = 0.25 },
@@ -913,8 +928,9 @@ local info=
 			default = 1
 		},
 		{
-			name = "Misery Toadstool's Health",
-			label = "悲惨的毒菌蟾蜍的血量",
+			name = "toadstool_dark_health_",
+			label = "Misery Toadstool's Health",
+			CH_label = "悲惨的毒菌蟾蜍的血量",
 			hover = "根据您的喜好调整悲惨的毒菌蟾蜍的生命值！",
 			options = {
 				{ description = "最低 (/4)",   data = 0.25 },
@@ -926,8 +942,9 @@ local info=
 			default = 1
 		},
 		{
-			name = "Moonmaw Dragonfly's Health",
-			label = "月光龙蝇的血量",
+			name = "moonmaw_dragonfly_health_",
+			label = "Moonmaw Dragonfly's Health",
+			CH_label = "月光龙蝇的血量",
 			hover = "根据您的喜好调整月光龙蝇的生命值！",
 			options = {
 				{ description = "最低 (/4)",   data = 0.25 },
@@ -939,8 +956,9 @@ local info=
 			default = 1
 		},
 		{
-			name = "Moose/Geese's Health",
-			label = "麋鹿鹅的血量",
+			name = "moose_health_",
+			label = "Moose/Geese's Health",
+			CH_label = "麋鹿鹅的血量",
 			hover = "根据您的喜好调整麋鹿鹅的生命值！",
 			options = {
 				{ description = "最低 (/4)",   data = 0.25 },
@@ -952,8 +970,9 @@ local info=
 			default = 1
 		},
 		{
-			name = "Mother Goose's Health",
-			label = "鹅妈妈的血量",
+			name = "mothergoose_health_",
+			label = "Mother Goose's Health",
+			CH_label = "鹅妈妈的血量",
 			hover = "根据您的喜好调整鹅妈妈的生命值！",
 			options = {
 				{ description = "最低 (/4)",   data = 0.25 },
@@ -965,8 +984,9 @@ local info=
 			default = 1
 		},
 		{
-			name = "Nightmare Werepig's Health",
-			label = "噩梦猪人的血量",
+			name = "daywalker_health_",
+			label = "Nightmare Werepig's Health",
+			CH_label = "噩梦猪人的血量",
 			hover = "根据您的喜好调整噩梦猪人的生命值！",
 			options = {
 				{ description = "最低 (/4)",   data = 0.25 },
@@ -978,8 +998,9 @@ local info=
 			default = 1
 		},
 		{
-			name = "Reanimated Skeleton's Health",
-			label = "复活的骨架的血量",
+			name = "stalker_atrium_health_",
+			label = "Reanimated Skeleton's Health",
+			CH_label = "复活的骨架的血量",
 			hover = "根据您的喜好调整复活的骨架的生命值！",
 			options = {
 				{ description = "最低 (/4)",   data = 0.25 },
@@ -991,8 +1012,9 @@ local info=
 			default = 1
 		},
 		{
-			name = "Shadow Pieces's Health",
-			label = "暗影三基佬的血量",
+			name = "shadowpieces_health_",
+			label = "Shadow Pieces's Health",
+			CH_label = "暗影三基佬的血量",
 			hover = "根据您的喜好调整暗影三基佬的生命值！",
 			options = {
 				{ description = "最低 (/4)",   data = 0.25 },
@@ -1004,8 +1026,9 @@ local info=
 			default = 1
 		},
 		{
-			name = "Spider Queen's Health",
-			label = "蜘蛛女王的血量",
+			name = "spiderqueen_health_",
+			label = "Spider Queen's Health",
+			CH_label = "蜘蛛女王的血量",
 			hover = "根据您的喜好调整蜘蛛女王的生命值！",
 			options = {
 				{ description = "最低 (/4)",   data = 0.25 },
@@ -1017,8 +1040,9 @@ local info=
 			default = 1
 		},
 		{
-			name = "Toadstool's Health",
-			label = "蟾蜍的血量",
+			name = "toadstool_health_",
+			label = "Toadstool's Health",
+			CH_label = "蟾蜍的血量",
 			hover = "根据您的喜好调整蟾蜍的生命值！",
 			options = {
 				{ description = "最低 (/4)",   data = 0.25 },
@@ -1030,21 +1054,23 @@ local info=
 			default = 1
 		},
 		{
-			name = "Treeguard's Health",
-			label = "树精守卫的血量",
+			name = "leif_health",
+			label = "Treeguard's Health",
+			CH_label = "树精守卫的血量",
 			hover = "根据您的喜好调整树精守卫的生命值！",
 			options = {
-				{ description = "最低 (/4)",   data = 750 },
-				{ description = "降低 (/2)",  data = 1500 },
-				{ description = "默认",       data = 3000 },
-				{ description = "更高 (x1.5)", data = 4500 },
-				{ description = "最高 (x2)",  data = 6000 },
-				{ description = "不妥协 (x3)",   data = 9000 } },
-			default = 3000
+				{ description = "最低 (/4)",   data = 0.25 },
+				{ description = "降低 (/2)",  data = 0.5 },
+				{ description = "默认",       data = 1 },
+				{ description = "更高 (x1.5)", data = 1.5 },
+				{ description = "最高 (x2)",  data = 2 },
+				{ description = "不妥协 (x3)",   data = 3 } },
+			default = 1
 		},
 		{
-			name = "Twins of Terror's Health",
-			label = "双子魔眼的血量",
+			name = "twinofterror_health_",
+			label = "Twins of Terror's Health",
+			CH_label = "双子魔眼的血量",
 			hover = "根据您的喜好调整双子魔眼的生命值！",
 			options = {
 				{ description = "最低 (/4)",   data = 0.25 },
@@ -1056,8 +1082,9 @@ local info=
 			default = 1
 		},
 		{
-			name = "Varg's Health",
-			label = "座狼的血量",
+			name = "mock_dragonfly_health_",
+			label = "Wilting Dragonfly's Health",
+			CH_label = "座狼的血量",
 			hover = "根据您的喜好调整座狼的生命值！",
 			options = {
 				{ description = "最低 (/4)",   data = 0.25 },
@@ -1069,8 +1096,9 @@ local info=
 			default = 1
 		},
 		{
-			name = "Wilting Dragonfly's Health",
-			label = "时令龙蝇的血量",
+			name = "mutated_deerclops_health_",
+			label = "Crystal Deerclops's Health",
+			CH_label = "时令龙蝇的血量",
 			hover = "根据您的喜好调整时令龙蝇的生命值！",
 			options = {
 				{ description = "最低 (/4)",   data = 0.25 },
@@ -1081,7 +1109,34 @@ local info=
 				{ description = "不妥协 (x3)",   data = 3 } },
 			default = 1
 		},
-
+		{
+			name = "mutated_bearger_health_",
+			label = "Armored Bearger's Health",
+			CH_label = "装甲熊獾的血量",
+			hover = "根据您的喜好调整装甲熊獾的生命值！",
+			options = {
+				{ description = "最低 (/4)",   data = 0.25 },
+				{ description = "降低 (/2)",  data = 0.5 },
+				{ description = "默认",       data = 1 },
+				{ description = "更高 (x1.5)", data = 1.5 },
+				{ description = "最高 (x2)",  data = 2 },
+				{ description = "不妥协 (x3)",   data = 3 } },
+			default = 1
+		},
+		{
+			name = "mutated_warg_health_",
+			label = "Possesed Varg's Health",
+			CH_label="附身座狼的血量",
+			hover = "根据您的喜好调整附身座狼的生命值！",
+			options = {
+				{ description = "最低 (/4)",   data = 0.25 },
+				{ description = "降低 (/2)",  data = 0.5 },
+				{ description = "默认",       data = 1 },
+				{ description = "更高 (x1.5)", data = 1.5 },
+				{ description = "最高 (x2)",  data = 2 },
+				{ description = "不妥协 (x3)",   data = 3 } },
+			default = 1
+		},
 
 		-----------------------------
 		-- Experimental --
@@ -1097,10 +1152,11 @@ local info=
 		Header("> Legacy Options <","> 遗留选项 <"),
 		BinaryConfig("hangyperds", "饥饿的火鸡", "火鸡现在更具侵略性，会试图从玩家的库存中拿走浆果。",false),
 		BinaryConfig("woodie_wet_goose", "鹅变湿", "鹅在水上会变湿。", false),
-		BinaryConfig("cave_clops", "[已损坏]巨鹿可以下洞", "在冬天，巨鹿可以冲破封锁线到达你的身边。", false),
+		BinaryConfig("cave_clops", "Cave Deerclops", "在冬天，巨鹿可以冲破封锁线到达你的身边。", false, "巨鹿可以下洞"),
 		{
 			name = "boss_resistance_",
-			label = "[已损坏]boss数值调整",
+			label = "Dynamic Boss Res.",
+			CH_label = "boss数值调整",
 			hover = "Boss的各项数值随着玩家数量做调整",
 			options = {
 				{
@@ -1120,10 +1176,9 @@ local info=
 			},
 			default = 3,
 		},
-		BinaryConfig("wormwood_fire", "[已损坏]特别易燃的植物人", "植物人非常容易燃烧", false),
-		BinaryConfig("hayfever_disable", "[已损坏]花粉热", "哈姆雷特里的花粉热，会使人打喷嚏，可预防", false),
-		BinaryConfig("moon_transformations", "[已损坏]月圆变异", "月圆时一些生物会变化，比如企鹅，比如蜘蛛",
-		false),
+		BinaryConfig("wormwood_fire", "Extra Flamable Wormwood", "植物人非常容易燃烧", false, "特别易燃的植物人"),
+		BinaryConfig("hayfever_disable", "Hayfever", "哈姆雷特里的花粉热，会使人打喷嚏，可预防", false, "花粉热"),
+		BinaryConfig("moon_transformations", "Moon Transfor.", "月圆时一些生物会变化，比如企鹅，比如蜘蛛", false, "月圆变异"),
 		-----------------------------
 		Header("> Dev Tools <","> 开发工具 <"),
 		BinaryConfig("announce_basestatus", "[DEV] 鼠潮分宣告", "[开发人员工具]将精确的鼠潮分值打印到聊天中，以便实时查看。",false),
@@ -1143,4 +1198,14 @@ local info=
 
 	}
 }
+
+--自动添加[已损坏]标注
+for _,v in ipairs(KnownModIndex:GetModInfo("workshop-2039181790").configuration_options) do
+	for _,v1 in ipairs(info.configuration_options) do
+		if (v.name == v1.name or v.label == v1.label) and v1.CH_label then
+			if string.find(v.label,"%[BROKEN%]") then v1.CH_label = "[已损坏]"..v1.CH_label end
+		end
+	end
+end
+
 return info
