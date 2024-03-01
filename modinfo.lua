@@ -7,9 +7,7 @@ description = "当前版本：" ..version .. "\n更新日期：2024年3月1日\n
 这既是客户端模组 也是服务器模组，当客户端启用此模组后 开服时服务器也会自动启用此模组
 支持汉化的MOD与更新日志请在创意工坊查看
 
-MOD内含冰冰羊的自用汉化包：修改了一些令人不爽的汉化内容、添加了一些提示、汉化岛屿冒险MOD的世界设置 可与【中文语言包】同时开启~
-
-󰀔汉化其它模组信息功能：当前未生效×]]
+MOD内含冰冰羊的自用汉化包：修改了一些令人不爽的汉化内容、添加了一些提示、汉化岛屿冒险MOD的世界设置 可与【中文语言包】同时开启~]]
 author = "冰冰羊"
 api_version = 10
 priority = -100001
@@ -46,6 +44,7 @@ if not folder_name:find("workshop-") then
     end
 else
     function MOD_MODE()
+    description = description .. "\n\n󰀔汉化其它模组信息功能：当前未生效×"
         return
         {
             name = "Test-Mode",
