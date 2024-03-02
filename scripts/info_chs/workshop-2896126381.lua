@@ -1,5 +1,5 @@
 local name = KnownModIndex:GetModInfo("workshop-2896126381").name
-local version = KnownModIndex:GetModInfo("workshop-2896126381").version
+local version = KnownModIndex:GetModInfo("workshop-2896126381").version or "未知"
 local a = {
     "A",
     "B",

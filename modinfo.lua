@@ -126,7 +126,6 @@ configuration_options =
     mainConfig("workshop-1938752683","ReForged(熔炉) 游戏内汉化","调用熔炉MOD中的中文简体语言来汉化熔炉MOD的游戏内页面",true),
 
     SkipSpace("辅助型/冷门模组"),
-    mainConfig("workshop-3169441836","Better Crash Screen(更好的崩溃提示) 翻译","翻译“更好的崩溃提示”模组",true,true),
     mainConfig("workshop-2621090176","Wormholes/Sinkholes Icons For Server\n虫洞/天坑的服务器图标翻译优化","修正游戏内原作者写反的“取消”和“接受”",true),
     mainConfig("workshop-2010472942","Reign of Runts(侏儒的统治)汉化","汉化Reign of Runts游戏内部分内容",true),
     mainConfig("workshop-1298780476","Nightmare phase indicator 中文宣告优化","将Nightmare phase indicator模组的宣告内容替换为我的内容",true,true),
@@ -135,6 +134,8 @@ configuration_options =
     mainConfig("workshop-1903101575","Auto-Join 汉化","汉化首页底部和服务器列表右下角的\nRejoin→重新加入 Cancel→取消",true,true),
     mainConfig("workshop-2480826828","Ground Chest汉化","汉化游戏内UI页面",true,true),
     mainConfig("workshop-1948762120","暴食(客户端)主页面文本汉化","Re-Gorge-itated (Client) 模组汉化",true,true),
+    mainConfig("workshop-3169441836","Better Crash Screen(更好的崩溃提示) 汉化","汉化“更好的崩溃提示”模组",true,true),
+    mainConfig("workshop-2065547564","No Login Screen(无登录页面) 汉化","汉化“无登录页面” 模组",true,true),
 
     SkipSpace("冒险模式系列"),
     mainConfig("workshop-1847959350","Adventure Mode(冒险模式)汉化","汉化Adventure Mode模组内文本\n目前由于主体模组每章章节的标题使用英文字符串写死了 无法汉化",true),

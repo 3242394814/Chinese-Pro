@@ -1,4 +1,4 @@
-local modname = KnownModIndex:GetModInfo("workshop-2039181790").name
+local modname = KnownModIndex:GetModInfo("workshop-2039181790").name or ""
 local description = KnownModIndex:GetModInfo("workshop-2039181790").description or ""
 description = string.gsub(description,"Version:","版本：")
 description = string.gsub(description,"%- \"Under the Weather Pt.1\"","- \"天气之下 第一章\"")
@@ -1200,10 +1200,12 @@ local info=
 }
 
 --自动添加[已损坏]标注
-for _,v in ipairs(KnownModIndex:GetModInfo("workshop-2039181790").configuration_options) do
-	for _,v1 in ipairs(info.configuration_options) do
-		if (v.name == v1.name or v.label == v1.label) and v1.CH_label then
-			if string.find(v.label,"%[BROKEN%]") then v1.CH_label = "[已损坏]"..v1.CH_label end
+if type(KnownModIndex:GetModInfo("workshop-2039181790").configuration_options) == "table" then
+	for _,v in ipairs(KnownModIndex:GetModInfo("workshop-2039181790").configuration_options) do
+		for _,v1 in ipairs(info.configuration_options) do
+			if (v.name == v1.name or v.label == v1.label) and v1.CH_label then
+				if string.find(v.label,"%[BROKEN%]") then v1.CH_label = "[已损坏]"..v1.CH_label end
+			end
 		end
 	end
 end

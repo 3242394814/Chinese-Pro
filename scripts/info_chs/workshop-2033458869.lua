@@ -1,13 +1,7 @@
-if KnownModIndex:GetModInfo("workshop-2033458869").name == "Auto Cooking" then
-    modname = "Auto Cooking(自动烹饪)"
-else
-    modname = KnownModIndex:GetModInfo("workshop-2033458869").name
-end
-
 local boolean = {{description = "是", data = true}, {description = "否", data = false}}
 local info=
 {
-    name=modname,
+    name="Auto Cooking(自动烹饪)",
     configuration_options =
     {
         {

@@ -1,5 +1,5 @@
 local old_ver = "170403.21:59"
-local version = KnownModIndex:GetModInfo("workshop-661253977").version
+local version = KnownModIndex:GetModInfo("workshop-661253977").version or "未知"
 
 local info={
     name = "Don't Drop Everything(灵魂携带物品)",

@@ -1,4 +1,4 @@
-local version = KnownModIndex:GetModInfo("workshop-699175387").version
+local version = KnownModIndex:GetModInfo("workshop-699175387").version or "未知"
 
 local keyslist = {}
 local alpha = {"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"}

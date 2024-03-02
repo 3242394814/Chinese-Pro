@@ -1,4 +1,4 @@
-local version = KnownModIndex:GetModInfo("workshop-1918927570").version
+local version = KnownModIndex:GetModInfo("workshop-1918927570").version or "未知"
 
 local empty = { { description = "", data = 0 } }
 local function Title(title, label, hover)

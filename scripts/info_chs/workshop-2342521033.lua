@@ -1,13 +1,15 @@
-local version = KnownModIndex:GetModInfo("workshop-2342521033").version
+local version = KnownModIndex:GetModInfo("workshop-2342521033").version or "未知"
 if KnownModIndex:GetModInfo("workshop-2342521033").name == "Entity Indicators" then
     modname = "Entity Indicators(实体指示器)"
+else
+    modname = KnownModIndex:GetModInfo("workshop-2342521033").name
 end
-local description = KnownModIndex:GetModInfo("workshop-2342521033").description
+local description = KnownModIndex:GetModInfo("workshop-2342521033").description or ""
 description = description:gsub("Do you feel it%? Call of blood and maybe stomach too! Thirsty for fight and delicious meat, you looking for enemies. But you never know where they are when you need them%? Well. Let's Hunt and Don't Starve... Together!", "你感觉到了吗？血液的呼唤.. 也许还有胃！\n渴望战斗和美味的肉，你在寻找敌人。但当你需要它们的时候 你永远不知道它们在哪里？\n好。让我们一起狩猎 还有不要挨饿...一起！")
 description = description:gsub("What's New", "新功能")
 description = description:gsub("Added Mutated bosses %+ Nightmare Werepig", "添加了变异BOSS + 噩梦猪人")
 description = description:gsub("Fixed Heads only", "修复 仅头部")
-description = description:gsub("Credits", "借用了以下MOD作者的代码")
+description = description:gsub("Credits", "致谢")
 description = description:gsub("Version", "版本")
 
 

@@ -151,7 +151,7 @@ local info =
 		},
 		{
 			name = "ENABLER",
-			label = "不检测是否与\nShow me(Origin)/Insight一起使用",
+			label = "不检测是否与\nShow me/Insight一起使用",
 			hover = "当此开关设置为\"否\"且服务器开启了Insight(Show Me+)/Show Me(Origin)时\n不加载此模组的显示信息功能",
 			options =
 			{

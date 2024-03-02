@@ -1,4 +1,4 @@
-local version = KnownModIndex:GetModInfo("workshop-1938752683").version
+local version = KnownModIndex:GetModInfo("workshop-1938752683").version or "未知"
 local function AddCustomConfig(name, label, hover, options, default)
     return { name = name, label = label, hover = hover or "", options = options, default = default }
 end

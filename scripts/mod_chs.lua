@@ -55,7 +55,7 @@ if GetModConfigData("mod_info_Chs",true) then
                 if not modinfo.old_name then -- 判断是否运行过汉化代码
                     modinfo.old_name = modinfo.name -- 保存旧名称用于兼容其他模组内的GetModActualName
                     modinfo.name = newinfo.name or modinfo.name      -- 笔记：modinfo.folder_name 表示MOD路径名称（workshop-xxx）
-                    modinfo.description = newinfo.description or modinfo.description
+                    if newinfo.description and newinfo.description ~= "" then modinfo.description = newinfo.description end
                     if modinfo.configuration_options and type(modinfo.configuration_options) == "table" then
                         for _, v in pairs(modinfo.configuration_options) do
                             if newinfo.configuration_options and type(newinfo.configuration_options) == "table" then

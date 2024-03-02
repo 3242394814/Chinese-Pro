@@ -82,7 +82,7 @@ local function Title(title,label)
 		default=0,
 	}
 end
-local version = KnownModIndex:GetModInfo("workshop-1416911938").version
+local version = KnownModIndex:GetModInfo("workshop-1416911938").version or "未知"
 local info =
 {
 	name = "Gorge extender(暴食扩展)",
