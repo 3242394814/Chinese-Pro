@@ -3,7 +3,7 @@ description = string.gsub(description,"This mod skips the main loging screen and
 description = string.gsub(description,"What's New:","最近更新：")
 description = string.gsub(description,"Option to select Online/Offline mode added","添加选择在线/离线模式的选项")
 description = string.gsub(description,"Button to switch between modes added","添加了模式切换按钮")
-description = string.gsub(description,"Added option to switch login time between 2 and instant","添加在2和即时之间切换登录时间的选项")
+description = string.gsub(description,"Added option to switch login time between 2 and instant","添加切换登录时间（\"2秒\"与\"瞬间\"）的选项")
 description = string.gsub(description,"Version:", "版本：")
 description = string.gsub(description,"Copyright © 2020","版权所有 © 2020")
 description = string.gsub(description,"󰀭 Credits","󰀭 致谢")
@@ -57,7 +57,7 @@ local info =
 			hover   = "需要多长时间",
 			options =
 			{
-				{ description = "2 秒",  data = 2, hover = "通过倒计时解决Drops Reset Countdown(掉落重置倒计时) 模组的问题" },
+				{ description = "2秒",  data = 2, hover = "通过倒计时解决Drops Reset Countdown(掉落重置倒计时) 模组的问题" },
 				{ description = "瞬间", data = 0 },
 			},
 			default = 0,
