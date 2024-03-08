@@ -1,5 +1,5 @@
 name = "Chinese++ Pro"
-version = "3.6.3"
+version = "3.7"
 description = "当前版本：" ..version .. "\n更新日期：2024年3月1日\n" ..
 [[
 
