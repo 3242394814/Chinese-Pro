@@ -1,4 +1,12 @@
-
+local version = KnownModIndex:GetModInfo("workshop-3169441836").version
+local modinfo_ver = KnownModIndex:GetModInfo("workshop-3169441836").modinfo_ver
+local description = KnownModIndex:GetModInfo("workshop-3169441836").description
+description = string.gsub(description,"Improves the crash screen to give more detailed information and makes it easier to understand.","改进了崩溃提示页面，以提供更详细的信息，使其更容易理解。")
+description = string.gsub(description,"Version","版本")
+description = string.gsub(description,"What's New:","最近更新：")
+description = string.gsub(description,"Added Workshop button when game crashes with a main cause","当游戏崩溃时，在崩溃界面添加了“创意工坊页面”按钮")
+description = string.gsub(description,"Adjusted Default settings","调整默认设置")
+description = string.gsub(description,"󰀭 Credits","󰀭 致谢")
 
 
 local scales = {
@@ -32,7 +40,7 @@ end
 local info =
 {
     name = "Better Crash Screen(更好的崩溃提示)",
-    description = "",
+    description = description,
     configuration_options = {
 
 
@@ -81,11 +89,33 @@ local info =
             default = 1.08
 
         },
-
-
-
-
-
+        {
+            name = "font",
+            label = "字体覆盖",
+            hover = "这不适用于底部按钮",
+            options =
+            {
+                { description = "默认", data = 0},
+                { description = "聊天字体", data = "TALKINGFONT"},
+                { description = "沃姆伍德字体", data = "TALKINGFONT_WORMWOOD"},
+                { description = "交易小店字体", data = "TALKINGFONT_TRADEIN"},
+                { description = "寄居蟹隐士字体", data = "TALKINGFONT_HERMIT"},
+                { description = "PT Mono", data = "PTMONO"},
+                { description = "Wildcard", data = "BETTERCRASHSCREEN_FONT_WILDCARD"},
+            },
+            default = 0
+        },
+        {
+            name = "nostalgia",
+            label = "怀旧",
+            hover = "",
+            options =
+            {
+                { description = "开启",  data = 1 },
+                { description = "关闭", data = 0 },
+            },
+            default = 0
+        },
 
         Title("Top Buttons", "Pick what mini buttons you want","选择你想要的小按钮"),
 
@@ -141,6 +171,8 @@ local info =
             },
             default = true
         },
+        Title("󰀔 Mod Version"..":".." "..version,"","󰀔 Mod 版本"..":".." "..version),
+		Title("󰀩 Modinfo Version:".." "..modinfo_ver,"","󰀩 Modinfo 版本:".." "..modinfo_ver)
     }
 }
 return info

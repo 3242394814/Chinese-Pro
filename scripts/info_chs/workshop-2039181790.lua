@@ -1,4 +1,4 @@
-local modname = KnownModIndex:GetModInfo("workshop-2039181790").name or ""
+local modname = KnownModIndex:GetModInfo("workshop-2039181790").name
 local description = KnownModIndex:GetModInfo("workshop-2039181790").description or ""
 description = string.gsub(description,"Version:","版本：")
 description = string.gsub(description,"%- \"Under the Weather Pt.1\"","- \"天气之下 第一章\"")
@@ -498,6 +498,7 @@ local info=
 		BinaryConfig("goodies_nerf", "好东西 食物类型更改", "更多可用的好东西 类型被更改为素食或通用。", true),
 		BinaryConfig("icecream_buff", "冰淇淋", "冰激凌现在恢复100理智，但是恢复的很慢。", true),
 		BinaryConfig("meatball", "肉丸", "肉丸的饥饿值恢复由62.5降低为50", true),
+		BinaryConfig("bonestew_nerf", "炖肉汤", "制作炖肉汤需要3.5肉值才能烹饪。", true),
 		{
 			name = "perogi",
 			label = "饺子",
@@ -661,7 +662,7 @@ local info=
 		BinaryConfig("cowardfrogs", "青蛙不吃芝士蛋糕", "青蛙会逃离芝士蛋糕", true),
 		BinaryConfig("toads", "毒青蛙", "毒青蛙在第二个秋天取代青蛙，死亡时释放毒云。", true),
 		BinaryConfig("fiendforcedmetodothis", "火药猴调整", "攻击更快，生命值更低，开炮更频繁。", true),
-		BinaryConfig("sharpshooter_monkeys", "火药猴射击调整", "火药猴会用大炮瞄准任何他们认为“有趣”的射击目标。", true),
+		BinaryConfig("sharpshooter_monkeys", "Sharpshooter Powder Monkeys", "火药猴会用大炮瞄准任何他们认为“有趣”的射击目标。", true, "神枪手火药猴"),
 
 		-----------------------------
 		-- Bosses --
@@ -1200,12 +1201,10 @@ local info=
 }
 
 --自动添加[已损坏]标注
-if type(KnownModIndex:GetModInfo("workshop-2039181790").configuration_options) == "table" then
-	for _,v in ipairs(KnownModIndex:GetModInfo("workshop-2039181790").configuration_options) do
-		for _,v1 in ipairs(info.configuration_options) do
-			if (v.name == v1.name or v.label == v1.label) and v1.CH_label then
-				if string.find(v.label,"%[BROKEN%]") then v1.CH_label = "[已损坏]"..v1.CH_label end
-			end
+for _,v in ipairs(KnownModIndex:GetModInfo("workshop-2039181790").configuration_options) do
+	for _,v1 in ipairs(info.configuration_options) do
+		if (v.name == v1.name or v.label == v1.label) and v1.CH_label then
+			if string.find(v.label,"%[BROKEN%]") then v1.CH_label = "[已损坏]"..v1.CH_label end
 		end
 	end
 end

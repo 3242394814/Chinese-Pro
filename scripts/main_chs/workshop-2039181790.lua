@@ -45,8 +45,8 @@ STRINGS.CHARACTER_DESCRIPTIONS.warly = string.gsub(STRINGS.CHARACTER_DESCRIPTION
 STRINGS.CHARACTER_DESCRIPTIONS.warly = string.gsub(STRINGS.CHARACTER_DESCRIPTIONS.warly,"\n󰀕Is a certified butcher","\n*󰀕是认证屠夫")
 STRINGS.CHARACTER_DESCRIPTIONS.warly = STRINGS.CHARACTER_DESCRIPTIONS.warly.."\n"
 
-STRINGS.CHARACTER_DESCRIPTIONS.wortox = string.gsub(STRINGS.CHARACTER_DESCRIPTIONS.wortox,"\n󰀕Some weak creatures have no meaningful Soul","\n*󰀕一些弱小的生物没有有意义的灵魂")
-STRINGS.CHARACTER_DESCRIPTIONS.wortox = string.gsub(STRINGS.CHARACTER_DESCRIPTIONS.wortox,"\n󰀕Souls take time to heal","\n*󰀕灵魂需要时间来治愈")
+STRINGS.CHARACTER_DESCRIPTIONS.wortox = string.gsub(STRINGS.CHARACTER_DESCRIPTIONS.wortox,"\n󰀕Some weak creatures have no soul.","\n*󰀕一些弱小的生物没有灵魂")
+STRINGS.CHARACTER_DESCRIPTIONS.wortox = string.gsub(STRINGS.CHARACTER_DESCRIPTIONS.wortox,"\n󰀕Souls take time to heal, and heal less","\n*󰀕灵魂需要时间来治愈,减少受到的伤害")
 STRINGS.CHARACTER_DESCRIPTIONS.wortox = STRINGS.CHARACTER_DESCRIPTIONS.wortox.."\n"
 
 STRINGS.CHARACTER_DESCRIPTIONS.wormwood = string.gsub(STRINGS.CHARACTER_DESCRIPTIONS.wormwood,"\n󰀕Is dangerously flammable","\n*󰀕危险易燃\n")
