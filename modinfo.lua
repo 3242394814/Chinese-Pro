@@ -1,6 +1,8 @@
 name = "Chinese++ Pro"
 version = "3.7"
-description = "当前版本：" ..version .. "\n更新日期：2024年3月8日\n" ..
+description = "当前版本：" ..version
+if version == "3.7" then description = description .. "\n更新日期：2024年3月9日\n" end -- 防止忘改
+description = description ..
 [[
 
 汉化你的客户端/服务器 MOD名称、MOD介绍、MOD设置 甚至MOD内容！

@@ -3,11 +3,10 @@ local modinfo_ver = KnownModIndex:GetModInfo("workshop-3169441836").modinfo_ver
 local description = KnownModIndex:GetModInfo("workshop-3169441836").description
 description = string.gsub(description,"Improves the crash screen to give more detailed information and makes it easier to understand.","改进了崩溃提示页面，以提供更详细的信息，使其更容易理解。")
 description = string.gsub(description,"Version","版本")
-description = string.gsub(description,"What's New:","最近更新：")
-description = string.gsub(description,"Added Workshop button when game crashes with a main cause","当游戏崩溃时，在崩溃界面添加了“创意工坊页面”按钮")
-description = string.gsub(description,"Adjusted Default settings","调整默认设置")
 description = string.gsub(description,"󰀭 Credits","󰀭 致谢")
-
+description = string.gsub(description,"What's New:","最近更新：")
+description = string.gsub(description,"Fixed issue where Reconnect did not show on certain screens","修复了某些页面上未显示“重新连接”的问题")
+description = string.gsub(description,"%(The Reconnect button only shows on dedi server that shows the dedi icon on scoreboard%)","（“重新连接”按钮仅显示在计分板上有专用服务器图标的专用服务器上）")
 
 local scales = {
 }
