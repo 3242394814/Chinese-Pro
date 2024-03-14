@@ -1,7 +1,6 @@
-·新增[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3169441836]Better Crash Screen(更好的崩溃提示)[/url]模组翻译
-·新增[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2065547564]No Login Screen(无登录页面)[/url]模组翻译
-
-·更新[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2039181790] 永不妥协 [/url]MOD配置汉化
+·更新[url=https://steamcommunity.com/sharedfiles/filedetails/?id=756229217]Teleportato(世界折跃)汉化
+·更新[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2039181790]永不妥协[/url]MOD配置汉化
+·更新[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3169441836]Better Crash Screen(更好的崩溃提示)[/url]模组介绍翻译
 
 这里的更新内容是方便我复制粘贴的，最终以创意工坊里的更新日志为准
 所有更新记录请前往：https://steamcommunity.com/sharedfiles/filedetails/changelog/2941527805 查看
