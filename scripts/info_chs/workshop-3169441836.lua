@@ -5,8 +5,7 @@ description = string.gsub(description,"Improves the crash screen to give more de
 description = string.gsub(description,"Version","版本")
 description = string.gsub(description,"󰀭 Credits","󰀭 致谢")
 description = string.gsub(description,"What's New:","最近更新：")
-description = string.gsub(description,"Fixed issue where Reconnect did not show on certain screens","修复了某些页面上未显示“重新连接”的问题")
-description = string.gsub(description,"%(The Reconnect button only shows on dedi server that shows the dedi icon on scoreboard%)","（“重新连接”按钮仅显示在计分板上有专用服务器图标的专用服务器上）")
+description = string.gsub(description,"Added forced tutorial for users %(will only show once%)","为玩家添加了强制教程（只显示一次）")
 
 local scales = {
 }
