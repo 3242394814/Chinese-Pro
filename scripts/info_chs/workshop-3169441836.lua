@@ -5,7 +5,8 @@ description = string.gsub(description,"Improves the crash screen to give more de
 description = string.gsub(description,"Version","版本")
 description = string.gsub(description,"󰀭 Credits","󰀭 致谢")
 description = string.gsub(description,"What's New:","最近更新：")
-description = string.gsub(description,"Added forced tutorial for users %(will only show once%)","为玩家添加了强制教程（只显示一次）")
+description = string.gsub(description,"Adjusted Voiceover volume","调整教程音量")
+description = string.gsub(description,"Fixed Crash %(ironic%)","修复崩溃(讽刺)")
 
 local scales = {
 }
@@ -115,6 +116,22 @@ local info =
             default = 0
         },
 
+        Title("Tutorial","","教程"),
+
+        {
+            name = "RewatchTutorial",
+            label = "重新查看BCS教程按钮",
+            hover = "",
+            options =
+            {
+                { description = "开启", data = 1},
+                { description = "关闭",  data = 0},
+    
+            },
+            default = 1
+    
+        },
+
         Title("Top Buttons", "Pick what mini buttons you want","选择你想要的小按钮"),
 
         {
@@ -128,6 +145,19 @@ local info =
 
             },
             default = 1
+        },
+
+        {
+            name = "AutoSaveLog",
+            label = "自动保存精简日志",
+            hover = "自动将日志保存到 DST 的数据文件夹中\n 不创建保存按钮",
+            options =
+            {
+                { description = "开启",  data = 1 },
+                { description = "关闭", data = 0 },
+    
+            },
+            default = 0
         },
 
         {

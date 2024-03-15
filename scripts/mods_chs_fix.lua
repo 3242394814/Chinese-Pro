@@ -1,6 +1,4 @@
---强制汉化某些模组内容
-local _G = GLOBAL
-local STRINGS = _G.STRINGS
+local STRINGS = GLOBAL.STRINGS
 
 --熔炉
 STRINGS.FORGE_PRELOADED = {
@@ -14,3 +12,7 @@ STRINGS.FORGE_PRELOADED = {
         BODY = "这些mod与熔炉mod不兼容。你确定要继续吗？",
 	},
 }
+
+--[API] Mods In Menu
+STRINGS.UI.MODSSCREEN.MIMMODS = "MiM 模组"
+STRINGS.UI.MODSSCREEN.TOOLTIP_MIMMODS = "能够通过Mods in Menu API启用的服务器模组"

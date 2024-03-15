@@ -1,7 +1,7 @@
 name = "Chinese++ Pro"
-version = "3.7.1"
+version = "3.7.2"
 description = "当前版本：" ..version
-if version == "3.7.1" then description = description .. "\n更新日期：2024年3月14日\n" end -- 防止忘改
+if version == "3.7.2" then description = description .. "\n更新日期：2024年3月15日\n" end -- 防止忘改
 description = description ..
 [[
 
