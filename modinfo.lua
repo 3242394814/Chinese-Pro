@@ -1,28 +1,32 @@
 name = "Chinese++ Pro"
-version = "3.7.2"
+version = "3.7.3"
 description = "当前版本：" ..version
-if version == "3.7.2" then description = description .. "\n更新日期：2024年3月15日\n" end -- 防止忘改
+if version == "3.7.3" then description = description .. "\n更新日期：2024年3月17日" end -- 防止忘改
 description = description ..
 [[
+
 
 汉化你的客户端/服务器 MOD名称、MOD介绍、MOD设置 甚至MOD内容！
 这既是客户端模组 也是服务器模组，当客户端启用此模组后 开服时服务器也会自动启用此模组
 支持汉化的MOD与更新日志请在创意工坊查看
 
-MOD内含冰冰羊的自用汉化包：修改了一些令人不爽的汉化内容、添加了一些提示、汉化岛屿冒险MOD的世界设置 可与【中文语言包】同时开启~]]
+MOD内含冰冰羊的自用汉化包：修改了一些令人不爽的汉化内容、添加了一些提示、汉化岛屿冒险MOD 可与【中文语言包】同时开启~]]
+
+-- 新闻
+description = description .. "\n\n\n岛屿冒险汉化 正在制作！by.冰冰羊 & 好学の末末酱"
 author = "冰冰羊"
 api_version = 10
 priority = -100001
 
-dst_compatible = true--兼容联机版
-forge_compatible = true--兼容熔炉
-gorge_compatible = true--兼容暴食
-dont_starve_compatible = false--不兼容单机版
+dst_compatible = true -- 兼容联机版
+forge_compatible = true -- 兼容熔炉
+gorge_compatible = true -- 兼容暴食
+dont_starve_compatible = false -- 不兼容单机版
 
-all_clients_require_mod = true--所有人都需要下载 -为了保证汉化效果 此MOD既是客户端MOD 也是服务器MOD QwQ
+all_clients_require_mod = true -- 所有人都需要下载 --为了保证汉化效果 此MOD既是客户端模组 也是服务器模组 QwQ
 client_only_mod = true
 server_only_mod = false
-server_filter_tags = {"Chinese++ Pro "..version}--服务器Tag 在服务器列表中搜索此Tag可以查看安装了此模组的服务器
+server_filter_tags = {"Chinese++ Pro "..version} -- 服务器Tag 在服务器列表中搜索此Tag可以查看安装了此模组的服务器
 
 icon_atlas = "images/modicon.xml"
 icon = "modicon.tex"
@@ -58,11 +62,11 @@ else
     end
 end
 
-local function SkipSpace(name, client_config)--空一行。如果填写了name则显示为标题。如果client_config为true则只显示在客户端设置页面上 用开服工具(例如鸽子鸽开服工具)就看不到了
+local function SkipSpace(name, client_config) -- 空一行。如果填写了name则显示为标题。如果client_config为true则只显示在客户端设置页面上 用开服工具(例如鸽子鸽开服工具)就看不到了
 	return { name = name, hover = "", options = { { description = "", data = false }, }, default = false, client = client_config}
 end
 
-local function mainConfig(name, label, hover, default, client_config)--选项名称(name),显示在游戏里的名称[如果没有则显示name](label),介绍(hover),默认选项(default),是不是给客户端设置的选项(client_config)
+local function mainConfig(name, label, hover, default, client_config) -- 选项名称(name),显示在游戏里的名称[如果没有则显示name](label),介绍(hover),默认选项(default),是不是给客户端设置的选项(client_config)
     if client_config then
     v_name = "client_"..name
     v_hover = "当对应的MOD开启时，自动加载汉化文件。此开关跟随客户端设置而非服务器设置"
@@ -85,7 +89,7 @@ local function mainConfig(name, label, hover, default, client_config)--选项名
 	    }
 end
 
-local function setConfig(name, label, options, default, desc, client_config)--选项名称(name),显示在游戏里的名称(label),选项(options),默认选项(default),介绍(desc),是不是给客户端设置的选项(client_config)
+local function setConfig(name, label, options, default, desc, client_config) -- 选项名称(name),显示在游戏里的名称(label),选项(options),默认选项(default),介绍(desc),是不是给客户端设置的选项(client_config)
     local _options = {}
     for i=1,#options  do
         _options[i] = {
