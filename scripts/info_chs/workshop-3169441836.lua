@@ -5,8 +5,8 @@ description = string.gsub(description,"Improves the crash screen to give more de
 description = string.gsub(description,"Version","版本")
 description = string.gsub(description,"󰀭 Credits","󰀭 致谢")
 description = string.gsub(description,"What's New:","最近更新：")
-description = string.gsub(description,"Adjusted Voiceover volume","调整教程音量")
-description = string.gsub(description,"Fixed Crash %(ironic%)","修复崩溃(讽刺)")
+description = string.gsub(description,"Adjusted Voiceover volume again","再一次调整教程音量")
+description = string.gsub(description,"Tutorial will no longer play at the start anymore","教程将不再在开始时播放")
 
 local scales = {
 }
