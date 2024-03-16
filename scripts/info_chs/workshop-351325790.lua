@@ -15,6 +15,20 @@ local hidden_option = {description = "隐藏", data = "hidden", hover = "完全�
 placer_color_options[#placer_color_options+1] = hidden_option
 color_options[#color_options+1] = hidden_option
 
+local KEY_A = 65
+local keyslist = {}
+local string = "" -- can't believe I have to do this... -____-
+for i = 1, 26 do
+	local ch = string.char(KEY_A + i - 1)
+	keyslist[i] = {description = ch, data = ch}
+end
+keyslist[27] = {description = "无", data = ""}
+
+local percent_options = {}
+for i = 1, 10 do
+	percent_options[i] = {description = i.."0%", data = i/10}
+end
+percent_options[11] = {description = "无限", data = false}
 
 local info={
 	name="Geometric Placement(几何放置)",
@@ -35,6 +49,7 @@ local info={
 			name = "KEYBOARDTOGGLEKEY",
 			label = "设置键",
 			default = "B",
+			options = keyslist,
 			-- hover = "A key to open the mod's options. On controllers, open\nthe scoreboard and then use Menu Misc 3 (left stick click).\nI recommend setting this with the Settings menu in DST.",
 			hover = "打开MOD设置的按键。使用手柄时，打开计分板并使用菜单杂项3键（点击左侧摇杆）",
 		},
@@ -42,6 +57,7 @@ local info={
 			name = "GEOMETRYTOGGLEKEY",
 			label = "切换布局键",
 			default = "V",
+			options = keyslist,
 			-- hover = "A key to toggle to the most recently used geometry\n(for example, switching between Square and X-Hexagon)\nI recommend setting this with the Settings menu in DST.",
 			hover = "切换到最近使用布局的按键（例如，在矩形和X轴六边形间切换）",
 		},
@@ -49,6 +65,7 @@ local info={
 			name = "SNAPGRIDKEY",
 			label = "捕捉网格按钮",
 			default = "",
+			options = keyslist,
 			hover = "绑定一个键，使网格有一个点以悬停物体或点为中心。不绑定键鼠。",
 		},
 		{
@@ -89,6 +106,7 @@ local info={
 			name = "TIMEBUDGET",
 			label = "刷新频率",
 			default = 0.1,
+			options = percent_options,
 			hover = "将多少可用时间用于刷新网格。不限或者设置得太高很可能导致卡顿。",
 		},
 		{
