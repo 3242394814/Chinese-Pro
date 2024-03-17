@@ -26,7 +26,7 @@ local main_list = {}
 -- 加载MOD配置汉化
 local modlist=KnownModIndex:GetModNames()
 	for _,v in ipairs(modlist) do
-		if fileexists(MODROOT.."scripts/info_chs/"..v..".lua") and GetModConfigData("mod_info_Chs",true) then--检测本模组内的MOD信息翻译文件（补充: v1.CH_label 是我的翻译文件内新定义的一个东西）
+		if fileexists(MODROOT.."scripts/info_chs/"..v..".lua") and GetModConfigData("mod_info_Chs",true) then -- 检测本模组内的MOD信息翻译文件（补充: v1.CH_label 是我的翻译文件内新定义的一个东西）
 			info_list[v] = require("info_chs/"..v)
 		end
         if fileexists(MODROOT.."scripts/main_chs/"..v..".lua") then -- 检测本模组内的游戏内汉化文件

@@ -1,8 +1,8 @@
-·更新[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3169441836]Better Crash Screen(更好的崩溃提示)[/url]模组翻译
-·将[url=https://gitlab.com/3242394814/IslandAdventures]正在制作的岛屿冒险汉化[/url]添加到“冰冰羊的个人翻译”中
+·补充[url=https://steamcommunity.com/sharedfiles/filedetails/?id=351325790]Geometric Placement(几何放置)[/url]未汉化的设置选项
 
 这里的更新内容是方便我复制粘贴的，最终以创意工坊里的更新日志为准
 所有更新记录请前往：https://steamcommunity.com/sharedfiles/filedetails/changelog/2941527805 查看
 
 ·更新[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2039181790]永不妥协[/url]模组配置汉化
 ·新增[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2415978456][API] Mods In Menu[/url]模组翻译
+·更新[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3169441836]Better Crash Screen(更好的崩溃提示)[/url]模组翻译
