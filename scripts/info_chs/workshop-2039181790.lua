@@ -177,7 +177,6 @@ local info=
 			false),
 		BinaryConfig("waxwell", "老麦", "老麦又再次获得他旧的经典宝典！", true),
 		BinaryConfig("waxwell_nerf", "老麦: 削弱", "对麦斯威尔进行多次削弱，以降低他的实力。", true),
-		BinaryConfig("wathgrithr_rework", "女武神: 重做", "减少女武神的战斗吸血能力，修改技能树，增加更有意义的定位选择", true),
 		BinaryConfig("wathgrithr_arsenal", "女武神: 武器", "更改了女武神的新武器，使其没有无限的耐久。", true),
 		BinaryConfig("wolfgang", "大力士", "沃尔夫冈根据饥饿等级获得力量。持续时间越长，饥饿流失越多。",
 			false),
@@ -210,6 +209,17 @@ local info=
 			},
 			default = "vanilla",
 
+		},
+		{
+			name = "wathgrithr_rework_",
+			label = "Wigfrid - Rework",
+			CH_label = "女武神: 重做",
+			hover = "减少女武神的战斗吸血能力，修改技能树，增加更有意义的生存选择",
+			options = {
+				{ description = "开启",  data = 1, hover = "启用所有改动" },
+				{ description = "部分",   data = 2, hover = "只有吸血削弱。与其他重做MOD一起使用。" },
+				{ description = "关闭", data = 0, hover = "所有改动均已禁用。与原版相同。" } },
+			default = 1
 		},
 		BinaryConfig("wickerbottom", "老奶奶:读书", "老奶奶和麦斯威尔在精神值低的时候不能再读书",true),
 		BinaryConfig("on tentacles", "老奶奶:触手书", "老奶奶的触手书召唤的是友好的触手，但这些触手会随着时间降低生命值，且死亡后没有战利品",true),
@@ -428,7 +438,7 @@ local info=
 			options =
 			{
 				{ description = "默认", data = "default", hover = "仅在低于 25% 时治愈最大健康损失." },
-				{ description = "Legacy", data = "legacy", hover = "治疗最大生命值损失，无论百分比如何." },
+				{ description = "无视百分比", data = "legacy", hover = "治疗最大生命值损失，无论百分比如何." },
 				{ description = "关闭", data = false },
 			},
 			default = "default",
@@ -1192,10 +1202,9 @@ local info=
 		Header("󰀊 ROLLBACK CITY 󰀊","󰀊 回到上面去 󰀊"),
 
 		--	Header("General"),
-		BinaryConfig("maraboss_bottomtext", "JUDGEMENT", "激活了特殊的月球变异。是的！", false),
-		BinaryConfig("um_advertisements", "趣味模式", "启用趣味模式以获得新内容增强体验!", false),
 		BinaryConfig("um_shrink", "不要变小", "失去健康/饥饿时人物会变小，精神疯狂时会变平。", false),
-
+		BinaryConfig("um_advertisements", "趣味模式", "启用趣味模式以获得新内容增强体验!", false),
+		BinaryConfig("maraboss_bottomtext", "裁决", "激活了特殊的月圆变异。是的！", false),
 	}
 }
 
