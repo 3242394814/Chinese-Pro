@@ -51,7 +51,7 @@ if this_mod then
 	_G.ModManager.GetEnabledServerModNames=function(self)
 		local server_mods = OldGetEnabledServerModNames(self)
 			if _G.IsNotConsole() then
-			table.insert(server_mods, this_mod)--将本模组插入到服务器模组列表中。开启洞穴时、直接复制存档文件夹到专服时也会加载此模组
+				table.insert(server_mods, this_mod)--将本模组插入到服务器模组列表中。开启洞穴时、直接复制存档文件夹到专服时也会加载此模组
 			end
 		return server_mods
 	end

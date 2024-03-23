@@ -1,7 +1,7 @@
 name = "Chinese++ Pro"
-version = "3.7.4"
+version = "3.7.5"
 description = "当前版本：" ..version
-if version == "3.7.4" then description = description .. "\n更新日期：2024年3月17日" end -- 防止忘改
+if version == "3.7.5" then description = description .. "\n更新日期：2024年3月23日" end -- 防止忘改
 description = description ..
 [[
 
@@ -16,7 +16,6 @@ MOD内含冰冰羊的自用汉化包：修改了一些令人不爽的汉化内�
 description = description .. "\n\n\n岛屿冒险汉化 正在制作！by.冰冰羊 & 好学の末末酱"
 author = "冰冰羊"
 api_version = 10
-priority = -100001
 
 dst_compatible = true -- 兼容联机版
 forge_compatible = true -- 兼容熔炉
@@ -34,6 +33,7 @@ icon = "modicon.tex"
 folder_name = folder_name or "workshop-"
 if not folder_name:find("workshop-") then
 	name = name .. " - 本地版"
+    priority = -100002
     function MOD_MODE()
         return
         {
@@ -42,7 +42,7 @@ if not folder_name:find("workshop-") then
             hover = "显示此模组是从哪里获取的",
             options =
             {
-                { description = "本地", hover = "此模组将插入到服务器模组列表中，会影响到其它没下载此模组的玩家进服", data = "Chinese-Pro" },
+                { description = "本地", hover = "此模组将插入到服务器模组列表中，会影响到其它没下载此模组的玩家进服", data = folder_name },
                 { description = "仅客户端运行",hover = "此模组将不会插入到服务器模组列表中，仅在客户端运行", data = false }
             },
             default = false
@@ -50,6 +50,7 @@ if not folder_name:find("workshop-") then
     end
 else
     function MOD_MODE()
+    priority = -100001
     description = description .. "\n\n󰀔汉化其它模组信息功能：当前未生效×"
         return
         {
