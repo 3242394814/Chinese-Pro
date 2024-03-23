@@ -5,8 +5,9 @@ description = string.gsub(description,"Improves the crash screen to give more de
 description = string.gsub(description,"Version","版本")
 description = string.gsub(description,"󰀭 Credits","󰀭 致谢")
 description = string.gsub(description,"What's New:","最近更新：")
-description = string.gsub(description,"Adjusted Voiceover volume again","再一次调整教程音量")
-description = string.gsub(description,"Tutorial will no longer play at the start anymore","教程将不再在开始时播放")
+description = string.gsub(description,"Adjusted Tutorial","调整教程")
+description = string.gsub(description,"Added PT language with voiceover %(Galvinoo%)","添加带有说明的PT语言(Galvinoo)")
+description = string.gsub(description,"Added Autoupdate feature","添加自动更新功能")
 
 local scales = {
 }
@@ -42,7 +43,18 @@ local info =
     description = description,
     configuration_options = {
 
-
+		Title("Language", "Pick langauge","语言"),
+        {
+            name = "language",
+            label = "语言",
+            hover = "",
+            options =
+            {
+                { description = "英语(English)", data = "en"}, -- , hover = "" }
+                { description = "葡萄牙语(Portuguese)", data = "pt"},-- , hover = "" }
+            },
+            default = "en"
+        },
 
         Title("Crashscreen", "General Crashscreen Settings","崩溃提示设置"),
         {
@@ -56,7 +68,6 @@ local info =
 
             },
             default = "classic"
-
         },
 
         {
@@ -70,7 +81,6 @@ local info =
 
             },
             default = false
-
         },
 
         {
@@ -83,7 +93,6 @@ local info =
                 { description = "1.15", data = 1.15},
                 { description = "1.25", data = 1.25},
                 { description = "1.5", data = 1.5},
-
             },
             default = 1.08
 
